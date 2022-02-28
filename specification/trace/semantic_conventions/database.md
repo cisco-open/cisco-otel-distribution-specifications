@@ -12,5 +12,5 @@ Cisco OTel Distributions MAY add the following attributes:
 
 | Attribute  | Type | Description  | Examples  | Metadata / Data |
 |---|---|---|---|---|
-|db.redis.arguments|Json Array  |redis command arguments    |`[myhash, field, Hello]`; `[myhash, age, 27]`  |Yes|
-|db.redis.response |Json        |redis command response     |`1`; `OK`; `[1,1,1]`                           |Yes|
+|db.redis.arguments|String|redis command arguments    |`[myhash, field, Hello]`; `[myhash, age, 27]`  |Metadata|
+|db.redis.response |String|redis command response     |`1`; `OK`; `[1,1,1]`                           |Metadata|
