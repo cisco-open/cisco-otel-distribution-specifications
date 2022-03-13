@@ -45,7 +45,7 @@ export const {{class}} = {
   * @deprecated {{attribute.deprecated | to_doc_brief}}.
     {%- endif %}
   */
-  {{attribute.fqn | to_const_name}}: <SemanticAttribute>{ key: '{{attribute.fqn}}', metadata: {{%- if attribute.deprecated %} },
+  {{attribute.fqn | to_const_name}}: <SemanticAttribute>{ key: '{{attribute.fqn}}', metadata: {{ attribute.sampling_relevant | string  | lower() }} },
   {%- endfor %}
 }
 

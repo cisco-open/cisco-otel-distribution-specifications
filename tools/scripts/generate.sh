@@ -1,15 +1,24 @@
 #!/bin/bash
 
+# Consts
 GENERATOR_VERSION=0.7.0
-BEST_DIR=/Users/osherv/workspace/repos/fso/cisco-otel-distribution-specifications/
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+ROOT_DIR="${SCRIPT_DIR}/../../"
 
-docker run --rm \
-  -v ${BEST_DIR}/semantic-conventions/trace:/source \
-  -v ${BEST_DIR}/templates:/templates \
-  -v ${BEST_DIR}/src/trace/:/output \
-  otel/semconvgen:${GENERATOR_VERSION} \
-  -f /source \
-  code \
-  --template /templates/SemanticAttributes.ts.j2 \
-  --output /output/SemanticAttributes.ts \
-  -Dclass=SemanticAttributes
+# Functions
+function generate_js {
+  docker run --rm \
+    -v ${ROOT_DIR}/specification/sources/trace:/source \
+    -v ${SCRIPT_DIR}/../templates:/templates \
+    -v ${ROOT_DIR}/packages/js/src/trace/:/output \
+    otel/semconvgen:${GENERATOR_VERSION} \
+    -f /source \
+    code \
+    --template /templates/SemanticAttributes.ts.j2 \
+    --output /output/SemanticAttributes.ts \
+    -Dclass=SemanticAttributes
+
+  exit
+}
+
+generate_js
