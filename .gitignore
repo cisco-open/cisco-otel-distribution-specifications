@@ -1,2 +1,7 @@
 .vscode
 .idea/
+
+packages/js/lib/
+packages/js/node_modules
+
+packages/python/dist
