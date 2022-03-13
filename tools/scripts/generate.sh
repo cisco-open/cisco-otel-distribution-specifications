@@ -37,5 +37,5 @@ function generate_py {
 }
 
 
-# generate_js
+generate_js
 generate_py
