@@ -12,16 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from dataclasses import dataclasses
+from collections import namedtuple
 
-@dataclasses
-class SemanticAttribute:
-    key: string
-    metadata: bool
-
+_SemanticAttribute = namedtuple('_SemanticAttribute', 'key value')
 
 class SemanticAttributes:
-    HTTP_REQUEST_HEADER = SemanticAttribute("http.request.header", True)
+    HTTP_REQUEST_HEADER = _SemanticAttribute("http.request.header", True)
     """
     HTTP request header. This describes the prefix to HTTP headers capturing.
     """

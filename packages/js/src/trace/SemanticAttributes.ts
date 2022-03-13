@@ -1,5 +1,5 @@
 /*
- * Copyright The OpenTelemetry Authors
+ * Copyright The Cisco Authors
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-type SemanticAttribute = {
+type _SemanticAttribute = {
   key: string;
   metadata: boolean;
 }
@@ -25,5 +25,5 @@ export const SemanticAttributes = {
   /**
   * HTTP request header. This describes the prefix to HTTP headers capturing.
   */
-  HTTP_REQUEST_HEADER: <SemanticAttribute>{ key: 'http.request.header', metadata: true },
+  HTTP_REQUEST_HEADER: <_SemanticAttribute>{ key: 'http.request.header', metadata: true },
 }
