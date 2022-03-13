@@ -19,7 +19,7 @@ type SemanticAttribute = {
   metadata: boolean;
 }
 
-// DO NOT EDIT, this is an Auto-generated file from scripts/semconv/templates//templates/SemanticAttributes.ts.j2
+// DO NOT EDIT, this is an Auto-generated file from tools/templates/SemanticAttributes.ts.j2
 export const SemanticAttributes = {
 
   /**
