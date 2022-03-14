@@ -42,12 +42,31 @@ groups:
         type: string
         examples:
           - "aws.sqs.message_attribute.Title={DataType: 'String', StringValue: 'The Whistler'}"
+
+      - id: record.message_id
+        brief: The record message ID
+        type: string
+        sampling_relevant: true
+        examples: "5652789a-f672-5064-9459-223395b82d3a"
+
   - id: aws.sqs.send_message_batch
     prefix: aws.sqs
     brief: A unique data that captured from aws.sqs reuqest/response SendMessageBatch type.
     attributes:
       - id: request_entry
-        brief: point to batch requets entries
+        brief: prefix to batch requets entries
+        type: string
+        sampling_relevant: false
+        examples: '[]'
+
+      - id: result_error_entry
+        brief: prefix to batch result error entries
+        type: string
+        sampling_relevant: false
+        examples: '[]'
+
+      - id: result_entry
+        brief: prefix to batch result entries
         type: string
         sampling_relevant: false
         examples: '[]'
@@ -84,3 +103,48 @@ groups:
         type: string
         sampling_relevant: true
         examples: "aws.sqs.message_attribute_name.attr=name"
+
+      - id: record.message_body
+        brief: The response body
+        type: string
+        sampling_relevant: false
+        examples: "{response: 'message'}"
+
+      - id: record.attribute
+        brief: prefix to record attributes
+        type: string
+        sampling_relevant: false
+        examples: "aws.sqs.record.attribute.key='attribute'"
+
+      - id: record.message_attribute
+        brief: prefix to record message attributes
+        type: string
+        sampling_relevant: false
+        examples:
+          - "aws.sqs.record.message_attribute.key='message attribute'"
+
+      - id: record.message_id
+        brief: The record message ID
+        type: string
+        sampling_relevant: true
+        examples: "5652789a-f672-5064-9459-223395b82d3a"
+
+      - id: aws.sqs.record
+        brief: string list of all records
+        type: string
+        sampling_relevant: true
+        examples:
+        - '[
+             {
+               "message_body": "{\"cart\":{\"0e882f33-a55b-4af6-bc85-02ffb2ec70e1\":\"1\",\"a00018c0-3ffa-4e92-90b5-7f17e0c0f00e\":\"1\",\"03589a66-5ef2-4f5b-9381-bf22235d06a7\":\"1\"},\"userEmail\":\"anthony@store.com\"}",
+                                           "md5_of_message_body": "2c0f54a5544aa1a43ea6bf9911931dd9",
+                                           "message_attributes": { },
+                                           "message_id": "62c3c03c-b1ed-419e-a45a-833d781e14d1",
+                                           "attributes": {
+                                             "ApproximateFirstReceiveTimestamp": "1647272329827",
+                                             "SentTimestamp": "1647272329826",
+                                             "SenderId": "AROASEVJA2MGCYV5OZ33I:retail-store-lambda-checkout-demo-checkout",
+                                             "ApproximateReceiveCount": "1"
+                                           }
+      }
+      ]'
