@@ -34,7 +34,7 @@ export const SemanticAttributes = {
   *
   * Note: Assuming this structure for QueueUrl: https://sqs.&lt;region&gt;.amazonaws.com/&lt;accountId&gt;/&lt;queueName&gt;.
   */
-  AWS_SQS_ACCOUNT_ID: <_SemanticAttribute>{ key: 'aws.sqs.account_id', metadata: false },
+  AWS_SQS_ACCOUNT_ID: <_SemanticAttribute>{ key: 'aws.sqs.account_id', metadata: true },
 
   /**
   * The SQS message body.
@@ -44,7 +44,7 @@ export const SemanticAttributes = {
   /**
   * The number in seconds to delay the message.
   */
-  AWS_SQS_RECORD_DELAY_SECONDS: <_SemanticAttribute>{ key: 'aws.sqs.record.delay_seconds', metadata: false },
+  AWS_SQS_RECORD_DELAY_SECONDS: <_SemanticAttribute>{ key: 'aws.sqs.record.delay_seconds', metadata: true },
 
   /**
   * HTTP request header. This describes the prefix to HTTP headers capturing.

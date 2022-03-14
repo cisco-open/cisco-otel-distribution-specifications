@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Consts
-GENERATOR_VERSION=0.7.0
+GENERATOR_VERSION=0.11.0
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ROOT_DIR="${SCRIPT_DIR}/../../"
 
@@ -32,6 +32,13 @@ function generate_py {
     -Dclass=SemanticAttributes
 }
 
+function generate_markdown {
+  docker run --rm  \
+    -v ${ROOT_DIR}/specification/sources/trace/:/source \
+    -v ${ROOT_DIR}/specification/trace:/output \
+    otel/semconvgen:${GENERATOR_VERSION} --debug \
+    -f /source \
+    markdown -md /output --md-check
+}
 
-generate_js
-generate_py
+generate_markdown
