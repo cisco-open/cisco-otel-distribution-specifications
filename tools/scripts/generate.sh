@@ -34,11 +34,11 @@ function generate_py {
 
 function generate_markdown {
   docker run --rm  \
-    -v ${ROOT_DIR}/specification/sources/trace/:/source \
-    -v ${ROOT_DIR}/specification/trace:/output \
+    -v ${ROOT_DIR}/specification/sources/trace:/source \
+    -v ${ROOT_DIR}/specification/trace:/spec \
     otel/semconvgen:${GENERATOR_VERSION} --debug \
     -f /source \
-    markdown -md /output --md-check
+    markdown -md /spec
 }
 
 generate_markdown

@@ -13,7 +13,7 @@ Cisco OTel Distributions SHOULD add the following attributes:
 | `http.request.body` | string | [HTTP message body](https://tools.ietf.org/html/rfc7230#section-3.3) of the request | - | Data
 | `http.request.body` | string | [HTTP message body](https://tools.ietf.org/html/rfc7230#section-3.3) of the response | - | Data
 
-The data MUST be trimmed according to the [Max Payload Size configuration parameter](../../../../../general.md#configuration)
+The data MUST be trimmed according to the [Max Payload Size configuration parameter](../../../general.md#configuration)
 
 ## HTTP request and response headers
 
