@@ -41,20 +41,7 @@ groups:
         brief: A prefix for all message attributes collection.
         type: string
         examples:
-          - "{
-            Title: {
-              DataType: 'String',
-              StringValue: 'The Whistler',
-            },
-            Author: {
-              DataType: 'String',
-              StringValue: 'John Grisham',
-            },
-            WeeksOn: {
-              DataType: 'Number',
-              StringValue: '6',
-            },
-          }"
+          - "aws.sqs.message_attribute.Title={DataType: 'String', StringValue: 'The Whistler'}"
   - id: aws.sqs.request.send_message_batch
     prefix: aws.sqs
     brief: A unique data that captured from aws.sqs reuqest SendMessageBatch type.
@@ -89,11 +76,5 @@ groups:
       - id: attribute_name
         brief: A prefix for all message attributes collection.
         type: string
-        examples:
-          ""
-
-
-
-
-
+        examples: "aws.sqs.attribute_name.attr=name"
 

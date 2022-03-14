@@ -11,13 +11,13 @@ groups:
         type: string
         required: always
         sampling_relevant: true
-        examples: 'http.request.header.user-agent'
+        examples: 'http.request.header.user-agent="chrome"'
       - id: response.header
         brief: 'HTTP response header. This describes the prefix to HTTP headers capturing'
         type: string
         required: always
         sampling_relevant: true
-        examples: 'http.response.header.content-type'
+        examples: 'http.response.header.content-type="JSON"'
       - id: request.body
         brief: 'HTTP message request body'
         type: string
