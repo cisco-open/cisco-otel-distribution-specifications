@@ -20,13 +20,23 @@ class SemanticAttributes:
     AWS_SQS_QUEUE_NAME = _SemanticAttribute("aws.sqs.queue_name", True)
     """
     The SQS queue name.
-    Note: Assuming this structure for QueueUrl: "https://sqs.<region>.amazonaws.com/<accountId>/<queueName>".
+    Note: Assuming this structure for QueueUrl: https://sqs.<region>.amazonaws.com/<accountId>/<queueName>.
     """
 
     AWS_SQS_ACCOUNT_ID = _SemanticAttribute("aws.sqs.account_id", False)
     """
     The user account id.
-    Note: Assuming this structure for QueueUrl: "https://sqs.<region>.amazonaws.com/<accountId>/<queueName>".
+    Note: Assuming this structure for QueueUrl: https://sqs.<region>.amazonaws.com/<accountId>/<queueName>.
+    """
+
+    AWS_SQS_RECORD_MESSAGE_BODY = _SemanticAttribute("aws.sqs.record.message_body", False)
+    """
+    The SQS message body.
+    """
+
+    AWS_SQS_RECORD_DELAY_SECONDS = _SemanticAttribute("aws.sqs.record.delay_seconds", False)
+    """
+    The number in seconds to delay the message.
     """
 
     HTTP_REQUEST_HEADER = _SemanticAttribute("http.request.header", True)

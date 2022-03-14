@@ -6,20 +6,38 @@ groups:
     attributes:
       - id: queue_name
         type: string
-        brief: >
-          The SQS queue name.
-        sampling_relevant: true
+        brief: The SQS queue name.
         note: >
           Assuming this structure for QueueUrl:
           https://sqs.<region>.amazonaws.com/<accountId>/<queueName>
-        examples:
-          ['retail-store-lambda-reports']
+        sampling_relevant: true
+        examples: 'retail-store-lambda-reports'
       - id: account_id
         type: int
-        brief: >
-          The user account id.
+        brief: The user account id.
         note: >
           Assuming this structure for QueueUrl:
           https://sqs.<region>.amazonaws.com/<accountId>/<queueName>
-        examples:
-          [147457102604]
+        sampling_relevant: true
+        examples: 147457102604
+
+  - id: aws.sqs.request.send_message
+    prefix: aws.sqs
+    brief: A unique data that captured from aws.sqs reuqest SendMessage type.
+    attributes:
+      - id: record.message_body
+        brief: The SQS message body
+        type: string
+        sampling_relevant: false
+        examples: 'Test sqs: This is the message body.'
+
+      - id: record.delay_seconds
+        brief: The number in seconds to delay the message
+        type: int
+        sampling_relevant: true
+        examples: 10
+
+
+
+
+

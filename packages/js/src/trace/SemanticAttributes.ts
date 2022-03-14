@@ -25,16 +25,26 @@ export const SemanticAttributes = {
   /**
   * The SQS queue name.
   *
-  * Note: Assuming this structure for QueueUrl: &#34;https://sqs.&lt;region&gt;.amazonaws.com/&lt;accountId&gt;/&lt;queueName&gt;&#34;.
+  * Note: Assuming this structure for QueueUrl: https://sqs.&lt;region&gt;.amazonaws.com/&lt;accountId&gt;/&lt;queueName&gt;.
   */
   AWS_SQS_QUEUE_NAME: <_SemanticAttribute>{ key: 'aws.sqs.queue_name', metadata: true },
 
   /**
   * The user account id.
   *
-  * Note: Assuming this structure for QueueUrl: &#34;https://sqs.&lt;region&gt;.amazonaws.com/&lt;accountId&gt;/&lt;queueName&gt;&#34;.
+  * Note: Assuming this structure for QueueUrl: https://sqs.&lt;region&gt;.amazonaws.com/&lt;accountId&gt;/&lt;queueName&gt;.
   */
   AWS_SQS_ACCOUNT_ID: <_SemanticAttribute>{ key: 'aws.sqs.account_id', metadata: false },
+
+  /**
+  * The SQS message body.
+  */
+  AWS_SQS_RECORD_MESSAGE_BODY: <_SemanticAttribute>{ key: 'aws.sqs.record.message_body', metadata: false },
+
+  /**
+  * The number in seconds to delay the message.
+  */
+  AWS_SQS_RECORD_DELAY_SECONDS: <_SemanticAttribute>{ key: 'aws.sqs.record.delay_seconds', metadata: false },
 
   /**
   * HTTP request header. This describes the prefix to HTTP headers capturing.
