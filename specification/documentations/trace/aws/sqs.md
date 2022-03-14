@@ -24,8 +24,8 @@ Following attributes MUST be provided **at span creation time** (when provided a
 * `aws.sqs.account_id`
 <!-- endsemconv -->
 
-## Request SendMessage attributes
-<!-- semconv aws.sqs.request.send_message -->
+## SendMessage attributes
+<!-- semconv aws.sqs.send_message -->
 | Attribute  | Type | Description  | Examples  | Required |
 |---|---|---|---|---|
 | `aws.sqs.record.message_body` | string | The SQS message body | `Test sqs: This is the message body.` | No |
@@ -37,24 +37,27 @@ Following attributes MUST be provided **at span creation time** (when provided a
 * `aws.sqs.record.delay_seconds`
 <!-- endsemconv -->
 
-## Request SendMessageBatch attributes
-<!-- semconv aws.sqs.request.send_message_batch -->
+## SendMessageBatch attributes
+<!-- semconv aws.sqs.send_message_batch -->
 | Attribute  | Type | Description  | Examples  | Required |
 |---|---|---|---|---|
 | `aws.sqs.request_entry` | string | point to batch requets entries | `[]` | No |
 <!-- endsemconv -->
 
-## Request receiveMessage attributes
-<!-- semconv aws.sqs.request.receive_message -->
+## ReceiveMessage attributes
+<!-- semconv aws.sqs.receive_message -->
 | Attribute  | Type | Description  | Examples  | Required |
 |---|---|---|---|---|
 | `aws.sqs.visibility_timeout` | int | The number in seconds of how long this message will be available to consume | `10` | No |
 | `aws.sqs.wait_time_seconds` | int | The number in seconds for the polling time | `10` | No |
 | `aws.sqs.max_number_of_messages` | int | The maximum number of messages can recive | `10` | No |
-| `aws.sqs.attribute_name` | string | A prefix for all message attributes collection. | `aws.sqs.attribute_name.attr=name` | No |
+| `aws.sqs.attribute_name` | string | A prefix for all attributes names collection. | `aws.sqs.attribute_name.attr=name` | No |
+| `aws.sqs.message_attribute_name` | string | A prefix for all message attributes names collection. | `aws.sqs.message_attribute_name.attr=name` | No |
 
 Following attributes MUST be provided **at span creation time** (when provided at all), so they can be considered for sampling decisions:
 
 * `aws.sqs.wait_time_seconds`
 * `aws.sqs.max_number_of_messages`
+* `aws.sqs.attribute_name`
+* `aws.sqs.message_attribute_name`
 <!-- endsemconv -->

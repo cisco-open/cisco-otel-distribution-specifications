@@ -72,9 +72,14 @@ export const SemanticAttributes = {
   AWS_SQS_MAX_NUMBER_OF_MESSAGES: <_SemanticAttribute>{ key: 'aws.sqs.max_number_of_messages', metadata: true },
 
   /**
-  * A prefix for all message attributes collection.
+  * A prefix for all attributes names collection.
   */
-  AWS_SQS_ATTRIBUTE_NAME: <_SemanticAttribute>{ key: 'aws.sqs.attribute_name', metadata: false },
+  AWS_SQS_ATTRIBUTE_NAME: <_SemanticAttribute>{ key: 'aws.sqs.attribute_name', metadata: true },
+
+  /**
+  * A prefix for all message attributes names collection.
+  */
+  AWS_SQS_MESSAGE_ATTRIBUTE_NAME: <_SemanticAttribute>{ key: 'aws.sqs.message_attribute_name', metadata: true },
 
   /**
   * HTTP request header. This describes the prefix to HTTP headers capturing.

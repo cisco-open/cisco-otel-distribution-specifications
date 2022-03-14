@@ -64,9 +64,14 @@ class SemanticAttributes:
     The maximum number of messages can recive.
     """
 
-    AWS_SQS_ATTRIBUTE_NAME = _SemanticAttribute("aws.sqs.attribute_name", False)
+    AWS_SQS_ATTRIBUTE_NAME = _SemanticAttribute("aws.sqs.attribute_name", True)
     """
-    A prefix for all message attributes collection.
+    A prefix for all attributes names collection.
+    """
+
+    AWS_SQS_MESSAGE_ATTRIBUTE_NAME = _SemanticAttribute("aws.sqs.message_attribute_name", True)
+    """
+    A prefix for all message attributes names collection.
     """
 
     HTTP_REQUEST_HEADER = _SemanticAttribute("http.request.header", True)
