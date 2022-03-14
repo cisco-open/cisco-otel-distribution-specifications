@@ -26,4 +26,19 @@ export const SemanticAttributes = {
   * HTTP request header. This describes the prefix to HTTP headers capturing.
   */
   HTTP_REQUEST_HEADER: <_SemanticAttribute>{ key: 'http.request.header', metadata: true },
+
+  /**
+  * HTTP response header. This describes the prefix to HTTP headers capturing.
+  */
+  HTTP_RESPONSE_HEADER: <_SemanticAttribute>{ key: 'http.response.header', metadata: true },
+
+  /**
+  * HTTP message request body.
+  */
+  HTTP_REQUEST_BODY: <_SemanticAttribute>{ key: 'http.request.body', metadata: false },
+
+  /**
+  * HTTP message response body.
+  */
+  HTTP_RESPONSE_BODY: <_SemanticAttribute>{ key: 'http.response.body', metadata: false },
 }

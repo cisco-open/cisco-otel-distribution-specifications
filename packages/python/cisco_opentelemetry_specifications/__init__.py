@@ -21,3 +21,18 @@ class SemanticAttributes:
     """
     HTTP request header. This describes the prefix to HTTP headers capturing.
     """
+
+    HTTP_RESPONSE_HEADER = _SemanticAttribute("http.response.header", True)
+    """
+    HTTP response header. This describes the prefix to HTTP headers capturing.
+    """
+
+    HTTP_REQUEST_BODY = _SemanticAttribute("http.request.body", False)
+    """
+    HTTP message request body.
+    """
+
+    HTTP_RESPONSE_BODY = _SemanticAttribute("http.response.body", False)
+    """
+    HTTP message response body.
+    """
