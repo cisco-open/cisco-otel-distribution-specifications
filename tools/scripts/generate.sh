@@ -17,8 +17,6 @@ function generate_js {
     --template /templates/SemanticAttributes.ts.j2 \
     --output /output/SemanticAttributes.ts \
     -Dclass=SemanticAttributes
-
-  exit
 }
 
 function generate_py {
@@ -32,8 +30,6 @@ function generate_py {
     --template /templates/semantic_attributes.py.j2 \
     --output /output/__init__.py \
     -Dclass=SemanticAttributes
-
-  exit
 }
 
 
