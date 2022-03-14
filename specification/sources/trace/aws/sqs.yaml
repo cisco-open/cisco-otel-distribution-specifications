@@ -37,6 +37,26 @@ groups:
         sampling_relevant: true
         examples: 10
 
+      - id: message_attribute
+        brief: A prefix for all message attributes collection.
+        type: string
+        examples: >
+          {
+            Title: {
+              DataType: 'String',
+              StringValue: 'The Whistler',
+            },
+            Author: {
+              DataType: 'String',
+              StringValue: 'John Grisham',
+            },
+            WeeksOn: {
+              DataType: 'Number',
+              StringValue: '6',
+            },
+          }
+
+
 
 
 

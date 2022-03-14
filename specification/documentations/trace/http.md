@@ -1,5 +1,15 @@
 # Semantic conventions for HTTP spans
 
+<!-- toc -->
+
+- [Status](#status)
+- [Common Attributes](#common-attributes)
+- [HTTP request and response headers](#http-request-and-response-headers)
+  * [Type](#type)
+  * [Metadata / Data](#metadata--data)
+
+<!-- tocstop -->
+
 ## Status
 
 According to [OTel specifications](https://github.com/open-telemetry/opentelemetry-specification/blob/master/specification/trace/semantic_conventions/http.md#status)
@@ -8,10 +18,19 @@ According to [OTel specifications](https://github.com/open-telemetry/opentelemet
 
 Cisco OTel Distributions SHOULD add the following attributes:
 
-| Attribute  | Type | Description  | Example  | Metadata / Data |
+<!-- semconv http -->
+| Attribute  | Type | Description  | Examples  | Required |
 |---|---|---|---|---|
-| `http.request.body` | string | [HTTP message body](https://tools.ietf.org/html/rfc7230#section-3.3) of the request | - | Data
-| `http.request.body` | string | [HTTP message body](https://tools.ietf.org/html/rfc7230#section-3.3) of the response | - | Data
+| `http.request.header` | string | HTTP request header. This describes the prefix to HTTP headers capturing | `http.request.header.user-agent` | Yes |
+| `http.response.header` | string | HTTP response header. This describes the prefix to HTTP headers capturing | `http.response.header.content-type` | Yes |
+| `http.request.body` | string | HTTP message request body | `{"cart": {"6200f9eefd49910014d1e789": "1"} }` | Yes |
+| `http.response.body` | string | HTTP message response body | `{"inStock": {"6200f9eefd49910014d1e789": "true"} }` | Yes |
+
+Following attributes MUST be provided **at span creation time** (when provided at all), so they can be considered for sampling decisions:
+
+* `http.request.header`
+* `http.response.header`
+<!-- endsemconv -->
 
 The data MUST be trimmed according to the [Max Payload Size configuration parameter](../../../general.md#configuration)
 

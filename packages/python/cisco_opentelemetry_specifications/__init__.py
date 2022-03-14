@@ -39,6 +39,11 @@ class SemanticAttributes:
     The number in seconds to delay the message.
     """
 
+    AWS_SQS_MESSAGE_ATTRIBUTE = _SemanticAttribute("aws.sqs.message_attribute", False)
+    """
+    A prefix for all message attributes collection.
+    """
+
     HTTP_REQUEST_HEADER = _SemanticAttribute("http.request.header", True)
     """
     HTTP request header. This describes the prefix to HTTP headers capturing.

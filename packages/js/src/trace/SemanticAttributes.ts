@@ -47,6 +47,11 @@ export const SemanticAttributes = {
   AWS_SQS_RECORD_DELAY_SECONDS: <_SemanticAttribute>{ key: 'aws.sqs.record.delay_seconds', metadata: true },
 
   /**
+  * A prefix for all message attributes collection.
+  */
+  AWS_SQS_MESSAGE_ATTRIBUTE: <_SemanticAttribute>{ key: 'aws.sqs.message_attribute', metadata: false },
+
+  /**
   * HTTP request header. This describes the prefix to HTTP headers capturing.
   */
   HTTP_REQUEST_HEADER: <_SemanticAttribute>{ key: 'http.request.header', metadata: true },
