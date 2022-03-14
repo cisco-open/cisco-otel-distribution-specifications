@@ -40,8 +40,8 @@ groups:
       - id: message_attribute
         brief: A prefix for all message attributes collection.
         type: string
-        examples: >
-          {
+        examples:
+          - "{
             Title: {
               DataType: 'String',
               StringValue: 'The Whistler',
@@ -54,7 +54,7 @@ groups:
               DataType: 'Number',
               StringValue: '6',
             },
-          }
+          }"
 
 
 
