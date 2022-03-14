@@ -56,5 +56,5 @@ function generate_toc {
 
 generate_js
 generate_py
-generate_toc
+# generate_toc
 generate_markdown

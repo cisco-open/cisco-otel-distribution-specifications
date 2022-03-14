@@ -44,6 +44,31 @@ class SemanticAttributes:
     A prefix for all message attributes collection.
     """
 
+    AWS_SQS_REQUEST_ENTRY = _SemanticAttribute("aws.sqs.request_entry", False)
+    """
+    point to batch requets entries.
+    """
+
+    AWS_SQS_VISIBILITY_TIMEOUT = _SemanticAttribute("aws.sqs.visibility_timeout", False)
+    """
+    The number in seconds of how long this message will be available to consume.
+    """
+
+    AWS_SQS_WAIT_TIME_SECONDS = _SemanticAttribute("aws.sqs.wait_time_seconds", True)
+    """
+    The number in seconds for the polling time.
+    """
+
+    AWS_SQS_MAX_NUMBER_OF_MESSAGES = _SemanticAttribute("aws.sqs.max_number_of_messages", True)
+    """
+    The maximum number of messages can recive.
+    """
+
+    AWS_SQS_ATTRIBUTE_NAME = _SemanticAttribute("aws.sqs.attribute_name", False)
+    """
+    A prefix for all message attributes collection.
+    """
+
     HTTP_REQUEST_HEADER = _SemanticAttribute("http.request.header", True)
     """
     HTTP request header. This describes the prefix to HTTP headers capturing.

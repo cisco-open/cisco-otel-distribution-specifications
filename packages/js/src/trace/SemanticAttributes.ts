@@ -52,6 +52,31 @@ export const SemanticAttributes = {
   AWS_SQS_MESSAGE_ATTRIBUTE: <_SemanticAttribute>{ key: 'aws.sqs.message_attribute', metadata: false },
 
   /**
+  * point to batch requets entries.
+  */
+  AWS_SQS_REQUEST_ENTRY: <_SemanticAttribute>{ key: 'aws.sqs.request_entry', metadata: false },
+
+  /**
+  * The number in seconds of how long this message will be available to consume.
+  */
+  AWS_SQS_VISIBILITY_TIMEOUT: <_SemanticAttribute>{ key: 'aws.sqs.visibility_timeout', metadata: false },
+
+  /**
+  * The number in seconds for the polling time.
+  */
+  AWS_SQS_WAIT_TIME_SECONDS: <_SemanticAttribute>{ key: 'aws.sqs.wait_time_seconds', metadata: true },
+
+  /**
+  * The maximum number of messages can recive.
+  */
+  AWS_SQS_MAX_NUMBER_OF_MESSAGES: <_SemanticAttribute>{ key: 'aws.sqs.max_number_of_messages', metadata: true },
+
+  /**
+  * A prefix for all message attributes collection.
+  */
+  AWS_SQS_ATTRIBUTE_NAME: <_SemanticAttribute>{ key: 'aws.sqs.attribute_name', metadata: false },
+
+  /**
   * HTTP request header. This describes the prefix to HTTP headers capturing.
   */
   HTTP_REQUEST_HEADER: <_SemanticAttribute>{ key: 'http.request.header', metadata: true },
