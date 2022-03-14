@@ -17,6 +17,18 @@ from collections import namedtuple
 _SemanticAttribute = namedtuple('_SemanticAttribute', 'key value')
 
 class SemanticAttributes:
+    AWS_SQS_QUEUE_NAME = _SemanticAttribute("aws.sqs.queue_name", True)
+    """
+    The SQS queue name.
+    Note: Assuming this structure for QueueUrl: "https://sqs.<region>.amazonaws.com/<accountId>/<queueName>".
+    """
+
+    AWS_SQS_ACCOUNT_ID = _SemanticAttribute("aws.sqs.account_id", False)
+    """
+    The user account id.
+    Note: Assuming this structure for QueueUrl: "https://sqs.<region>.amazonaws.com/<accountId>/<queueName>".
+    """
+
     HTTP_REQUEST_HEADER = _SemanticAttribute("http.request.header", True)
     """
     HTTP request header. This describes the prefix to HTTP headers capturing.

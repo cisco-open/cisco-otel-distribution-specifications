@@ -1,0 +1,25 @@
+groups:
+  - id: aws.sqs
+    prefix: aws.sqs
+    brief: >
+      Additional Span attributes to collect for the full Telescope experience.
+    attributes:
+      - id: queue_name
+        type: string
+        brief: >
+          The SQS queue name.
+        sampling_relevant: true
+        note: >
+          Assuming this structure for QueueUrl:
+          https://sqs.<region>.amazonaws.com/<accountId>/<queueName>
+        examples:
+          ['retail-store-lambda-reports']
+      - id: account_id
+        type: int
+        brief: >
+          The user account id.
+        note: >
+          Assuming this structure for QueueUrl:
+          https://sqs.<region>.amazonaws.com/<accountId>/<queueName>
+        examples:
+          [147457102604]

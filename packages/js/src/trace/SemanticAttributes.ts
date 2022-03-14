@@ -23,6 +23,20 @@ type _SemanticAttribute = {
 export const SemanticAttributes = {
 
   /**
+  * The SQS queue name.
+  *
+  * Note: Assuming this structure for QueueUrl: &#34;https://sqs.&lt;region&gt;.amazonaws.com/&lt;accountId&gt;/&lt;queueName&gt;&#34;.
+  */
+  AWS_SQS_QUEUE_NAME: <_SemanticAttribute>{ key: 'aws.sqs.queue_name', metadata: true },
+
+  /**
+  * The user account id.
+  *
+  * Note: Assuming this structure for QueueUrl: &#34;https://sqs.&lt;region&gt;.amazonaws.com/&lt;accountId&gt;/&lt;queueName&gt;&#34;.
+  */
+  AWS_SQS_ACCOUNT_ID: <_SemanticAttribute>{ key: 'aws.sqs.account_id', metadata: false },
+
+  /**
   * HTTP request header. This describes the prefix to HTTP headers capturing.
   */
   HTTP_REQUEST_HEADER: <_SemanticAttribute>{ key: 'http.request.header', metadata: true },
