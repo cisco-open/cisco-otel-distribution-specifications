@@ -17,6 +17,46 @@ from collections import namedtuple
 _SemanticAttribute = namedtuple('_SemanticAttribute', 'key value')
 
 class SemanticAttributes:
+    DB_DYNAMO_PARAMETERS = _SemanticAttribute("db.dynamo.parameters", True)
+    """
+    The request parameters.
+    """
+
+    DB_DYNAMO_RESPONSE = _SemanticAttribute("db.dynamo.response", True)
+    """
+    The DynamoDB response data.
+    """
+
+    AWS_SNS_MESSAGE_ID = _SemanticAttribute("aws.sns.message_id", True)
+    """
+    The message ID.
+    """
+
+    AWS_SNS_MESSAGE_STRUCTURE = _SemanticAttribute("aws.sns.message_structure", True)
+    """
+    The message Message structure.
+    """
+
+    AWS_SNS_MESSAGE_ATTRIBUTE = _SemanticAttribute("aws.sns.message_attribute", False)
+    """
+    A prefix for all message attributes collection.
+    """
+
+    AWS_SNS_PHONE_NUMBER = _SemanticAttribute("aws.sns.phone_number", True)
+    """
+    The phone number for SMS sending.
+    """
+
+    AWS_SNS_TOPIC_ARN = _SemanticAttribute("aws.sns.topic_arn", True)
+    """
+    The topic ARN ID.
+    """
+
+    AWS_SNS_SUBJECT = _SemanticAttribute("aws.sns.subject", True)
+    """
+    The SNS subject.
+    """
+
     AWS_SQS_QUEUE_NAME = _SemanticAttribute("aws.sqs.queue_name", True)
     """
     The SQS queue name.
@@ -106,6 +146,26 @@ class SemanticAttributes:
     string list of all records.
     """
 
+    RPC_REQUEST_METADATA = _SemanticAttribute("rpc.request.metadata", True)
+    """
+    prefix to request metadata.
+    """
+
+    RPC_REQUEST_BODY = _SemanticAttribute("rpc.request.body", False)
+    """
+    The transferred body.
+    """
+
+    RPC_RESPONSE_METADATA = _SemanticAttribute("rpc.response.metadata", True)
+    """
+    prefix to response metadata.
+    """
+
+    RPC_RESPONSE_BODY = _SemanticAttribute("rpc.response.body", False)
+    """
+    The transferred body.
+    """
+
     HTTP_REQUEST_HEADER = _SemanticAttribute("http.request.header", True)
     """
     HTTP request header. This describes the prefix to HTTP headers capturing.
@@ -124,4 +184,29 @@ class SemanticAttributes:
     HTTP_RESPONSE_BODY = _SemanticAttribute("http.response.body", False)
     """
     HTTP message response body.
+    """
+
+    MESSAGING_RABBITMQ_MESSAGE_HEADER = _SemanticAttribute("messaging.rabbitmq.message.header", True)
+    """
+    prefix to headers.
+    """
+
+    MESSAGING_RABBITMQ_PAYLOAD = _SemanticAttribute("messaging.rabbitmq.payload", False)
+    """
+    The transferred payload.
+    """
+
+    MESSAGING_RABBITMQ_PAYLOAD_SIZE = _SemanticAttribute("messaging.rabbitmq.payload_size", True)
+    """
+    The transferred payload size in bytes.
+    """
+
+    DB_REDIS_ARGUMENTS = _SemanticAttribute("db.redis.arguments", True)
+    """
+    The request arguments.
+    """
+
+    DB_REDIS_RESPONSE = _SemanticAttribute("db.redis.response", True)
+    """
+    The response data.
     """

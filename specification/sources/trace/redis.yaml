@@ -1,0 +1,21 @@
+groups:
+  - id: db.redis
+    prefix: db.redis
+    brief: >
+      Additional Span attributes to collect for the full Telescope experience.
+
+    attributes:
+      - id: arguments
+        brief: The request arguments
+        type: string
+        sampling_relevant: true
+        required: always
+        examples: '["coupons"]'
+
+      - id: response
+        brief: The response data
+        type: string
+        sampling_relevant: true
+        required: always
+        examples: '50'
+
