@@ -15,7 +15,7 @@
 |---|---|---|---|---|
 | `aws.sqs.queue_name` | string | The SQS queue name. [1] | `retail-store-lambda-reports` | Yes |
 | `aws.sqs.account_id` | int | The user account id. [2] | `147457102604` | Yes |
-| `aws.sqs.record.message_id` | string | The record message ID [3] | `5652789a-f672-5064-9459-223395b82d3a` | No |
+| `aws.sqs.record.message_id` | string | The record message ID [3] | `5652789a-f672-5064-9459-223395b82d3a` | Yes |
 | `aws.sqs.record.message_body` | string | The response body [4] | `{response: 'message'}` | Yes |
 
 **[1]:** Assuming this structure for QueueUrl: https://sqs.<region>.amazonaws.com/<accountId>/<queueName>
@@ -50,7 +50,7 @@ Following attributes MUST be provided **at span creation time** (when provided a
 | Attribute  | Type | Description  | Examples  | Required |
 |---|---|---|---|---|
 | `aws.sqs.request_entry` | string | prefix to batch requets entries | `[]` | Yes |
-| `aws.sqs.result_error_entry` | string | prefix to batch result error entries | `[]` | No |
+| `aws.sqs.result_error_entry` | string | prefix to batch result error entries | `[]` | Yes |
 | `aws.sqs.result_entry` | string | prefix to batch result entries | `[]` | Yes |
 <!-- endsemconv -->
 
