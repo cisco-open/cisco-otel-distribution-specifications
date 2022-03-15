@@ -78,7 +78,7 @@ export const SemanticAttributes = {
   /**
   * The number in seconds of how long this message will be available to consume.
   */
-  AWS_SQS_VISIBILITY_TIMEOUT: <_SemanticAttribute>{ key: 'aws.sqs.visibility_timeout', metadata: false },
+  AWS_SQS_VISIBILITY_TIMEOUT: <_SemanticAttribute>{ key: 'aws.sqs.visibility_timeout', metadata: true },
 
   /**
   * The number in seconds for the polling time.

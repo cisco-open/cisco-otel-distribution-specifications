@@ -66,7 +66,7 @@ class SemanticAttributes:
     prefix to batch result entries.
     """
 
-    AWS_SQS_VISIBILITY_TIMEOUT = _SemanticAttribute("aws.sqs.visibility_timeout", False)
+    AWS_SQS_VISIBILITY_TIMEOUT = _SemanticAttribute("aws.sqs.visibility_timeout", True)
     """
     The number in seconds of how long this message will be available to consume.
     """

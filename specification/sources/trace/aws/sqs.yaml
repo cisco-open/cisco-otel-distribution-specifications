@@ -11,13 +11,16 @@ groups:
           Assuming this structure for QueueUrl:
           https://sqs.<region>.amazonaws.com/<accountId>/<queueName>
         sampling_relevant: true
+        required: always
         examples: 'retail-store-lambda-reports'
+
       - id: account_id
         type: int
         brief: The user account id.
         note: >
           Assuming this structure for QueueUrl:
           https://sqs.<region>.amazonaws.com/<accountId>/<queueName>
+        required: always
         sampling_relevant: true
         examples: 147457102604
 
@@ -26,6 +29,7 @@ groups:
         note: Captured from SendMessage,ReceiveMessage only
         type: string
         sampling_relevant: true
+        required: always
         examples: "5652789a-f672-5064-9459-223395b82d3a"
 
       - id: record.message_body
@@ -33,6 +37,7 @@ groups:
         note: Captured from SendMessage,ReceiveMessage only
         type: string
         sampling_relevant: false
+        required: always
         examples: "{response: 'message'}"
 
 
@@ -44,11 +49,13 @@ groups:
         brief: The number in seconds to delay the message
         type: int
         sampling_relevant: true
+        required: always
         examples: 10
 
       - id: message_attribute
         brief: A prefix for all message attributes collection.
         type: string
+        required: always
         examples:
           - "aws.sqs.message_attribute.Title={DataType: 'String', StringValue: 'The Whistler'}"
 
@@ -60,18 +67,21 @@ groups:
         brief: prefix to batch requets entries
         type: string
         sampling_relevant: false
+        required: always
         examples: '[]'
 
       - id: result_error_entry
         brief: prefix to batch result error entries
         type: string
         sampling_relevant: false
+        required: always
         examples: '[]'
 
       - id: result_entry
         brief: prefix to batch result entries
         type: string
         sampling_relevant: false
+        required: always
         examples: '[]'
 
   - id: aws.sqs.receive_message
@@ -81,42 +91,50 @@ groups:
       - id: visibility_timeout
         brief: The number in seconds of how long this message will be available to consume
         type: int
+        sampling_relevant: true
+        required: always
         examples: 10
 
       - id: wait_time_seconds
         brief: The number in seconds for the polling time
         type: int
         sampling_relevant: true
+        required: always
         examples: 10
 
       - id: max_number_of_messages
         brief: The maximum number of messages can recive
         type: int
         sampling_relevant: true
+        required: always
         examples: 10
 
       - id: attribute_name
         brief: A prefix for all attributes names collection.
         type: string
         sampling_relevant: true
+        required: always
         examples: "aws.sqs.attribute_name.attr=name"
 
       - id: message_attribute_name
         brief: A prefix for all message attributes names collection.
         type: string
         sampling_relevant: true
+        required: always
         examples: "aws.sqs.message_attribute_name.attr=name"
 
       - id: record.attribute
         brief: prefix to record attributes
         type: string
         sampling_relevant: false
+        required: always
         examples: "aws.sqs.record.attribute.key='attribute'"
 
       - id: record.message_attribute
         brief: prefix to record message attributes
         type: string
         sampling_relevant: false
+        required: always
         examples:
           - "aws.sqs.record.message_attribute.key='message attribute'"
 
@@ -124,6 +142,7 @@ groups:
         brief: string list of all records
         type: string
         sampling_relevant: true
+        required: always
         examples:
         - '[
              {
