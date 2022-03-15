@@ -3,7 +3,9 @@
 Specifications for Ciscos Opentelemetry Distributions.
 
 ## Usage
+
 in order to generate new docs and code packages from the yaml files, run:
+
 ```shell
 ./tools/scripts/generate.sh
 ```
