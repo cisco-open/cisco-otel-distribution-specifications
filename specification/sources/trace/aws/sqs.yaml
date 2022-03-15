@@ -127,7 +127,7 @@ groups:
         type: string
         sampling_relevant: false
         required: always
-        examples: "aws.sqs.record.attribute.key='attribute'"
+        examples: "aws.sqs.record.attribute.key=attribute"
 
       - id: record.message_attribute
         brief: prefix to record message attributes

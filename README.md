@@ -2,4 +2,10 @@
 
 Specifications for Ciscos Opentelemetry Distributions.
 
-Markdown files are linted with [markdownlint](https://github.com/DavidAnson/markdownlint)
+## Usage
+in order to generate new docs and code packages from the yaml files, run:
+```shell
+./tools/scripts/generate.sh
+```
+
+The command will generate from all source yaml files, new packages and docs.

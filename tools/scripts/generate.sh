@@ -54,6 +54,7 @@ function generate_toc {
 	done
 }
 
+# Generate from source yaml files, code packages, markdowns
 generate_js
 generate_py
 generate_toc
