@@ -29,9 +29,16 @@ class SemanticAttributes:
     Note: Assuming this structure for QueueUrl: https://sqs.<region>.amazonaws.com/<accountId>/<queueName>.
     """
 
+    AWS_SQS_RECORD_MESSAGE_ID = _SemanticAttribute("aws.sqs.record.message_id", True)
+    """
+    The record message ID.
+    Note: Captured from SendMessage,ReceiveMessage only.
+    """
+
     AWS_SQS_RECORD_MESSAGE_BODY = _SemanticAttribute("aws.sqs.record.message_body", False)
     """
-    The SQS message body.
+    The response body.
+    Note: Captured from SendMessage,ReceiveMessage only.
     """
 
     AWS_SQS_RECORD_DELAY_SECONDS = _SemanticAttribute("aws.sqs.record.delay_seconds", True)
@@ -46,7 +53,17 @@ class SemanticAttributes:
 
     AWS_SQS_REQUEST_ENTRY = _SemanticAttribute("aws.sqs.request_entry", False)
     """
-    point to batch requets entries.
+    prefix to batch requets entries.
+    """
+
+    AWS_SQS_RESULT_ERROR_ENTRY = _SemanticAttribute("aws.sqs.result_error_entry", False)
+    """
+    prefix to batch result error entries.
+    """
+
+    AWS_SQS_RESULT_ENTRY = _SemanticAttribute("aws.sqs.result_entry", False)
+    """
+    prefix to batch result entries.
     """
 
     AWS_SQS_VISIBILITY_TIMEOUT = _SemanticAttribute("aws.sqs.visibility_timeout", False)
@@ -72,6 +89,21 @@ class SemanticAttributes:
     AWS_SQS_MESSAGE_ATTRIBUTE_NAME = _SemanticAttribute("aws.sqs.message_attribute_name", True)
     """
     A prefix for all message attributes names collection.
+    """
+
+    AWS_SQS_RECORD_ATTRIBUTE = _SemanticAttribute("aws.sqs.record.attribute", False)
+    """
+    prefix to record attributes.
+    """
+
+    AWS_SQS_RECORD_MESSAGE_ATTRIBUTE = _SemanticAttribute("aws.sqs.record.message_attribute", False)
+    """
+    prefix to record message attributes.
+    """
+
+    AWS_SQS_AWS_SQS_RECORD = _SemanticAttribute("aws.sqs.aws.sqs.record", True)
+    """
+    string list of all records.
     """
 
     HTTP_REQUEST_HEADER = _SemanticAttribute("http.request.header", True)

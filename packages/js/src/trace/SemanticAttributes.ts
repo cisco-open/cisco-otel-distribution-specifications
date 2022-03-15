@@ -37,7 +37,16 @@ export const SemanticAttributes = {
   AWS_SQS_ACCOUNT_ID: <_SemanticAttribute>{ key: 'aws.sqs.account_id', metadata: true },
 
   /**
-  * The SQS message body.
+  * The record message ID.
+  *
+  * Note: Captured from SendMessage,ReceiveMessage only.
+  */
+  AWS_SQS_RECORD_MESSAGE_ID: <_SemanticAttribute>{ key: 'aws.sqs.record.message_id', metadata: true },
+
+  /**
+  * The response body.
+  *
+  * Note: Captured from SendMessage,ReceiveMessage only.
   */
   AWS_SQS_RECORD_MESSAGE_BODY: <_SemanticAttribute>{ key: 'aws.sqs.record.message_body', metadata: false },
 
@@ -52,9 +61,19 @@ export const SemanticAttributes = {
   AWS_SQS_MESSAGE_ATTRIBUTE: <_SemanticAttribute>{ key: 'aws.sqs.message_attribute', metadata: false },
 
   /**
-  * point to batch requets entries.
+  * prefix to batch requets entries.
   */
   AWS_SQS_REQUEST_ENTRY: <_SemanticAttribute>{ key: 'aws.sqs.request_entry', metadata: false },
+
+  /**
+  * prefix to batch result error entries.
+  */
+  AWS_SQS_RESULT_ERROR_ENTRY: <_SemanticAttribute>{ key: 'aws.sqs.result_error_entry', metadata: false },
+
+  /**
+  * prefix to batch result entries.
+  */
+  AWS_SQS_RESULT_ENTRY: <_SemanticAttribute>{ key: 'aws.sqs.result_entry', metadata: false },
 
   /**
   * The number in seconds of how long this message will be available to consume.
@@ -80,6 +99,21 @@ export const SemanticAttributes = {
   * A prefix for all message attributes names collection.
   */
   AWS_SQS_MESSAGE_ATTRIBUTE_NAME: <_SemanticAttribute>{ key: 'aws.sqs.message_attribute_name', metadata: true },
+
+  /**
+  * prefix to record attributes.
+  */
+  AWS_SQS_RECORD_ATTRIBUTE: <_SemanticAttribute>{ key: 'aws.sqs.record.attribute', metadata: false },
+
+  /**
+  * prefix to record message attributes.
+  */
+  AWS_SQS_RECORD_MESSAGE_ATTRIBUTE: <_SemanticAttribute>{ key: 'aws.sqs.record.message_attribute', metadata: false },
+
+  /**
+  * string list of all records.
+  */
+  AWS_SQS_AWS_SQS_RECORD: <_SemanticAttribute>{ key: 'aws.sqs.aws.sqs.record', metadata: true },
 
   /**
   * HTTP request header. This describes the prefix to HTTP headers capturing.

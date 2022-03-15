@@ -21,16 +21,25 @@ groups:
         sampling_relevant: true
         examples: 147457102604
 
+      - id: record.message_id
+        brief: The record message ID
+        note: Captured from SendMessage,ReceiveMessage only
+        type: string
+        sampling_relevant: true
+        examples: "5652789a-f672-5064-9459-223395b82d3a"
+
+      - id: record.message_body
+        brief: The response body
+        note: Captured from SendMessage,ReceiveMessage only
+        type: string
+        sampling_relevant: false
+        examples: "{response: 'message'}"
+
+
   - id: aws.sqs.send_message
     prefix: aws.sqs
     brief: a unique data that captured from aws.sqs reuqest/response SendMessage type.
     attributes:
-      - id: record.message_body
-        brief: The SQS message body
-        type: string
-        sampling_relevant: false
-        examples: 'Test sqs: This is the message body.'
-
       - id: record.delay_seconds
         brief: The number in seconds to delay the message
         type: int
@@ -42,12 +51,6 @@ groups:
         type: string
         examples:
           - "aws.sqs.message_attribute.Title={DataType: 'String', StringValue: 'The Whistler'}"
-
-      - id: record.message_id
-        brief: The record message ID
-        type: string
-        sampling_relevant: true
-        examples: "5652789a-f672-5064-9459-223395b82d3a"
 
   - id: aws.sqs.send_message_batch
     prefix: aws.sqs
@@ -104,12 +107,6 @@ groups:
         sampling_relevant: true
         examples: "aws.sqs.message_attribute_name.attr=name"
 
-      - id: record.message_body
-        brief: The response body
-        type: string
-        sampling_relevant: false
-        examples: "{response: 'message'}"
-
       - id: record.attribute
         brief: prefix to record attributes
         type: string
@@ -122,12 +119,6 @@ groups:
         sampling_relevant: false
         examples:
           - "aws.sqs.record.message_attribute.key='message attribute'"
-
-      - id: record.message_id
-        brief: The record message ID
-        type: string
-        sampling_relevant: true
-        examples: "5652789a-f672-5064-9459-223395b82d3a"
 
       - id: aws.sqs.record
         brief: string list of all records
