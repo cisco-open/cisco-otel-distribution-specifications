@@ -144,17 +144,4 @@ groups:
         sampling_relevant: true
         required: always
         examples:
-        - '[
-             {
-               "message_body": "{\"cart\":{\"0e882f33-a55b-4af6-bc85-02ffb2ec70e1\":\"1\",\"a00018c0-3ffa-4e92-90b5-7f17e0c0f00e\":\"1\",\"03589a66-5ef2-4f5b-9381-bf22235d06a7\":\"1\"},\"userEmail\":\"anthony@store.com\"}",
-                                           "md5_of_message_body": "2c0f54a5544aa1a43ea6bf9911931dd9",
-                                           "message_attributes": { },
-                                           "message_id": "62c3c03c-b1ed-419e-a45a-833d781e14d1",
-                                           "attributes": {
-                                             "ApproximateFirstReceiveTimestamp": "1647272329827",
-                                             "SentTimestamp": "1647272329826",
-                                             "SenderId": "AROASEVJA2MGCYV5OZ33I:retail-store-lambda-checkout-demo-checkout",
-                                             "ApproximateReceiveCount": "1"
-                                           }
-      }
-      ]'
+        - '[{"message_body": "{"cart": {"12341234": "1"}"}]'
