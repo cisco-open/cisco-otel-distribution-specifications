@@ -3,7 +3,9 @@
 <!-- toc -->
 
 - [Common attributes](#common-attributes)
-- [Request SendMessage attributes](#request-sendmessage-attributes)
+- [SendMessage attributes](#sendmessage-attributes)
+- [SendMessageBatch attributes](#sendmessagebatch-attributes)
+- [ReceiveMessage attributes](#receivemessage-attributes)
 
 <!-- tocstop -->
 
