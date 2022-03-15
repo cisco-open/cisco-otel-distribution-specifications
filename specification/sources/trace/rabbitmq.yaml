@@ -25,5 +25,3 @@ groups:
         sampling_relevant: true
         required: always
         examples: 1337
-
-

@@ -17,5 +17,4 @@ groups:
         type: string
         sampling_relevant: true
         required: always
-        examples: '50'
-
+        examples: "50"
