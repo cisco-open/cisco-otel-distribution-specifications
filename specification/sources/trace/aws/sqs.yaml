@@ -12,7 +12,7 @@ groups:
           https://sqs.<region>.amazonaws.com/<accountId>/<queueName>
         sampling_relevant: true
         required: always
-        examples: 'retail-store-lambda-reports'
+        examples: "retail-store-lambda-reports"
 
       - id: account_id
         type: int
@@ -39,7 +39,6 @@ groups:
         sampling_relevant: false
         required: always
         examples: "{response: 'message'}"
-
 
   - id: aws.sqs.send_message
     prefix: aws.sqs
@@ -68,21 +67,21 @@ groups:
         type: string
         sampling_relevant: false
         required: always
-        examples: '[]'
+        examples: "[]"
 
       - id: result_error_entry
         brief: prefix to batch result error entries
         type: string
         sampling_relevant: false
         required: always
-        examples: '[]'
+        examples: "[]"
 
       - id: result_entry
         brief: prefix to batch result entries
         type: string
         sampling_relevant: false
         required: always
-        examples: '[]'
+        examples: "[]"
 
   - id: aws.sqs.receive_message
     prefix: aws.sqs
@@ -144,4 +143,4 @@ groups:
         sampling_relevant: true
         required: always
         examples:
-        - '[{"message_body": "{"cart": {"12341234": "1"}"}]'
+          - '[{"message_body": "{"cart": {"12341234": "1"}"}]'
