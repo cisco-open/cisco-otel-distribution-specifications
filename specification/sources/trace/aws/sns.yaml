@@ -1,0 +1,51 @@
+groups:
+  - id: aws.sns
+    prefix: aws.sns
+    brief: >
+      Additional Span attributes to collect for the full Telescope experience.
+
+  - id: aws.sns.publish
+    prefix: aws.sns
+    brief: a unique data that captured from aws.sns reuqest/response Publish
+    attributes:
+      - id: message_id
+        brief: The message ID
+        type: string
+        sampling_relevant: true
+        required: always
+        examples: "5652789a-f672-5064-9459-223395b82d3a"
+
+      - id: message_structure
+        brief: The message Message structure
+        type: string
+        sampling_relevant: true
+        required: always
+        examples: "json"
+
+      - id: message_attribute
+        brief: A prefix for all message attributes collection.
+        type: string
+        required: always
+        examples:
+          - "aws.snq.message_attribute.Title={DataType: 'String', StringValue: 'The Whistler'}"
+
+      - id: phone_number
+        brief: The phone number for SMS sending
+        type: string
+        sampling_relevant: true
+        required: always
+        examples: "+972 52 367 2314"
+
+      - id: topic_arn
+        brief: The topic ARN ID
+        type: string
+        sampling_relevant: true
+        required: always
+        examples: "arn:aws:iam::123456789012:user/Development/product_1234"
+
+      - id: subject
+        brief: The SNS subject
+        type: string
+        sampling_relevant: true
+        required: always
+        examples: "subject"

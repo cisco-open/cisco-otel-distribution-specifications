@@ -8,5 +8,5 @@ AWS API is based on HTTP API for each one of the services (see [AWS API Referenc
 
 This attributes are to be set for any API operation executed by the AWS SDK.
 
-| Attribute  | Type   | Description  | Example  | Metadata / Data |
-|---|---|---|---|---|
+| Attribute | Type | Description | Example | Metadata / Data |
+| --------- | ---- | ----------- | ------- | --------------- |
