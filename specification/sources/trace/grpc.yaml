@@ -1,0 +1,35 @@
+groups:
+  - id: rpc.grpc
+    prefix: rpc
+    brief: >
+      Additional Span attributes to collect for the full Telescope experience.
+      Describes the data for Client/Server, Unary/Stream collections.
+
+    attributes:
+      - id: request.metadata
+        brief: prefix to request metadata
+        type: string
+        sampling_relevant: true
+        required: always
+        examples: '"rpc.request.metadata.key=value'
+
+      - id: request.body
+        brief: The transferred body
+        type: string
+        sampling_relevant: false
+        required: always
+        examples: '"{"Count":52,"ScannedCount":52}"'
+
+      - id: response.metadata
+        brief: prefix to response metadata
+        type: string
+        sampling_relevant: true
+        required: always
+        examples: '"rpc.request.metadata.key=value'
+
+      - id: response.body
+        brief: The transferred body
+        type: string
+        sampling_relevant: false
+        required: always
+        examples: '"{"Count":52,"ScannedCount":52}"'

@@ -1,0 +1,27 @@
+groups:
+  - id: messaging.rabbitmq
+    prefix: messaging.rabbitmq
+    brief: >
+      Additional Span attributes to collect for the full Telescope experience.
+
+    attributes:
+      - id: message.header
+        brief: prefix to headers
+        type: string
+        sampling_relevant: true
+        required: always
+        examples: '"messaging.rabbitmq.message.header.key=value'
+
+      - id: payload
+        brief: The transferred payload
+        type: string
+        sampling_relevant: false
+        required: always
+        examples: '"{"Count":52,"ScannedCount":52}"'
+
+      - id: payload_size
+        brief: The transferred payload size in bytes
+        type: int
+        sampling_relevant: true
+        required: always
+        examples: 1337

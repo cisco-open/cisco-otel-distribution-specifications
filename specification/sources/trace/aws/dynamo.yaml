@@ -1,0 +1,23 @@
+groups:
+  - id: aws.dynamo
+    prefix: aws.dynamo
+    brief: >
+      Additional Span attributes to collect for the full Telescope experience.
+
+  - id: aws.dynamo.put_item
+    prefix: db.dynamo
+    brief: a unique data that captured from AWS DynamoDB reuqest/response PutItem
+    attributes:
+      - id: parameters
+        brief: The request parameters
+        type: string
+        sampling_relevant: true
+        required: always
+        examples: '"{"TableName": "retail-store-lambda-inventory-items"}"'
+
+      - id: response
+        brief: The DynamoDB response data
+        type: string
+        sampling_relevant: true
+        required: always
+        examples: '"{"Count":52,"ScannedCount":52}"'
