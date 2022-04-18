@@ -1,0 +1,42 @@
+consts:
+  - const:
+    name: default_collector_endpoint
+    value: "https://production.cisco-udp.com/trace-collector"
+    type: string
+    brief: The default URL to Telescope OTel collector
+
+  - const:
+    name: default_collector_type
+    value: otlp-http
+    type: string
+    brief: The default Collector type
+
+  - const:
+    name: token_header_key
+    value: authorization
+    type: string
+    brief: The header key name
+
+  - const:
+    name: default_payloads_enabled
+    type: bool
+    value: false
+    brief: Whether should collect payloads by default
+
+  - const:
+    name: default_service_name
+    value: application
+    type: string
+    brief: The default service name
+
+  - const:
+    name: default_max_payload_size
+    type: int
+    value: 1024
+    brief: The default max payload size to capture
+
+  - const:
+    name: default_cisco_debug
+    value: false
+    type: bool
+    brief: The default cisco debug logs mode

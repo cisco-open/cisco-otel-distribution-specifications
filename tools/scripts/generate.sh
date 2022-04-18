@@ -5,6 +5,7 @@ GENERATOR_VERSION=0.11.0
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ROOT_DIR="${SCRIPT_DIR}/../../"
 ALL_DOCS=$(find ${ROOT_DIR} -type f -name '*.md' -not -path './.github/*' -not -path './node_modules/*' | sort)
+SCHEMA_URL="${ROOT_DIR}/tools/templates/schemas/consts.schema.json"
 
 # Functions
 function generate_js {
@@ -18,7 +19,15 @@ function generate_js {
     --template /templates/SemanticAttributes.ts.j2 \
     --output /output/SemanticAttributes.ts \
     -Dclass=SemanticAttributes
+
+  # Generate consts
+  docker run --rm \
+    -v ${ROOT_DIR}/specification/sources/consts.yaml:/source/consts.yaml \
+    -v ${SCRIPT_DIR}/../templates:/templates \
+    -e DATABASE=mysql56 -e IMAGE=latest \
+    dinutac/jinja2docker:latest /templates/consts.ts.j2 /source/consts.yaml --format=yaml > ${ROOT_DIR}/packages/js/src/consts.ts
 }
+
 
 function generate_py {
   docker run --rm \
@@ -31,6 +40,13 @@ function generate_py {
     --template /templates/semantic_attributes.py.j2 \
     --output /output/__init__.py \
     -Dclass=SemanticAttributes
+
+  # Generate consts
+  docker run --rm \
+    -v ${ROOT_DIR}/specification/sources/consts.yaml:/source/consts.yaml \
+    -v ${SCRIPT_DIR}/../templates:/templates \
+    -e DATABASE=mysql56 -e IMAGE=latest \
+    dinutac/jinja2docker:latest /templates/consts.py.j2 /source/consts.yaml --format=yaml > ${ROOT_DIR}/packages/python/cisco_opentelemetry_specifications/consts.py
 }
 
 function generate_markdown {
@@ -57,5 +73,6 @@ function generate_toc {
 # Generate from source yaml files, code packages, markdowns
 generate_js
 generate_py
-generate_toc
-generate_markdown
+#generate_toc
+#generate_markdown
+
