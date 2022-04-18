@@ -15,37 +15,41 @@
 */
 // DO NOT EDIT, this is an Auto-generated file from tools/templates/consts.ts.j2
 
-/**
- The default URL to Telescope OTel collector
- */
-export const DEFAULT_COLLECTOR_ENDPOINT = "https://production.cisco-udp.com/trace-collector";
 
-/**
- The default Collector type
- */
-export const DEFAULT_COLLECTOR_TYPE = "otlp-http";
-
-/**
- The header key name
- */
-export const TOKEN_HEADER_KEY = "authorization";
-
-/**
- Whether should collect payloads by default
- */
-export const DEFAULT_PAYLOADS_ENABLED = false;
-
-/**
- The default service name
- */
-export const DEFAULT_SERVICE_NAME = "application";
-
-/**
- The default max payload size to capture
- */
-export const DEFAULT_MAX_PAYLOAD_SIZE = 1024;
-
-/**
- The default cisco debug logs mode
- */
-export const DEFAULT_CISCO_DEBUG = false;
+export const Consts = {
+    /**
+     The default URL to Telescope OTel collector
+     */
+    DEFAULT_COLLECTOR_ENDPOINT: "https://production.cisco-udp.com/trace-collector",
+    
+    /**
+     The default Collector type
+     */
+    DEFAULT_COLLECTOR_TYPE: "otlp-http",
+    
+    /**
+     The header key name
+     */
+    TOKEN_HEADER_KEY: "authorization",
+    
+    /**
+     Whether should collect payloads by default
+     */
+    DEFAULT_PAYLOADS_ENABLED: false,
+    
+    /**
+     The default service name
+     */
+    DEFAULT_SERVICE_NAME: "application",
+    
+    /**
+     The default max payload size to capture
+     */
+    DEFAULT_MAX_PAYLOAD_SIZE: 1024,
+    
+    /**
+     The default cisco debug logs mode
+     */
+    DEFAULT_CISCO_DEBUG: false,
+    
+}

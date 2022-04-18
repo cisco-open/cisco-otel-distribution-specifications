@@ -38,7 +38,7 @@ function generate_py {
     -f /source \
     code \
     --template /templates/semantic_attributes.py.j2 \
-    --output /output/__init__.py \
+    --output /output/semantic_attributes.py \
     -Dclass=SemanticAttributes
 
   # Generate consts

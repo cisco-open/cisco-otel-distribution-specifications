@@ -25,10 +25,12 @@
     {% endif -%}
 {%- endmacro %}
 
-{%- for const in consts | unique(attribute="name") %}
-/**
- {{ const.brief }}
- */
-export const {{const.name | upper}} = {{ print_value(const.type, const.value) }};
-{# Extra line #}
-{%- endfor %}
+export const Consts = {
+    {%- for const in consts | unique(attribute="name") %}
+    /**
+     {{ const.brief }}
+     */
+    {{const.name | upper}}: {{ print_value(const.type, const.value) }},
+    {# Extra line #}
+    {%- endfor %}
+}

@@ -14,37 +14,40 @@
 
 # DO NOT EDIT, this is an Auto-generated file from tools/templates/consts.py.j2
 
-DEFAULT_COLLECTOR_ENDPOINT = "https://production.cisco-udp.com/trace-collector"
-"""
-The default URL to Telescope OTel collector
-"""
 
-DEFAULT_COLLECTOR_TYPE = "otlp-http"
-"""
-The default Collector type
-"""
-
-TOKEN_HEADER_KEY = "authorization"
-"""
-The header key name
-"""
-
-DEFAULT_PAYLOADS_ENABLED = False
-"""
-Whether should collect payloads by default
-"""
-
-DEFAULT_SERVICE_NAME = "application"
-"""
-The default service name
-"""
-
-DEFAULT_MAX_PAYLOAD_SIZE = 1024
-"""
-The default max payload size to capture
-"""
-
-DEFAULT_CISCO_DEBUG = False
-"""
-The default cisco debug logs mode
-"""
+class Consts:
+    DEFAULT_COLLECTOR_ENDPOINT = "https://production.cisco-udp.com/trace-collector"
+    """
+    The default URL to Telescope OTel collector
+    """
+    
+    DEFAULT_COLLECTOR_TYPE = "otlp-http"
+    """
+    The default Collector type
+    """
+    
+    TOKEN_HEADER_KEY = "authorization"
+    """
+    The header key name
+    """
+    
+    DEFAULT_PAYLOADS_ENABLED = False
+    """
+    Whether should collect payloads by default
+    """
+    
+    DEFAULT_SERVICE_NAME = "application"
+    """
+    The default service name
+    """
+    
+    DEFAULT_MAX_PAYLOAD_SIZE = 1024
+    """
+    The default max payload size to capture
+    """
+    
+    DEFAULT_CISCO_DEBUG = False
+    """
+    The default cisco debug logs mode
+    """
+    
