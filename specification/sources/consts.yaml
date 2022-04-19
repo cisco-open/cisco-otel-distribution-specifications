@@ -6,10 +6,10 @@ consts:
     brief: The default URL to Telescope OTel collector
 
   - const:
-    name: default_collector_type
+    name: default_exporter_type
     value: otlp-http
     type: string
-    brief: The default Collector type
+    brief: The default Exporter type
 
   - const:
     name: token_header_key
@@ -40,3 +40,39 @@ consts:
     value: false
     type: bool
     brief: The default cisco debug logs mode
+
+  - const:
+    name: cisco_debug_env
+    value: CISCO_DEBUG
+    type: string
+    brief: The Cisco debug env var name
+
+  - const:
+    name: cisco_max_payload_size_env
+    value: CISCO_MAX_PAYLOAD_SIZE
+    type: string
+    brief: The Cisco max payload size var name
+
+  - const:
+    name: cisco_payloads_enabled_env
+    value: CISCO_PAYLOADS_ENABLED
+    type: string
+    brief: The Cisco payloads enabled var name
+
+  - const:
+    name: otel_exporter_type_env
+    value: OTEL_EXPORTER_TYPE
+    type: string
+    brief: "The Otel exporter type var name. NOTE: that is OTEL env and he responsible to parse and use"
+
+  - const:
+    name: cisco_token_env
+    value: CISCO_TOKEN
+    type: string
+    brief: The Cisco Token env var name
+
+  - const:
+    name: otel_collector_endpoint
+    value: OTEL_COLLECTOR_ENDPOINT
+    type: string
+    brief: The Collector endpoint env var name

@@ -23,9 +23,9 @@ export const Consts = {
     DEFAULT_COLLECTOR_ENDPOINT: "https://production.cisco-udp.com/trace-collector",
     
     /**
-     The default Collector type
+     The default Exporter type
      */
-    DEFAULT_COLLECTOR_TYPE: "otlp-http",
+    DEFAULT_EXPORTER_TYPE: "otlp-http",
     
     /**
      The header key name
@@ -51,5 +51,35 @@ export const Consts = {
      The default cisco debug logs mode
      */
     DEFAULT_CISCO_DEBUG: false,
+    
+    /**
+     The Cisco debug env var name
+     */
+    CISCO_DEBUG_ENV: "CISCO_DEBUG",
+    
+    /**
+     The Cisco max payload size var name
+     */
+    CISCO_MAX_PAYLOAD_SIZE_ENV: "CISCO_MAX_PAYLOAD_SIZE",
+    
+    /**
+     The Cisco payloads enabled var name
+     */
+    CISCO_PAYLOADS_ENABLED_ENV: "CISCO_PAYLOADS_ENABLED",
+    
+    /**
+     The Otel exporter type var name. NOTE: that is OTEL env and he responsible to parse and use
+     */
+    OTEL_EXPORTER_TYPE_ENV: "OTEL_EXPORTER_TYPE",
+    
+    /**
+     The Cisco Token env var name
+     */
+    CISCO_TOKEN_ENV: "CISCO_TOKEN",
+    
+    /**
+     The Collector endpoint env var name
+     */
+    OTEL_COLLECTOR_ENDPOINT: "OTEL_COLLECTOR_ENDPOINT",
     
 }

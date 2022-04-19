@@ -21,9 +21,9 @@ class Consts:
     The default URL to Telescope OTel collector
     """
     
-    DEFAULT_COLLECTOR_TYPE = "otlp-http"
+    DEFAULT_EXPORTER_TYPE = "otlp-http"
     """
-    The default Collector type
+    The default Exporter type
     """
     
     TOKEN_HEADER_KEY = "authorization"
@@ -49,5 +49,35 @@ class Consts:
     DEFAULT_CISCO_DEBUG = False
     """
     The default cisco debug logs mode
+    """
+    
+    CISCO_DEBUG_ENV = "CISCO_DEBUG"
+    """
+    The Cisco debug env var name
+    """
+    
+    CISCO_MAX_PAYLOAD_SIZE_ENV = "CISCO_MAX_PAYLOAD_SIZE"
+    """
+    The Cisco max payload size var name
+    """
+    
+    CISCO_PAYLOADS_ENABLED_ENV = "CISCO_PAYLOADS_ENABLED"
+    """
+    The Cisco payloads enabled var name
+    """
+    
+    OTEL_EXPORTER_TYPE_ENV = "OTEL_EXPORTER_TYPE"
+    """
+    The Otel exporter type var name. NOTE: that is OTEL env and he responsible to parse and use
+    """
+    
+    CISCO_TOKEN_ENV = "CISCO_TOKEN"
+    """
+    The Cisco Token env var name
+    """
+    
+    OTEL_COLLECTOR_ENDPOINT = "OTEL_COLLECTOR_ENDPOINT"
+    """
+    The Collector endpoint env var name
     """
     
