@@ -14,7 +14,7 @@
 
 from collections import namedtuple
 
-_SemanticAttribute = namedtuple('_SemanticAttribute', 'key value')
+_SemanticAttribute = namedtuple('_SemanticAttribute', 'key sampling_relevant')
 
 class SemanticAttributes:
     DB_DYNAMO_PARAMETERS = _SemanticAttribute("db.dynamo.parameters", True)

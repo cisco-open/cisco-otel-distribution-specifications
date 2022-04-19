@@ -16,7 +16,7 @@
 
 type _SemanticAttribute = {
   key: string;
-  metadata: boolean;
+  sampling_relevant: boolean;
 }
 
 // DO NOT EDIT, this is an Auto-generated file from tools/templates/SemanticAttributes.ts.j2
@@ -25,198 +25,198 @@ export const SemanticAttributes = {
   /**
   * The request parameters.
   */
-  DB_DYNAMO_PARAMETERS: <_SemanticAttribute>{ key: 'db.dynamo.parameters', metadata: true },
+  DB_DYNAMO_PARAMETERS: <_SemanticAttribute>{ key: 'db.dynamo.parameters', sampling_relevant: true },
 
   /**
   * The DynamoDB response data.
   */
-  DB_DYNAMO_RESPONSE: <_SemanticAttribute>{ key: 'db.dynamo.response', metadata: true },
+  DB_DYNAMO_RESPONSE: <_SemanticAttribute>{ key: 'db.dynamo.response', sampling_relevant: true },
 
   /**
   * The message ID.
   */
-  AWS_SNS_MESSAGE_ID: <_SemanticAttribute>{ key: 'aws.sns.message_id', metadata: true },
+  AWS_SNS_MESSAGE_ID: <_SemanticAttribute>{ key: 'aws.sns.message_id', sampling_relevant: true },
 
   /**
   * The message Message structure.
   */
-  AWS_SNS_MESSAGE_STRUCTURE: <_SemanticAttribute>{ key: 'aws.sns.message_structure', metadata: true },
+  AWS_SNS_MESSAGE_STRUCTURE: <_SemanticAttribute>{ key: 'aws.sns.message_structure', sampling_relevant: true },
 
   /**
   * A prefix for all message attributes collection.
   */
-  AWS_SNS_MESSAGE_ATTRIBUTE: <_SemanticAttribute>{ key: 'aws.sns.message_attribute', metadata: false },
+  AWS_SNS_MESSAGE_ATTRIBUTE: <_SemanticAttribute>{ key: 'aws.sns.message_attribute', sampling_relevant: false },
 
   /**
   * The phone number for SMS sending.
   */
-  AWS_SNS_PHONE_NUMBER: <_SemanticAttribute>{ key: 'aws.sns.phone_number', metadata: true },
+  AWS_SNS_PHONE_NUMBER: <_SemanticAttribute>{ key: 'aws.sns.phone_number', sampling_relevant: true },
 
   /**
   * The topic ARN ID.
   */
-  AWS_SNS_TOPIC_ARN: <_SemanticAttribute>{ key: 'aws.sns.topic_arn', metadata: true },
+  AWS_SNS_TOPIC_ARN: <_SemanticAttribute>{ key: 'aws.sns.topic_arn', sampling_relevant: true },
 
   /**
   * The SNS subject.
   */
-  AWS_SNS_SUBJECT: <_SemanticAttribute>{ key: 'aws.sns.subject', metadata: true },
+  AWS_SNS_SUBJECT: <_SemanticAttribute>{ key: 'aws.sns.subject', sampling_relevant: true },
 
   /**
   * The SQS queue name.
   *
   * Note: Assuming this structure for QueueUrl: https://sqs.&lt;region&gt;.amazonaws.com/&lt;accountId&gt;/&lt;queueName&gt;.
   */
-  AWS_SQS_QUEUE_NAME: <_SemanticAttribute>{ key: 'aws.sqs.queue_name', metadata: true },
+  AWS_SQS_QUEUE_NAME: <_SemanticAttribute>{ key: 'aws.sqs.queue_name', sampling_relevant: true },
 
   /**
   * The user account id.
   *
   * Note: Assuming this structure for QueueUrl: https://sqs.&lt;region&gt;.amazonaws.com/&lt;accountId&gt;/&lt;queueName&gt;.
   */
-  AWS_SQS_ACCOUNT_ID: <_SemanticAttribute>{ key: 'aws.sqs.account_id', metadata: true },
+  AWS_SQS_ACCOUNT_ID: <_SemanticAttribute>{ key: 'aws.sqs.account_id', sampling_relevant: true },
 
   /**
   * The record message ID.
   *
   * Note: Captured from SendMessage,ReceiveMessage only.
   */
-  AWS_SQS_RECORD_MESSAGE_ID: <_SemanticAttribute>{ key: 'aws.sqs.record.message_id', metadata: true },
+  AWS_SQS_RECORD_MESSAGE_ID: <_SemanticAttribute>{ key: 'aws.sqs.record.message_id', sampling_relevant: true },
 
   /**
   * The response body.
   *
   * Note: Captured from SendMessage,ReceiveMessage only.
   */
-  AWS_SQS_RECORD_MESSAGE_BODY: <_SemanticAttribute>{ key: 'aws.sqs.record.message_body', metadata: false },
+  AWS_SQS_RECORD_MESSAGE_BODY: <_SemanticAttribute>{ key: 'aws.sqs.record.message_body', sampling_relevant: false },
 
   /**
   * The number in seconds to delay the message.
   */
-  AWS_SQS_RECORD_DELAY_SECONDS: <_SemanticAttribute>{ key: 'aws.sqs.record.delay_seconds', metadata: true },
+  AWS_SQS_RECORD_DELAY_SECONDS: <_SemanticAttribute>{ key: 'aws.sqs.record.delay_seconds', sampling_relevant: true },
 
   /**
   * A prefix for all message attributes collection.
   */
-  AWS_SQS_MESSAGE_ATTRIBUTE: <_SemanticAttribute>{ key: 'aws.sqs.message_attribute', metadata: false },
+  AWS_SQS_MESSAGE_ATTRIBUTE: <_SemanticAttribute>{ key: 'aws.sqs.message_attribute', sampling_relevant: false },
 
   /**
   * prefix to batch requets entries.
   */
-  AWS_SQS_REQUEST_ENTRY: <_SemanticAttribute>{ key: 'aws.sqs.request_entry', metadata: false },
+  AWS_SQS_REQUEST_ENTRY: <_SemanticAttribute>{ key: 'aws.sqs.request_entry', sampling_relevant: false },
 
   /**
   * prefix to batch result error entries.
   */
-  AWS_SQS_RESULT_ERROR_ENTRY: <_SemanticAttribute>{ key: 'aws.sqs.result_error_entry', metadata: false },
+  AWS_SQS_RESULT_ERROR_ENTRY: <_SemanticAttribute>{ key: 'aws.sqs.result_error_entry', sampling_relevant: false },
 
   /**
   * prefix to batch result entries.
   */
-  AWS_SQS_RESULT_ENTRY: <_SemanticAttribute>{ key: 'aws.sqs.result_entry', metadata: false },
+  AWS_SQS_RESULT_ENTRY: <_SemanticAttribute>{ key: 'aws.sqs.result_entry', sampling_relevant: false },
 
   /**
   * The number in seconds of how long this message will be available to consume.
   */
-  AWS_SQS_VISIBILITY_TIMEOUT: <_SemanticAttribute>{ key: 'aws.sqs.visibility_timeout', metadata: true },
+  AWS_SQS_VISIBILITY_TIMEOUT: <_SemanticAttribute>{ key: 'aws.sqs.visibility_timeout', sampling_relevant: true },
 
   /**
   * The number in seconds for the polling time.
   */
-  AWS_SQS_WAIT_TIME_SECONDS: <_SemanticAttribute>{ key: 'aws.sqs.wait_time_seconds', metadata: true },
+  AWS_SQS_WAIT_TIME_SECONDS: <_SemanticAttribute>{ key: 'aws.sqs.wait_time_seconds', sampling_relevant: true },
 
   /**
   * The maximum number of messages can recive.
   */
-  AWS_SQS_MAX_NUMBER_OF_MESSAGES: <_SemanticAttribute>{ key: 'aws.sqs.max_number_of_messages', metadata: true },
+  AWS_SQS_MAX_NUMBER_OF_MESSAGES: <_SemanticAttribute>{ key: 'aws.sqs.max_number_of_messages', sampling_relevant: true },
 
   /**
   * A prefix for all attributes names collection.
   */
-  AWS_SQS_ATTRIBUTE_NAME: <_SemanticAttribute>{ key: 'aws.sqs.attribute_name', metadata: true },
+  AWS_SQS_ATTRIBUTE_NAME: <_SemanticAttribute>{ key: 'aws.sqs.attribute_name', sampling_relevant: true },
 
   /**
   * A prefix for all message attributes names collection.
   */
-  AWS_SQS_MESSAGE_ATTRIBUTE_NAME: <_SemanticAttribute>{ key: 'aws.sqs.message_attribute_name', metadata: true },
+  AWS_SQS_MESSAGE_ATTRIBUTE_NAME: <_SemanticAttribute>{ key: 'aws.sqs.message_attribute_name', sampling_relevant: true },
 
   /**
   * prefix to record attributes.
   */
-  AWS_SQS_RECORD_ATTRIBUTE: <_SemanticAttribute>{ key: 'aws.sqs.record.attribute', metadata: false },
+  AWS_SQS_RECORD_ATTRIBUTE: <_SemanticAttribute>{ key: 'aws.sqs.record.attribute', sampling_relevant: false },
 
   /**
   * prefix to record message attributes.
   */
-  AWS_SQS_RECORD_MESSAGE_ATTRIBUTE: <_SemanticAttribute>{ key: 'aws.sqs.record.message_attribute', metadata: false },
+  AWS_SQS_RECORD_MESSAGE_ATTRIBUTE: <_SemanticAttribute>{ key: 'aws.sqs.record.message_attribute', sampling_relevant: false },
 
   /**
   * string list of all records.
   */
-  AWS_SQS_AWS_SQS_RECORD: <_SemanticAttribute>{ key: 'aws.sqs.aws.sqs.record', metadata: true },
+  AWS_SQS_AWS_SQS_RECORD: <_SemanticAttribute>{ key: 'aws.sqs.aws.sqs.record', sampling_relevant: true },
 
   /**
   * prefix to request metadata.
   */
-  RPC_REQUEST_METADATA: <_SemanticAttribute>{ key: 'rpc.request.metadata', metadata: true },
+  RPC_REQUEST_METADATA: <_SemanticAttribute>{ key: 'rpc.request.metadata', sampling_relevant: true },
 
   /**
   * The transferred body.
   */
-  RPC_REQUEST_BODY: <_SemanticAttribute>{ key: 'rpc.request.body', metadata: false },
+  RPC_REQUEST_BODY: <_SemanticAttribute>{ key: 'rpc.request.body', sampling_relevant: false },
 
   /**
   * prefix to response metadata.
   */
-  RPC_RESPONSE_METADATA: <_SemanticAttribute>{ key: 'rpc.response.metadata', metadata: true },
+  RPC_RESPONSE_METADATA: <_SemanticAttribute>{ key: 'rpc.response.metadata', sampling_relevant: true },
 
   /**
   * The transferred body.
   */
-  RPC_RESPONSE_BODY: <_SemanticAttribute>{ key: 'rpc.response.body', metadata: false },
+  RPC_RESPONSE_BODY: <_SemanticAttribute>{ key: 'rpc.response.body', sampling_relevant: false },
 
   /**
   * HTTP request header. This describes the prefix to HTTP headers capturing.
   */
-  HTTP_REQUEST_HEADER: <_SemanticAttribute>{ key: 'http.request.header', metadata: true },
+  HTTP_REQUEST_HEADER: <_SemanticAttribute>{ key: 'http.request.header', sampling_relevant: true },
 
   /**
   * HTTP response header. This describes the prefix to HTTP headers capturing.
   */
-  HTTP_RESPONSE_HEADER: <_SemanticAttribute>{ key: 'http.response.header', metadata: true },
+  HTTP_RESPONSE_HEADER: <_SemanticAttribute>{ key: 'http.response.header', sampling_relevant: true },
 
   /**
   * HTTP message request body.
   */
-  HTTP_REQUEST_BODY: <_SemanticAttribute>{ key: 'http.request.body', metadata: false },
+  HTTP_REQUEST_BODY: <_SemanticAttribute>{ key: 'http.request.body', sampling_relevant: false },
 
   /**
   * HTTP message response body.
   */
-  HTTP_RESPONSE_BODY: <_SemanticAttribute>{ key: 'http.response.body', metadata: false },
+  HTTP_RESPONSE_BODY: <_SemanticAttribute>{ key: 'http.response.body', sampling_relevant: false },
 
   /**
   * prefix to headers.
   */
-  MESSAGING_RABBITMQ_MESSAGE_HEADER: <_SemanticAttribute>{ key: 'messaging.rabbitmq.message.header', metadata: true },
+  MESSAGING_RABBITMQ_MESSAGE_HEADER: <_SemanticAttribute>{ key: 'messaging.rabbitmq.message.header', sampling_relevant: true },
 
   /**
   * The transferred payload.
   */
-  MESSAGING_RABBITMQ_PAYLOAD: <_SemanticAttribute>{ key: 'messaging.rabbitmq.payload', metadata: false },
+  MESSAGING_RABBITMQ_PAYLOAD: <_SemanticAttribute>{ key: 'messaging.rabbitmq.payload', sampling_relevant: false },
 
   /**
   * The transferred payload size in bytes.
   */
-  MESSAGING_RABBITMQ_PAYLOAD_SIZE: <_SemanticAttribute>{ key: 'messaging.rabbitmq.payload_size', metadata: true },
+  MESSAGING_RABBITMQ_PAYLOAD_SIZE: <_SemanticAttribute>{ key: 'messaging.rabbitmq.payload_size', sampling_relevant: true },
 
   /**
   * The request arguments.
   */
-  DB_REDIS_ARGUMENTS: <_SemanticAttribute>{ key: 'db.redis.arguments', metadata: true },
+  DB_REDIS_ARGUMENTS: <_SemanticAttribute>{ key: 'db.redis.arguments', sampling_relevant: true },
 
   /**
   * The response data.
   */
-  DB_REDIS_RESPONSE: <_SemanticAttribute>{ key: 'db.redis.response', metadata: true },
+  DB_REDIS_RESPONSE: <_SemanticAttribute>{ key: 'db.redis.response', sampling_relevant: true },
 }
