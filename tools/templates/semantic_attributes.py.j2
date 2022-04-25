@@ -20,11 +20,11 @@
 
 from collections import namedtuple
 
-_SemanticAttribute = namedtuple('_SemanticAttribute', 'key sampling_relevant')
+SemanticAttribute = namedtuple('SemanticAttribute', 'key sampling_relevant')
 
 class {{class}}:
     {%- for attribute in attributes | unique(attribute="fqn") %}
-    {{attribute.fqn | to_const_name}} = _SemanticAttribute("{{attribute.fqn}}", {{ attribute.sampling_relevant }})
+    {{attribute.fqn | to_const_name}} = SemanticAttribute("{{attribute.fqn}}", {{ attribute.sampling_relevant }})
     """
     {{attribute.brief | to_doc_brief}}.
 

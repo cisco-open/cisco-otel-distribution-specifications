@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-type _SemanticAttribute = {
+export type SemanticAttribute = {
   key: string;
   sampling_relevant: boolean;
 };
@@ -24,7 +24,7 @@ export const SemanticAttributes = {
   /**
    * The request parameters.
    */
-  DB_DYNAMO_PARAMETERS: <_SemanticAttribute>{
+  DB_DYNAMO_PARAMETERS: <SemanticAttribute>{
     key: "db.dynamo.parameters",
     sampling_relevant: true,
   },
@@ -32,7 +32,7 @@ export const SemanticAttributes = {
   /**
    * The DynamoDB response data.
    */
-  DB_DYNAMO_RESPONSE: <_SemanticAttribute>{
+  DB_DYNAMO_RESPONSE: <SemanticAttribute>{
     key: "db.dynamo.response",
     sampling_relevant: true,
   },
@@ -40,7 +40,7 @@ export const SemanticAttributes = {
   /**
    * The message ID.
    */
-  AWS_SNS_MESSAGE_ID: <_SemanticAttribute>{
+  AWS_SNS_MESSAGE_ID: <SemanticAttribute>{
     key: "aws.sns.message_id",
     sampling_relevant: true,
   },
@@ -48,7 +48,7 @@ export const SemanticAttributes = {
   /**
    * The message Message structure.
    */
-  AWS_SNS_MESSAGE_STRUCTURE: <_SemanticAttribute>{
+  AWS_SNS_MESSAGE_STRUCTURE: <SemanticAttribute>{
     key: "aws.sns.message_structure",
     sampling_relevant: true,
   },
@@ -56,7 +56,7 @@ export const SemanticAttributes = {
   /**
    * A prefix for all message attributes collection.
    */
-  AWS_SNS_MESSAGE_ATTRIBUTE: <_SemanticAttribute>{
+  AWS_SNS_MESSAGE_ATTRIBUTE: <SemanticAttribute>{
     key: "aws.sns.message_attribute",
     sampling_relevant: false,
   },
@@ -64,7 +64,7 @@ export const SemanticAttributes = {
   /**
    * The phone number for SMS sending.
    */
-  AWS_SNS_PHONE_NUMBER: <_SemanticAttribute>{
+  AWS_SNS_PHONE_NUMBER: <SemanticAttribute>{
     key: "aws.sns.phone_number",
     sampling_relevant: true,
   },
@@ -72,7 +72,7 @@ export const SemanticAttributes = {
   /**
    * The topic ARN ID.
    */
-  AWS_SNS_TOPIC_ARN: <_SemanticAttribute>{
+  AWS_SNS_TOPIC_ARN: <SemanticAttribute>{
     key: "aws.sns.topic_arn",
     sampling_relevant: true,
   },
@@ -80,7 +80,7 @@ export const SemanticAttributes = {
   /**
    * The SNS subject.
    */
-  AWS_SNS_SUBJECT: <_SemanticAttribute>{
+  AWS_SNS_SUBJECT: <SemanticAttribute>{
     key: "aws.sns.subject",
     sampling_relevant: true,
   },
@@ -90,7 +90,7 @@ export const SemanticAttributes = {
    *
    * Note: Assuming this structure for QueueUrl: https://sqs.&lt;region&gt;.amazonaws.com/&lt;accountId&gt;/&lt;queueName&gt;.
    */
-  AWS_SQS_QUEUE_NAME: <_SemanticAttribute>{
+  AWS_SQS_QUEUE_NAME: <SemanticAttribute>{
     key: "aws.sqs.queue_name",
     sampling_relevant: true,
   },
@@ -100,7 +100,7 @@ export const SemanticAttributes = {
    *
    * Note: Assuming this structure for QueueUrl: https://sqs.&lt;region&gt;.amazonaws.com/&lt;accountId&gt;/&lt;queueName&gt;.
    */
-  AWS_SQS_ACCOUNT_ID: <_SemanticAttribute>{
+  AWS_SQS_ACCOUNT_ID: <SemanticAttribute>{
     key: "aws.sqs.account_id",
     sampling_relevant: true,
   },
@@ -110,7 +110,7 @@ export const SemanticAttributes = {
    *
    * Note: Captured from SendMessage,ReceiveMessage only.
    */
-  AWS_SQS_RECORD_MESSAGE_ID: <_SemanticAttribute>{
+  AWS_SQS_RECORD_MESSAGE_ID: <SemanticAttribute>{
     key: "aws.sqs.record.message_id",
     sampling_relevant: true,
   },
@@ -120,7 +120,7 @@ export const SemanticAttributes = {
    *
    * Note: Captured from SendMessage,ReceiveMessage only.
    */
-  AWS_SQS_RECORD_MESSAGE_BODY: <_SemanticAttribute>{
+  AWS_SQS_RECORD_MESSAGE_BODY: <SemanticAttribute>{
     key: "aws.sqs.record.message_body",
     sampling_relevant: false,
   },
@@ -128,7 +128,7 @@ export const SemanticAttributes = {
   /**
    * The number in seconds to delay the message.
    */
-  AWS_SQS_RECORD_DELAY_SECONDS: <_SemanticAttribute>{
+  AWS_SQS_RECORD_DELAY_SECONDS: <SemanticAttribute>{
     key: "aws.sqs.record.delay_seconds",
     sampling_relevant: true,
   },
@@ -136,7 +136,7 @@ export const SemanticAttributes = {
   /**
    * A prefix for all message attributes collection.
    */
-  AWS_SQS_MESSAGE_ATTRIBUTE: <_SemanticAttribute>{
+  AWS_SQS_MESSAGE_ATTRIBUTE: <SemanticAttribute>{
     key: "aws.sqs.message_attribute",
     sampling_relevant: false,
   },
@@ -144,7 +144,7 @@ export const SemanticAttributes = {
   /**
    * prefix to batch requets entries.
    */
-  AWS_SQS_REQUEST_ENTRY: <_SemanticAttribute>{
+  AWS_SQS_REQUEST_ENTRY: <SemanticAttribute>{
     key: "aws.sqs.request_entry",
     sampling_relevant: false,
   },
@@ -152,7 +152,7 @@ export const SemanticAttributes = {
   /**
    * prefix to batch result error entries.
    */
-  AWS_SQS_RESULT_ERROR_ENTRY: <_SemanticAttribute>{
+  AWS_SQS_RESULT_ERROR_ENTRY: <SemanticAttribute>{
     key: "aws.sqs.result_error_entry",
     sampling_relevant: false,
   },
@@ -160,7 +160,7 @@ export const SemanticAttributes = {
   /**
    * prefix to batch result entries.
    */
-  AWS_SQS_RESULT_ENTRY: <_SemanticAttribute>{
+  AWS_SQS_RESULT_ENTRY: <SemanticAttribute>{
     key: "aws.sqs.result_entry",
     sampling_relevant: false,
   },
@@ -168,7 +168,7 @@ export const SemanticAttributes = {
   /**
    * The number in seconds of how long this message will be available to consume.
    */
-  AWS_SQS_VISIBILITY_TIMEOUT: <_SemanticAttribute>{
+  AWS_SQS_VISIBILITY_TIMEOUT: <SemanticAttribute>{
     key: "aws.sqs.visibility_timeout",
     sampling_relevant: true,
   },
@@ -176,7 +176,7 @@ export const SemanticAttributes = {
   /**
    * The number in seconds for the polling time.
    */
-  AWS_SQS_WAIT_TIME_SECONDS: <_SemanticAttribute>{
+  AWS_SQS_WAIT_TIME_SECONDS: <SemanticAttribute>{
     key: "aws.sqs.wait_time_seconds",
     sampling_relevant: true,
   },
@@ -184,7 +184,7 @@ export const SemanticAttributes = {
   /**
    * The maximum number of messages can recive.
    */
-  AWS_SQS_MAX_NUMBER_OF_MESSAGES: <_SemanticAttribute>{
+  AWS_SQS_MAX_NUMBER_OF_MESSAGES: <SemanticAttribute>{
     key: "aws.sqs.max_number_of_messages",
     sampling_relevant: true,
   },
@@ -192,7 +192,7 @@ export const SemanticAttributes = {
   /**
    * A prefix for all attributes names collection.
    */
-  AWS_SQS_ATTRIBUTE_NAME: <_SemanticAttribute>{
+  AWS_SQS_ATTRIBUTE_NAME: <SemanticAttribute>{
     key: "aws.sqs.attribute_name",
     sampling_relevant: true,
   },
@@ -200,7 +200,7 @@ export const SemanticAttributes = {
   /**
    * A prefix for all message attributes names collection.
    */
-  AWS_SQS_MESSAGE_ATTRIBUTE_NAME: <_SemanticAttribute>{
+  AWS_SQS_MESSAGE_ATTRIBUTE_NAME: <SemanticAttribute>{
     key: "aws.sqs.message_attribute_name",
     sampling_relevant: true,
   },
@@ -208,7 +208,7 @@ export const SemanticAttributes = {
   /**
    * prefix to record attributes.
    */
-  AWS_SQS_RECORD_ATTRIBUTE: <_SemanticAttribute>{
+  AWS_SQS_RECORD_ATTRIBUTE: <SemanticAttribute>{
     key: "aws.sqs.record.attribute",
     sampling_relevant: false,
   },
@@ -216,7 +216,7 @@ export const SemanticAttributes = {
   /**
    * prefix to record message attributes.
    */
-  AWS_SQS_RECORD_MESSAGE_ATTRIBUTE: <_SemanticAttribute>{
+  AWS_SQS_RECORD_MESSAGE_ATTRIBUTE: <SemanticAttribute>{
     key: "aws.sqs.record.message_attribute",
     sampling_relevant: false,
   },
@@ -224,7 +224,7 @@ export const SemanticAttributes = {
   /**
    * string list of all records.
    */
-  AWS_SQS_AWS_SQS_RECORD: <_SemanticAttribute>{
+  AWS_SQS_AWS_SQS_RECORD: <SemanticAttribute>{
     key: "aws.sqs.aws.sqs.record",
     sampling_relevant: true,
   },
@@ -232,7 +232,7 @@ export const SemanticAttributes = {
   /**
    * prefix to request metadata.
    */
-  RPC_REQUEST_METADATA: <_SemanticAttribute>{
+  RPC_REQUEST_METADATA: <SemanticAttribute>{
     key: "rpc.request.metadata",
     sampling_relevant: true,
   },
@@ -240,7 +240,7 @@ export const SemanticAttributes = {
   /**
    * The transferred body.
    */
-  RPC_REQUEST_BODY: <_SemanticAttribute>{
+  RPC_REQUEST_BODY: <SemanticAttribute>{
     key: "rpc.request.body",
     sampling_relevant: false,
   },
@@ -248,7 +248,7 @@ export const SemanticAttributes = {
   /**
    * prefix to response metadata.
    */
-  RPC_RESPONSE_METADATA: <_SemanticAttribute>{
+  RPC_RESPONSE_METADATA: <SemanticAttribute>{
     key: "rpc.response.metadata",
     sampling_relevant: true,
   },
@@ -256,7 +256,7 @@ export const SemanticAttributes = {
   /**
    * The transferred body.
    */
-  RPC_RESPONSE_BODY: <_SemanticAttribute>{
+  RPC_RESPONSE_BODY: <SemanticAttribute>{
     key: "rpc.response.body",
     sampling_relevant: false,
   },
@@ -264,7 +264,7 @@ export const SemanticAttributes = {
   /**
    * HTTP request header. This describes the prefix to HTTP headers capturing.
    */
-  HTTP_REQUEST_HEADER: <_SemanticAttribute>{
+  HTTP_REQUEST_HEADER: <SemanticAttribute>{
     key: "http.request.header",
     sampling_relevant: true,
   },
@@ -272,7 +272,7 @@ export const SemanticAttributes = {
   /**
    * HTTP response header. This describes the prefix to HTTP headers capturing.
    */
-  HTTP_RESPONSE_HEADER: <_SemanticAttribute>{
+  HTTP_RESPONSE_HEADER: <SemanticAttribute>{
     key: "http.response.header",
     sampling_relevant: true,
   },
@@ -280,7 +280,7 @@ export const SemanticAttributes = {
   /**
    * HTTP message request body.
    */
-  HTTP_REQUEST_BODY: <_SemanticAttribute>{
+  HTTP_REQUEST_BODY: <SemanticAttribute>{
     key: "http.request.body",
     sampling_relevant: false,
   },
@@ -288,7 +288,7 @@ export const SemanticAttributes = {
   /**
    * HTTP message response body.
    */
-  HTTP_RESPONSE_BODY: <_SemanticAttribute>{
+  HTTP_RESPONSE_BODY: <SemanticAttribute>{
     key: "http.response.body",
     sampling_relevant: false,
   },
@@ -296,7 +296,7 @@ export const SemanticAttributes = {
   /**
    * prefix to headers.
    */
-  MESSAGING_RABBITMQ_MESSAGE_HEADER: <_SemanticAttribute>{
+  MESSAGING_RABBITMQ_MESSAGE_HEADER: <SemanticAttribute>{
     key: "messaging.rabbitmq.message.header",
     sampling_relevant: true,
   },
@@ -304,7 +304,7 @@ export const SemanticAttributes = {
   /**
    * The transferred payload.
    */
-  MESSAGING_RABBITMQ_PAYLOAD: <_SemanticAttribute>{
+  MESSAGING_RABBITMQ_PAYLOAD: <SemanticAttribute>{
     key: "messaging.rabbitmq.payload",
     sampling_relevant: false,
   },
@@ -312,7 +312,7 @@ export const SemanticAttributes = {
   /**
    * The transferred payload size in bytes.
    */
-  MESSAGING_RABBITMQ_PAYLOAD_SIZE: <_SemanticAttribute>{
+  MESSAGING_RABBITMQ_PAYLOAD_SIZE: <SemanticAttribute>{
     key: "messaging.rabbitmq.payload_size",
     sampling_relevant: true,
   },
@@ -320,7 +320,7 @@ export const SemanticAttributes = {
   /**
    * The request arguments.
    */
-  DB_REDIS_ARGUMENTS: <_SemanticAttribute>{
+  DB_REDIS_ARGUMENTS: <SemanticAttribute>{
     key: "db.redis.arguments",
     sampling_relevant: true,
   },
@@ -328,7 +328,7 @@ export const SemanticAttributes = {
   /**
    * The response data.
    */
-  DB_REDIS_RESPONSE: <_SemanticAttribute>{
+  DB_REDIS_RESPONSE: <SemanticAttribute>{
     key: "db.redis.response",
     sampling_relevant: true,
   },

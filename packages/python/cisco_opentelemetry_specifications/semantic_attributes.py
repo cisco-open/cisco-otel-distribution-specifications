@@ -14,199 +14,199 @@
 
 from collections import namedtuple
 
-_SemanticAttribute = namedtuple('_SemanticAttribute', 'key sampling_relevant')
+SemanticAttribute = namedtuple('SemanticAttribute', 'key sampling_relevant')
 
 class SemanticAttributes:
-    DB_DYNAMO_PARAMETERS = _SemanticAttribute("db.dynamo.parameters", True)
+    DB_DYNAMO_PARAMETERS = SemanticAttribute("db.dynamo.parameters", True)
     """
     The request parameters.
     """
 
-    DB_DYNAMO_RESPONSE = _SemanticAttribute("db.dynamo.response", True)
+    DB_DYNAMO_RESPONSE = SemanticAttribute("db.dynamo.response", True)
     """
     The DynamoDB response data.
     """
 
-    AWS_SNS_MESSAGE_ID = _SemanticAttribute("aws.sns.message_id", True)
+    AWS_SNS_MESSAGE_ID = SemanticAttribute("aws.sns.message_id", True)
     """
     The message ID.
     """
 
-    AWS_SNS_MESSAGE_STRUCTURE = _SemanticAttribute("aws.sns.message_structure", True)
+    AWS_SNS_MESSAGE_STRUCTURE = SemanticAttribute("aws.sns.message_structure", True)
     """
     The message Message structure.
     """
 
-    AWS_SNS_MESSAGE_ATTRIBUTE = _SemanticAttribute("aws.sns.message_attribute", False)
+    AWS_SNS_MESSAGE_ATTRIBUTE = SemanticAttribute("aws.sns.message_attribute", False)
     """
     A prefix for all message attributes collection.
     """
 
-    AWS_SNS_PHONE_NUMBER = _SemanticAttribute("aws.sns.phone_number", True)
+    AWS_SNS_PHONE_NUMBER = SemanticAttribute("aws.sns.phone_number", True)
     """
     The phone number for SMS sending.
     """
 
-    AWS_SNS_TOPIC_ARN = _SemanticAttribute("aws.sns.topic_arn", True)
+    AWS_SNS_TOPIC_ARN = SemanticAttribute("aws.sns.topic_arn", True)
     """
     The topic ARN ID.
     """
 
-    AWS_SNS_SUBJECT = _SemanticAttribute("aws.sns.subject", True)
+    AWS_SNS_SUBJECT = SemanticAttribute("aws.sns.subject", True)
     """
     The SNS subject.
     """
 
-    AWS_SQS_QUEUE_NAME = _SemanticAttribute("aws.sqs.queue_name", True)
+    AWS_SQS_QUEUE_NAME = SemanticAttribute("aws.sqs.queue_name", True)
     """
     The SQS queue name.
     Note: Assuming this structure for QueueUrl: https://sqs.<region>.amazonaws.com/<accountId>/<queueName>.
     """
 
-    AWS_SQS_ACCOUNT_ID = _SemanticAttribute("aws.sqs.account_id", True)
+    AWS_SQS_ACCOUNT_ID = SemanticAttribute("aws.sqs.account_id", True)
     """
     The user account id.
     Note: Assuming this structure for QueueUrl: https://sqs.<region>.amazonaws.com/<accountId>/<queueName>.
     """
 
-    AWS_SQS_RECORD_MESSAGE_ID = _SemanticAttribute("aws.sqs.record.message_id", True)
+    AWS_SQS_RECORD_MESSAGE_ID = SemanticAttribute("aws.sqs.record.message_id", True)
     """
     The record message ID.
     Note: Captured from SendMessage,ReceiveMessage only.
     """
 
-    AWS_SQS_RECORD_MESSAGE_BODY = _SemanticAttribute("aws.sqs.record.message_body", False)
+    AWS_SQS_RECORD_MESSAGE_BODY = SemanticAttribute("aws.sqs.record.message_body", False)
     """
     The response body.
     Note: Captured from SendMessage,ReceiveMessage only.
     """
 
-    AWS_SQS_RECORD_DELAY_SECONDS = _SemanticAttribute("aws.sqs.record.delay_seconds", True)
+    AWS_SQS_RECORD_DELAY_SECONDS = SemanticAttribute("aws.sqs.record.delay_seconds", True)
     """
     The number in seconds to delay the message.
     """
 
-    AWS_SQS_MESSAGE_ATTRIBUTE = _SemanticAttribute("aws.sqs.message_attribute", False)
+    AWS_SQS_MESSAGE_ATTRIBUTE = SemanticAttribute("aws.sqs.message_attribute", False)
     """
     A prefix for all message attributes collection.
     """
 
-    AWS_SQS_REQUEST_ENTRY = _SemanticAttribute("aws.sqs.request_entry", False)
+    AWS_SQS_REQUEST_ENTRY = SemanticAttribute("aws.sqs.request_entry", False)
     """
     prefix to batch requets entries.
     """
 
-    AWS_SQS_RESULT_ERROR_ENTRY = _SemanticAttribute("aws.sqs.result_error_entry", False)
+    AWS_SQS_RESULT_ERROR_ENTRY = SemanticAttribute("aws.sqs.result_error_entry", False)
     """
     prefix to batch result error entries.
     """
 
-    AWS_SQS_RESULT_ENTRY = _SemanticAttribute("aws.sqs.result_entry", False)
+    AWS_SQS_RESULT_ENTRY = SemanticAttribute("aws.sqs.result_entry", False)
     """
     prefix to batch result entries.
     """
 
-    AWS_SQS_VISIBILITY_TIMEOUT = _SemanticAttribute("aws.sqs.visibility_timeout", True)
+    AWS_SQS_VISIBILITY_TIMEOUT = SemanticAttribute("aws.sqs.visibility_timeout", True)
     """
     The number in seconds of how long this message will be available to consume.
     """
 
-    AWS_SQS_WAIT_TIME_SECONDS = _SemanticAttribute("aws.sqs.wait_time_seconds", True)
+    AWS_SQS_WAIT_TIME_SECONDS = SemanticAttribute("aws.sqs.wait_time_seconds", True)
     """
     The number in seconds for the polling time.
     """
 
-    AWS_SQS_MAX_NUMBER_OF_MESSAGES = _SemanticAttribute("aws.sqs.max_number_of_messages", True)
+    AWS_SQS_MAX_NUMBER_OF_MESSAGES = SemanticAttribute("aws.sqs.max_number_of_messages", True)
     """
     The maximum number of messages can recive.
     """
 
-    AWS_SQS_ATTRIBUTE_NAME = _SemanticAttribute("aws.sqs.attribute_name", True)
+    AWS_SQS_ATTRIBUTE_NAME = SemanticAttribute("aws.sqs.attribute_name", True)
     """
     A prefix for all attributes names collection.
     """
 
-    AWS_SQS_MESSAGE_ATTRIBUTE_NAME = _SemanticAttribute("aws.sqs.message_attribute_name", True)
+    AWS_SQS_MESSAGE_ATTRIBUTE_NAME = SemanticAttribute("aws.sqs.message_attribute_name", True)
     """
     A prefix for all message attributes names collection.
     """
 
-    AWS_SQS_RECORD_ATTRIBUTE = _SemanticAttribute("aws.sqs.record.attribute", False)
+    AWS_SQS_RECORD_ATTRIBUTE = SemanticAttribute("aws.sqs.record.attribute", False)
     """
     prefix to record attributes.
     """
 
-    AWS_SQS_RECORD_MESSAGE_ATTRIBUTE = _SemanticAttribute("aws.sqs.record.message_attribute", False)
+    AWS_SQS_RECORD_MESSAGE_ATTRIBUTE = SemanticAttribute("aws.sqs.record.message_attribute", False)
     """
     prefix to record message attributes.
     """
 
-    AWS_SQS_AWS_SQS_RECORD = _SemanticAttribute("aws.sqs.aws.sqs.record", True)
+    AWS_SQS_AWS_SQS_RECORD = SemanticAttribute("aws.sqs.aws.sqs.record", True)
     """
     string list of all records.
     """
 
-    RPC_REQUEST_METADATA = _SemanticAttribute("rpc.request.metadata", True)
+    RPC_REQUEST_METADATA = SemanticAttribute("rpc.request.metadata", True)
     """
     prefix to request metadata.
     """
 
-    RPC_REQUEST_BODY = _SemanticAttribute("rpc.request.body", False)
+    RPC_REQUEST_BODY = SemanticAttribute("rpc.request.body", False)
     """
     The transferred body.
     """
 
-    RPC_RESPONSE_METADATA = _SemanticAttribute("rpc.response.metadata", True)
+    RPC_RESPONSE_METADATA = SemanticAttribute("rpc.response.metadata", True)
     """
     prefix to response metadata.
     """
 
-    RPC_RESPONSE_BODY = _SemanticAttribute("rpc.response.body", False)
+    RPC_RESPONSE_BODY = SemanticAttribute("rpc.response.body", False)
     """
     The transferred body.
     """
 
-    HTTP_REQUEST_HEADER = _SemanticAttribute("http.request.header", True)
+    HTTP_REQUEST_HEADER = SemanticAttribute("http.request.header", True)
     """
     HTTP request header. This describes the prefix to HTTP headers capturing.
     """
 
-    HTTP_RESPONSE_HEADER = _SemanticAttribute("http.response.header", True)
+    HTTP_RESPONSE_HEADER = SemanticAttribute("http.response.header", True)
     """
     HTTP response header. This describes the prefix to HTTP headers capturing.
     """
 
-    HTTP_REQUEST_BODY = _SemanticAttribute("http.request.body", False)
+    HTTP_REQUEST_BODY = SemanticAttribute("http.request.body", False)
     """
     HTTP message request body.
     """
 
-    HTTP_RESPONSE_BODY = _SemanticAttribute("http.response.body", False)
+    HTTP_RESPONSE_BODY = SemanticAttribute("http.response.body", False)
     """
     HTTP message response body.
     """
 
-    MESSAGING_RABBITMQ_MESSAGE_HEADER = _SemanticAttribute("messaging.rabbitmq.message.header", True)
+    MESSAGING_RABBITMQ_MESSAGE_HEADER = SemanticAttribute("messaging.rabbitmq.message.header", True)
     """
     prefix to headers.
     """
 
-    MESSAGING_RABBITMQ_PAYLOAD = _SemanticAttribute("messaging.rabbitmq.payload", False)
+    MESSAGING_RABBITMQ_PAYLOAD = SemanticAttribute("messaging.rabbitmq.payload", False)
     """
     The transferred payload.
     """
 
-    MESSAGING_RABBITMQ_PAYLOAD_SIZE = _SemanticAttribute("messaging.rabbitmq.payload_size", True)
+    MESSAGING_RABBITMQ_PAYLOAD_SIZE = SemanticAttribute("messaging.rabbitmq.payload_size", True)
     """
     The transferred payload size in bytes.
     """
 
-    DB_REDIS_ARGUMENTS = _SemanticAttribute("db.redis.arguments", True)
+    DB_REDIS_ARGUMENTS = SemanticAttribute("db.redis.arguments", True)
     """
     The request arguments.
     """
 
-    DB_REDIS_RESPONSE = _SemanticAttribute("db.redis.response", True)
+    DB_REDIS_RESPONSE = SemanticAttribute("db.redis.response", True)
     """
     The response data.
     """
