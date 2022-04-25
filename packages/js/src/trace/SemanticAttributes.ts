@@ -16,7 +16,7 @@
 
 type _SemanticAttribute = {
   key: string;
-  metadata: boolean;
+  sampling_relevant: boolean;
 };
 
 // DO NOT EDIT, this is an Auto-generated file from tools/templates/SemanticAttributes.ts.j2
@@ -26,7 +26,7 @@ export const SemanticAttributes = {
    */
   DB_DYNAMO_PARAMETERS: <_SemanticAttribute>{
     key: "db.dynamo.parameters",
-    metadata: true,
+    sampling_relevant: true,
   },
 
   /**
@@ -34,7 +34,7 @@ export const SemanticAttributes = {
    */
   DB_DYNAMO_RESPONSE: <_SemanticAttribute>{
     key: "db.dynamo.response",
-    metadata: true,
+    sampling_relevant: true,
   },
 
   /**
@@ -42,7 +42,7 @@ export const SemanticAttributes = {
    */
   AWS_SNS_MESSAGE_ID: <_SemanticAttribute>{
     key: "aws.sns.message_id",
-    metadata: true,
+    sampling_relevant: true,
   },
 
   /**
@@ -50,7 +50,7 @@ export const SemanticAttributes = {
    */
   AWS_SNS_MESSAGE_STRUCTURE: <_SemanticAttribute>{
     key: "aws.sns.message_structure",
-    metadata: true,
+    sampling_relevant: true,
   },
 
   /**
@@ -58,7 +58,7 @@ export const SemanticAttributes = {
    */
   AWS_SNS_MESSAGE_ATTRIBUTE: <_SemanticAttribute>{
     key: "aws.sns.message_attribute",
-    metadata: false,
+    sampling_relevant: false,
   },
 
   /**
@@ -66,7 +66,7 @@ export const SemanticAttributes = {
    */
   AWS_SNS_PHONE_NUMBER: <_SemanticAttribute>{
     key: "aws.sns.phone_number",
-    metadata: true,
+    sampling_relevant: true,
   },
 
   /**
@@ -74,7 +74,7 @@ export const SemanticAttributes = {
    */
   AWS_SNS_TOPIC_ARN: <_SemanticAttribute>{
     key: "aws.sns.topic_arn",
-    metadata: true,
+    sampling_relevant: true,
   },
 
   /**
@@ -82,7 +82,7 @@ export const SemanticAttributes = {
    */
   AWS_SNS_SUBJECT: <_SemanticAttribute>{
     key: "aws.sns.subject",
-    metadata: true,
+    sampling_relevant: true,
   },
 
   /**
@@ -92,7 +92,7 @@ export const SemanticAttributes = {
    */
   AWS_SQS_QUEUE_NAME: <_SemanticAttribute>{
     key: "aws.sqs.queue_name",
-    metadata: true,
+    sampling_relevant: true,
   },
 
   /**
@@ -102,7 +102,7 @@ export const SemanticAttributes = {
    */
   AWS_SQS_ACCOUNT_ID: <_SemanticAttribute>{
     key: "aws.sqs.account_id",
-    metadata: true,
+    sampling_relevant: true,
   },
 
   /**
@@ -112,7 +112,7 @@ export const SemanticAttributes = {
    */
   AWS_SQS_RECORD_MESSAGE_ID: <_SemanticAttribute>{
     key: "aws.sqs.record.message_id",
-    metadata: true,
+    sampling_relevant: true,
   },
 
   /**
@@ -122,7 +122,7 @@ export const SemanticAttributes = {
    */
   AWS_SQS_RECORD_MESSAGE_BODY: <_SemanticAttribute>{
     key: "aws.sqs.record.message_body",
-    metadata: false,
+    sampling_relevant: false,
   },
 
   /**
@@ -130,7 +130,7 @@ export const SemanticAttributes = {
    */
   AWS_SQS_RECORD_DELAY_SECONDS: <_SemanticAttribute>{
     key: "aws.sqs.record.delay_seconds",
-    metadata: true,
+    sampling_relevant: true,
   },
 
   /**
@@ -138,7 +138,7 @@ export const SemanticAttributes = {
    */
   AWS_SQS_MESSAGE_ATTRIBUTE: <_SemanticAttribute>{
     key: "aws.sqs.message_attribute",
-    metadata: false,
+    sampling_relevant: false,
   },
 
   /**
@@ -146,7 +146,7 @@ export const SemanticAttributes = {
    */
   AWS_SQS_REQUEST_ENTRY: <_SemanticAttribute>{
     key: "aws.sqs.request_entry",
-    metadata: false,
+    sampling_relevant: false,
   },
 
   /**
@@ -154,7 +154,7 @@ export const SemanticAttributes = {
    */
   AWS_SQS_RESULT_ERROR_ENTRY: <_SemanticAttribute>{
     key: "aws.sqs.result_error_entry",
-    metadata: false,
+    sampling_relevant: false,
   },
 
   /**
@@ -162,7 +162,7 @@ export const SemanticAttributes = {
    */
   AWS_SQS_RESULT_ENTRY: <_SemanticAttribute>{
     key: "aws.sqs.result_entry",
-    metadata: false,
+    sampling_relevant: false,
   },
 
   /**
@@ -170,7 +170,7 @@ export const SemanticAttributes = {
    */
   AWS_SQS_VISIBILITY_TIMEOUT: <_SemanticAttribute>{
     key: "aws.sqs.visibility_timeout",
-    metadata: true,
+    sampling_relevant: true,
   },
 
   /**
@@ -178,7 +178,7 @@ export const SemanticAttributes = {
    */
   AWS_SQS_WAIT_TIME_SECONDS: <_SemanticAttribute>{
     key: "aws.sqs.wait_time_seconds",
-    metadata: true,
+    sampling_relevant: true,
   },
 
   /**
@@ -186,7 +186,7 @@ export const SemanticAttributes = {
    */
   AWS_SQS_MAX_NUMBER_OF_MESSAGES: <_SemanticAttribute>{
     key: "aws.sqs.max_number_of_messages",
-    metadata: true,
+    sampling_relevant: true,
   },
 
   /**
@@ -194,7 +194,7 @@ export const SemanticAttributes = {
    */
   AWS_SQS_ATTRIBUTE_NAME: <_SemanticAttribute>{
     key: "aws.sqs.attribute_name",
-    metadata: true,
+    sampling_relevant: true,
   },
 
   /**
@@ -202,7 +202,7 @@ export const SemanticAttributes = {
    */
   AWS_SQS_MESSAGE_ATTRIBUTE_NAME: <_SemanticAttribute>{
     key: "aws.sqs.message_attribute_name",
-    metadata: true,
+    sampling_relevant: true,
   },
 
   /**
@@ -210,7 +210,7 @@ export const SemanticAttributes = {
    */
   AWS_SQS_RECORD_ATTRIBUTE: <_SemanticAttribute>{
     key: "aws.sqs.record.attribute",
-    metadata: false,
+    sampling_relevant: false,
   },
 
   /**
@@ -218,7 +218,7 @@ export const SemanticAttributes = {
    */
   AWS_SQS_RECORD_MESSAGE_ATTRIBUTE: <_SemanticAttribute>{
     key: "aws.sqs.record.message_attribute",
-    metadata: false,
+    sampling_relevant: false,
   },
 
   /**
@@ -226,7 +226,7 @@ export const SemanticAttributes = {
    */
   AWS_SQS_AWS_SQS_RECORD: <_SemanticAttribute>{
     key: "aws.sqs.aws.sqs.record",
-    metadata: true,
+    sampling_relevant: true,
   },
 
   /**
@@ -234,7 +234,7 @@ export const SemanticAttributes = {
    */
   RPC_REQUEST_METADATA: <_SemanticAttribute>{
     key: "rpc.request.metadata",
-    metadata: true,
+    sampling_relevant: true,
   },
 
   /**
@@ -242,7 +242,7 @@ export const SemanticAttributes = {
    */
   RPC_REQUEST_BODY: <_SemanticAttribute>{
     key: "rpc.request.body",
-    metadata: false,
+    sampling_relevant: false,
   },
 
   /**
@@ -250,7 +250,7 @@ export const SemanticAttributes = {
    */
   RPC_RESPONSE_METADATA: <_SemanticAttribute>{
     key: "rpc.response.metadata",
-    metadata: true,
+    sampling_relevant: true,
   },
 
   /**
@@ -258,7 +258,7 @@ export const SemanticAttributes = {
    */
   RPC_RESPONSE_BODY: <_SemanticAttribute>{
     key: "rpc.response.body",
-    metadata: false,
+    sampling_relevant: false,
   },
 
   /**
@@ -266,7 +266,7 @@ export const SemanticAttributes = {
    */
   HTTP_REQUEST_HEADER: <_SemanticAttribute>{
     key: "http.request.header",
-    metadata: true,
+    sampling_relevant: true,
   },
 
   /**
@@ -274,7 +274,7 @@ export const SemanticAttributes = {
    */
   HTTP_RESPONSE_HEADER: <_SemanticAttribute>{
     key: "http.response.header",
-    metadata: true,
+    sampling_relevant: true,
   },
 
   /**
@@ -282,7 +282,7 @@ export const SemanticAttributes = {
    */
   HTTP_REQUEST_BODY: <_SemanticAttribute>{
     key: "http.request.body",
-    metadata: false,
+    sampling_relevant: false,
   },
 
   /**
@@ -290,7 +290,7 @@ export const SemanticAttributes = {
    */
   HTTP_RESPONSE_BODY: <_SemanticAttribute>{
     key: "http.response.body",
-    metadata: false,
+    sampling_relevant: false,
   },
 
   /**
@@ -298,7 +298,7 @@ export const SemanticAttributes = {
    */
   MESSAGING_RABBITMQ_MESSAGE_HEADER: <_SemanticAttribute>{
     key: "messaging.rabbitmq.message.header",
-    metadata: true,
+    sampling_relevant: true,
   },
 
   /**
@@ -306,7 +306,7 @@ export const SemanticAttributes = {
    */
   MESSAGING_RABBITMQ_PAYLOAD: <_SemanticAttribute>{
     key: "messaging.rabbitmq.payload",
-    metadata: false,
+    sampling_relevant: false,
   },
 
   /**
@@ -314,7 +314,7 @@ export const SemanticAttributes = {
    */
   MESSAGING_RABBITMQ_PAYLOAD_SIZE: <_SemanticAttribute>{
     key: "messaging.rabbitmq.payload_size",
-    metadata: true,
+    sampling_relevant: true,
   },
 
   /**
@@ -322,7 +322,7 @@ export const SemanticAttributes = {
    */
   DB_REDIS_ARGUMENTS: <_SemanticAttribute>{
     key: "db.redis.arguments",
-    metadata: true,
+    sampling_relevant: true,
   },
 
   /**
@@ -330,6 +330,6 @@ export const SemanticAttributes = {
    */
   DB_REDIS_RESPONSE: <_SemanticAttribute>{
     key: "db.redis.response",
-    metadata: true,
+    sampling_relevant: true,
   },
 };

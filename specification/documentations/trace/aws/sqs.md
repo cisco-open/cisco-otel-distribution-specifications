@@ -72,7 +72,7 @@ Following attributes MUST be provided **at span creation time** (when provided a
 | `aws.sqs.max_number_of_messages`   | int    | The maximum number of messages can recive                                   | `10`                                                       | Yes      |
 | `aws.sqs.attribute_name`           | string | A prefix for all attributes names collection.                               | `aws.sqs.attribute_name.attr=name`                         | Yes      |
 | `aws.sqs.message_attribute_name`   | string | A prefix for all message attributes names collection.                       | `aws.sqs.message_attribute_name.attr=name`                 | Yes      |
-| `aws.sqs.record.attribute`         | string | prefix to record attributes                                                 | `aws.sqs.record.attribute.key='attribute'`                 | Yes      |
+| `aws.sqs.record.attribute`         | string | prefix to record attributes                                                 | `aws.sqs.record.attribute.key=attribute`                   | Yes      |
 | `aws.sqs.record.message_attribute` | string | prefix to record message attributes                                         | `aws.sqs.record.message_attribute.key='message attribute'` | Yes      |
 | `aws.sqs.aws.sqs.record`           | string | string list of all records                                                  | `[{"message_body": "{"cart": {"12341234": "1"}"}]`         | Yes      |
 

@@ -12,5 +12,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from .consts import Consts
-from .semantic_attributes import SemanticAttributes
+# DO NOT EDIT, this is an Auto-generated file from tools/templates/consts.py.j2
+{# Extra line #}
+{%- macro print_value(type, value) -%}
+    {% if type == "string" -%}
+        "{{ value }}"
+    {%- else -%}
+        {{ value -}}
+    {% endif -%}
+{%- endmacro %}
+
+class Consts:
+    {%- for const in consts | unique(attribute="name") %}
+    {{const.name | upper}} = {{ print_value(const.type, const.value) }}
+    """
+    {{ const.brief }}
+    """
+    {# Extra line #}
+    {%- endfor %}

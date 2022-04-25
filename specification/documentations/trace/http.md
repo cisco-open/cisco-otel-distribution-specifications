@@ -22,8 +22,8 @@ Cisco OTel Distributions SHOULD add the following attributes:
 
 | Attribute              | Type   | Description                                                               | Examples                                             | Required |
 | ---------------------- | ------ | ------------------------------------------------------------------------- | ---------------------------------------------------- | -------- |
-| `http.request.header`  | string | HTTP request header. This describes the prefix to HTTP headers capturing  | `http.request.header.user-agent="chrome"`            | Yes      |
-| `http.response.header` | string | HTTP response header. This describes the prefix to HTTP headers capturing | `http.response.header.content-type="JSON"`           | Yes      |
+| `http.request.header`  | string | HTTP request header. This describes the prefix to HTTP headers capturing  | `http.request.header.user-agent=chrome`              | Yes      |
+| `http.response.header` | string | HTTP response header. This describes the prefix to HTTP headers capturing | `http.response.header.content-type=JSON`             | Yes      |
 | `http.request.body`    | string | HTTP message request body                                                 | `{"cart": {"6200f9eefd49910014d1e789": "1"} }`       | Yes      |
 | `http.response.body`   | string | HTTP message response body                                                | `{"inStock": {"6200f9eefd49910014d1e789": "true"} }` | Yes      |
 

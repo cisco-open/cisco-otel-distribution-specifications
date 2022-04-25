@@ -20,7 +20,7 @@
 
 from collections import namedtuple
 
-_SemanticAttribute = namedtuple('_SemanticAttribute', 'key value')
+_SemanticAttribute = namedtuple('_SemanticAttribute', 'key sampling_relevant')
 
 class {{class}}:
     {%- for attribute in attributes | unique(attribute="fqn") %}

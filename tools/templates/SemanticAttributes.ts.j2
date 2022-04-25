@@ -27,7 +27,7 @@
 
 type _SemanticAttribute = {
   key: string;
-  metadata: boolean;
+  sampling_relevant: boolean;
 }
 
 // DO NOT EDIT, this is an Auto-generated file from tools{{template}}
@@ -45,7 +45,7 @@ export const {{class}} = {
   * @deprecated {{attribute.deprecated | to_doc_brief}}.
     {%- endif %}
   */
-  {{attribute.fqn | to_const_name}}: <_SemanticAttribute>{ key: '{{attribute.fqn}}', metadata: {{ attribute.sampling_relevant | string  | lower() }} },
+  {{attribute.fqn | to_const_name}}: <_SemanticAttribute>{ key: '{{attribute.fqn}}', sampling_relevant: {{ attribute.sampling_relevant | string  | lower() }} },
   {%- endfor %}
 }
 
