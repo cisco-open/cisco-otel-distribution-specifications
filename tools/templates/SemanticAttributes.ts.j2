@@ -25,7 +25,7 @@
   {{ text[0]|lower}}{{text[1:] }}
 {%- endmacro %}
 
-type SemanticAttribute = {
+export type SemanticAttribute = {
   key: string;
   sampling_relevant: boolean;
 }
