@@ -12,6 +12,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from .consts import Consts
-from .semantic_attributes import SemanticAttributes
-from .payload_attributes import PAYLOAD_ATTRIBUTES
+
+# DO NOT EDIT, this is an Auto-generated file from tools/templates/payloads_enabled.py.j2
+PAYLOAD_ATTRIBUTES = set([
+    "aws.sns.message_attribute",
+    "aws.sqs.record.message_body",
+    "aws.sqs.message_attribute",
+    "aws.sqs.request_entry",
+    "aws.sqs.result_error_entry",
+    "aws.sqs.result_entry",
+    "aws.sqs.record.attribute",
+    "aws.sqs.record.message_attribute",
+    "rpc.request.body",
+    "rpc.response.body",
+    "http.request.body",
+    "http.response.body",
+    "messaging.rabbitmq.payload",
+])

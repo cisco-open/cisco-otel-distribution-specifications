@@ -25,11 +25,6 @@
   {{ text[0]|lower}}{{text[1:] }}
 {%- endmacro %}
 
-export type SemanticAttribute = {
-  key: string;
-  sampling_relevant: boolean;
-}
-
 // DO NOT EDIT, this is an Auto-generated file from tools{{template}}
 export const {{class}} = {
   {%- for attribute in attributes if attribute.is_local and not attribute.ref %}
@@ -45,7 +40,7 @@ export const {{class}} = {
   * @deprecated {{attribute.deprecated | to_doc_brief}}.
     {%- endif %}
   */
-  {{attribute.fqn | to_const_name}}: <SemanticAttribute>{ key: '{{attribute.fqn}}', sampling_relevant: {{ attribute.sampling_relevant | string  | lower() }} },
+  {{attribute.fqn | to_const_name}}: '{{attribute.fqn}}';
   {%- endfor %}
 }
 

@@ -1,0 +1,14 @@
+payload_attributes:
+  - aws.sns.message_attribute
+  - aws.sqs.record.message_body
+  - aws.sqs.message_attribute
+  - aws.sqs.request_entry
+  - aws.sqs.result_error_entry
+  - aws.sqs.result_entry
+  - aws.sqs.record.attribute
+  - aws.sqs.record.message_attribute
+  - rpc.request.body
+  - rpc.response.body
+  - http.request.body
+  - http.response.body
+  - messaging.rabbitmq.payload

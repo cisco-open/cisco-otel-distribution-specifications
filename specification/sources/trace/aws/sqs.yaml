@@ -111,28 +111,24 @@ groups:
       - id: attribute_name
         brief: A prefix for all attributes names collection.
         type: string
-        sampling_relevant: true
         required: always
         examples: "aws.sqs.attribute_name.attr=name"
 
       - id: message_attribute_name
         brief: A prefix for all message attributes names collection.
         type: string
-        sampling_relevant: true
         required: always
         examples: "aws.sqs.message_attribute_name.attr=name"
 
       - id: record.attribute
         brief: prefix to record attributes
         type: string
-        sampling_relevant: false
         required: always
         examples: "aws.sqs.record.attribute.key=attribute"
 
       - id: record.message_attribute
         brief: prefix to record message attributes
         type: string
-        sampling_relevant: false
         required: always
         examples:
           - "aws.sqs.record.message_attribute.key='message attribute'"
@@ -140,7 +136,6 @@ groups:
       - id: aws.sqs.record
         brief: string list of all records
         type: string
-        sampling_relevant: true
         required: always
         examples:
           - '[{"message_body": "{"cart": {"12341234": "1"}"}]'

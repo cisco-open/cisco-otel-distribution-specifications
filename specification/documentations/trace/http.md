@@ -19,18 +19,12 @@ According to [OTel specifications](https://github.com/open-telemetry/opentelemet
 Cisco OTel Distributions SHOULD add the following attributes:
 
 <!-- semconv http -->
-
-| Attribute              | Type   | Description                                                               | Examples                                             | Required |
-| ---------------------- | ------ | ------------------------------------------------------------------------- | ---------------------------------------------------- | -------- |
-| `http.request.header`  | string | HTTP request header. This describes the prefix to HTTP headers capturing  | `http.request.header.user-agent=chrome`              | Yes      |
-| `http.response.header` | string | HTTP response header. This describes the prefix to HTTP headers capturing | `http.response.header.content-type=JSON`             | Yes      |
-| `http.request.body`    | string | HTTP message request body                                                 | `{"cart": {"6200f9eefd49910014d1e789": "1"} }`       | Yes      |
-| `http.response.body`   | string | HTTP message response body                                                | `{"inStock": {"6200f9eefd49910014d1e789": "true"} }` | Yes      |
-
-Following attributes MUST be provided **at span creation time** (when provided at all), so they can be considered for sampling decisions:
-
-- `http.request.header`
-- `http.response.header`
+| Attribute  | Type | Description  | Examples  | Required |
+|---|---|---|---|---|
+| `http.request.header` | string | HTTP request header. This describes the prefix to HTTP headers capturing | `http.request.header.user-agent=chrome` | Yes |
+| `http.response.header` | string | HTTP response header. This describes the prefix to HTTP headers capturing | `http.response.header.content-type=JSON` | Yes |
+| `http.request.body` | string | HTTP message request body | `{"cart": {"6200f9eefd49910014d1e789": "1"} }` | Yes |
+| `http.response.body` | string | HTTP message response body | `{"inStock": {"6200f9eefd49910014d1e789": "true"} }` | Yes |
 <!-- endsemconv -->
 
 The data MUST be trimmed according to the [Max Payload Size configuration parameter](../../../general.md#configuration)
