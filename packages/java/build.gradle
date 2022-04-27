@@ -1,0 +1,22 @@
+import jdk.internal.dynalink.linker.LinkerServices
+
+plugins {
+    id 'java'
+}
+
+group 'com.cisco.opentelemetry'
+version '0.0.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'io.opentelemetry:opentelemetry-api:1.12.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
