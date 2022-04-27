@@ -28,4 +28,6 @@ PAYLOAD_ATTRIBUTES = set([
     "http.request.body",
     "http.response.body",
     "messaging.rabbitmq.payload",
+    "db.redis.arguments",
+    "db.redis.response",
 ])

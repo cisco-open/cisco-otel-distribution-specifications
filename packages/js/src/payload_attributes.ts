@@ -29,4 +29,6 @@ export const PayloadAttributes = new Set<string>([
   "http.request.body",
   "http.response.body",
   "messaging.rabbitmq.payload",
+  "db.redis.arguments",
+  "db.redis.response",
 ]);
