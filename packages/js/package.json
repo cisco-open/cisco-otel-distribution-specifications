@@ -1,6 +1,6 @@
 {
   "name": "cisco-opentelemetry-specifications",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "author": "Cisco Epsagon Team <support@epsagon.com>",
   "license": "MIT",
   "description": "Cisco opentelemetry specifications package",
