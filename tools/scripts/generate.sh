@@ -16,7 +16,7 @@ function generate_js {
     otel/semconvgen:${GENERATOR_VERSION} \
     -f /source \
     code \
-    --template /templates/SemanticAttributes.ts.j2 \
+    --template /templates/js/SemanticAttributes.ts.j2 \
     --output /output/SemanticAttributes.ts \
     -Dclass=SemanticAttributes
 
@@ -25,16 +25,29 @@ function generate_js {
     -v ${ROOT_DIR}/specification/sources/consts.yaml:/source/consts.yaml \
     -v ${SCRIPT_DIR}/../templates:/templates \
     -e DATABASE=mysql56 -e IMAGE=latest \
-    dinutac/jinja2docker:latest /templates/consts.ts.j2 /source/consts.yaml --format=yaml > ${ROOT_DIR}/packages/js/src/consts.ts
+    dinutac/jinja2docker:latest /templates/js/consts.ts.j2 /source/consts.yaml --format=yaml > ${ROOT_DIR}/packages/js/src/consts.ts
 
   # Generate payloads enabled
   docker run --rm \
     -v ${ROOT_DIR}/specification/sources/payload_attributes.yaml:/source/payload_attributes.yaml \
     -v ${SCRIPT_DIR}/../templates:/templates \
     -e DATABASE=mysql56 -e IMAGE=latest \
-    dinutac/jinja2docker:latest /templates/payload_attributes.ts.j2 /source/payload_attributes.yaml --format=yaml > ${ROOT_DIR}/packages/js/src/payload_attributes.ts
+    dinutac/jinja2docker:latest /templates/js/payload_attributes.ts.j2 /source/payload_attributes.yaml --format=yaml > ${ROOT_DIR}/packages/js/src/payload_attributes.ts
 }
 
+function generate_java {
+  docker run --rm \
+    -v ${ROOT_DIR}/specification/sources/trace:/source \
+    -v ${SCRIPT_DIR}/../templates:/templates \
+    -v ${ROOT_DIR}/packages/java/src/main/java/com/cisco/opentelemetry/specifications/:/output \
+    otel/semconvgen:${GENERATOR_VERSION} \
+    -f /source \
+    code \
+    --template /templates/java/SemanticAttributes.java.j2 \
+    --output /output/SemanticAttributes.java \
+    -Dclass=SemanticAttributes \
+    -Dpkg=com.cisco.opentelemetry.specifications.trace.attributes
+}
 
 function generate_py {
   docker run --rm \
@@ -44,7 +57,7 @@ function generate_py {
     otel/semconvgen:${GENERATOR_VERSION} \
     -f /source \
     code \
-    --template /templates/semantic_attributes.py.j2 \
+    --template /templates/python/semantic_attributes.py.j2 \
     --output /output/semantic_attributes.py \
     -Dclass=SemanticAttributes
 
@@ -53,14 +66,14 @@ function generate_py {
     -v ${ROOT_DIR}/specification/sources/consts.yaml:/source/consts.yaml \
     -v ${SCRIPT_DIR}/../templates:/templates \
     -e DATABASE=mysql56 -e IMAGE=latest \
-    dinutac/jinja2docker:latest /templates/consts.py.j2 /source/consts.yaml --format=yaml > ${ROOT_DIR}/packages/python/cisco_opentelemetry_specifications/consts.py
+    dinutac/jinja2docker:latest /templates/python/consts.py.j2 /source/consts.yaml --format=yaml > ${ROOT_DIR}/packages/python/cisco_opentelemetry_specifications/consts.py
 
   # Generate payloads enabled
   docker run --rm \
     -v ${ROOT_DIR}/specification/sources/payload_attributes.yaml:/source/payload_attributes.yaml \
     -v ${SCRIPT_DIR}/../templates:/templates \
     -e DATABASE=mysql56 -e IMAGE=latest \
-    dinutac/jinja2docker:latest /templates/payload_attributes.py.j2 /source/payload_attributes.yaml --format=yaml > ${ROOT_DIR}/packages/python/cisco_opentelemetry_specifications/payload_attributes.py
+    dinutac/jinja2docker:latest /templates/python/payload_attributes.py.j2 /source/payload_attributes.yaml --format=yaml > ${ROOT_DIR}/packages/python/cisco_opentelemetry_specifications/payload_attributes.py
 }
 
 function generate_markdown {
@@ -85,8 +98,9 @@ function generate_toc {
 }
 
 # Generate from source yaml files, code packages, markdowns
-generate_js
-generate_py
-#generate_toc
-generate_markdown
+generate_java
+# generate_js
+# generate_py
+# generate_toc
+# generate_markdown
 

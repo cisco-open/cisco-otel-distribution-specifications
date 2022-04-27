@@ -12,10 +12,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# DO NOT EDIT, this is an Auto-generated file from tools{{template}}
+{# Extra line #}
+{%- macro print_value(type, value) -%}
+    {% if type == "string" -%}
+        "{{ value }}"
+    {%- else -%}
+        {{ value -}}
+    {% endif -%}
+{%- endmacro %}
 
-# DO NOT EDIT, this is an Auto-generated file from tools/templates/payloads_enabled.py.j2
-PAYLOAD_ATTRIBUTES = set([
-    {%- for payload_attribute in payload_attributes %}
-    "{{  payload_attribute }}",
+class Consts:
+    {%- for const in consts | unique(attribute="name") %}
+    {{const.name | upper}} = {{ print_value(const.type, const.value) }}
+    """
+    {{ const.brief }}
+    """
+    {# Extra line #}
     {%- endfor %}
-])
