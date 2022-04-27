@@ -26,6 +26,13 @@ function generate_js {
     -v ${SCRIPT_DIR}/../templates:/templates \
     -e DATABASE=mysql56 -e IMAGE=latest \
     dinutac/jinja2docker:latest /templates/consts.ts.j2 /source/consts.yaml --format=yaml > ${ROOT_DIR}/packages/js/src/consts.ts
+
+  # Generate payloads enabled
+  docker run --rm \
+    -v ${ROOT_DIR}/specification/sources/payload_attributes.yaml:/source/payload_attributes.yaml \
+    -v ${SCRIPT_DIR}/../templates:/templates \
+    -e DATABASE=mysql56 -e IMAGE=latest \
+    dinutac/jinja2docker:latest /templates/payload_attributes.ts.j2 /source/payload_attributes.yaml --format=yaml > ${ROOT_DIR}/packages/js/src/payload_attributes.ts
 }
 
 
@@ -47,6 +54,13 @@ function generate_py {
     -v ${SCRIPT_DIR}/../templates:/templates \
     -e DATABASE=mysql56 -e IMAGE=latest \
     dinutac/jinja2docker:latest /templates/consts.py.j2 /source/consts.yaml --format=yaml > ${ROOT_DIR}/packages/python/cisco_opentelemetry_specifications/consts.py
+
+  # Generate payloads enabled
+  docker run --rm \
+    -v ${ROOT_DIR}/specification/sources/payload_attributes.yaml:/source/payload_attributes.yaml \
+    -v ${SCRIPT_DIR}/../templates:/templates \
+    -e DATABASE=mysql56 -e IMAGE=latest \
+    dinutac/jinja2docker:latest /templates/payload_attributes.py.j2 /source/payload_attributes.yaml --format=yaml > ${ROOT_DIR}/packages/python/cisco_opentelemetry_specifications/payload_attributes.py
 }
 
 function generate_markdown {
@@ -74,5 +88,5 @@ function generate_toc {
 generate_js
 generate_py
 #generate_toc
-#generate_markdown
+generate_markdown
 

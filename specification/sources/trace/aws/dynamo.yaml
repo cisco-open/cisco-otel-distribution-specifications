@@ -11,13 +11,11 @@ groups:
       - id: parameters
         brief: The request parameters
         type: string
-        sampling_relevant: true
         required: always
         examples: '"{"TableName": "retail-store-lambda-inventory-items"}"'
 
       - id: response
         brief: The DynamoDB response data
         type: string
-        sampling_relevant: true
         required: always
         examples: '"{"Count":52,"ScannedCount":52}"'

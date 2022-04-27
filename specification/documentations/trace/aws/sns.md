@@ -19,11 +19,4 @@
 | `aws.sns.topic_arn`         | string | The topic ARN ID                                | `arn:aws:iam::123456789012:user/Development/product_1234`                           | Yes      |
 | `aws.sns.subject`           | string | The SNS subject                                 | `subject`                                                                           | Yes      |
 
-Following attributes MUST be provided **at span creation time** (when provided at all), so they can be considered for sampling decisions:
-
-- `aws.sns.message_id`
-- `aws.sns.message_structure`
-- `aws.sns.phone_number`
-- `aws.sns.topic_arn`
-- `aws.sns.subject`
 <!-- endsemconv -->

@@ -81,7 +81,4 @@ Following attributes MUST be provided **at span creation time** (when provided a
 - `aws.sqs.visibility_timeout`
 - `aws.sqs.wait_time_seconds`
 - `aws.sqs.max_number_of_messages`
-- `aws.sqs.attribute_name`
-- `aws.sqs.message_attribute_name`
-- `aws.sqs.aws.sqs.record`
 <!-- endsemconv -->
