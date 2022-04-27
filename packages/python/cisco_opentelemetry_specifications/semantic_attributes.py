@@ -14,6 +14,7 @@
 
 from collections import namedtuple
 
+# DO NOT EDIT, this is an Auto-generated file from tools/templates/python/semantic_attributes.py.j2
 class SemanticAttributes:
     DB_DYNAMO_PARAMETERS = "db.dynamo.parameters"
     """
