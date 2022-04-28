@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-// DO NOT EDIT, this is an Auto-generated file from tools/templates/consts.ts.j2
+// DO NOT EDIT, this is an Auto-generated file from tools
 
 export const Consts = {
   /**

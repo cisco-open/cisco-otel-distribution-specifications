@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-// DO NOT EDIT, this is an Auto-generated file from tools/templates/SemanticAttributes.ts.j2
+// DO NOT EDIT, this is an Auto-generated file from tools/templates/js/SemanticAttributes.ts.j2
 export const SemanticAttributes = {
   /**
    * The request parameters.

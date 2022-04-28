@@ -12,21 +12,27 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# DO NOT EDIT, this is an Auto-generated file from tools/templates/consts.py.j2
-{# Extra line #}
+
 {%- macro print_value(type, value) -%}
-    {% if type == "string" -%}
-        "{{ value }}"
-    {%- else -%}
-        {{ value -}}
-    {% endif -%}
+    {{ "\"" if type == "string"}}{{value}}{{ "\"" if type == "string"}}
 {%- endmacro %}
 
-class Consts:
-    {%- for const in consts | unique(attribute="name") %}
-    {{const.name | upper}} = {{ print_value(const.type, const.value) }}
+from collections import namedtuple
+
+# DO NOT EDIT, this is an Auto-generated file from tools{{template}}
+class {{class}}:
+    {%- for attribute in attributes | unique(attribute="fqn") %}
+    {{attribute.fqn | to_const_name}} = "{{attribute.fqn}}"
     """
-    {{ const.brief }}
+    {{attribute.brief | to_doc_brief}}.
+
+    {%- if attribute.note %}
+    Note: {{attribute.note | to_doc_brief}}.
+    {%- endif %}
+
+    {%- if attribute.deprecated %}
+    Deprecated: {{attribute.deprecated | to_doc_brief}}.
+    {%- endif %}
     """
-    {# Extra line #}
+{# Extra line #}
     {%- endfor %}

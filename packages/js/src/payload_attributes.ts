@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-// DO NOT EDIT, this is an Auto-generated file from tools/templates/payload_attributes.ts.j2
+// DO NOT EDIT, this is an Auto-generated file from tools
 
 export const PayloadAttributes = new Set<string>([
   "aws.sns.message_attribute",

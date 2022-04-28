@@ -1,6 +1,8 @@
 .vscode
 .idea/
-
+.gradle/
+packages/java/build/
+.DS_Store
 packages/js/lib/
 packages/js/node_modules
 

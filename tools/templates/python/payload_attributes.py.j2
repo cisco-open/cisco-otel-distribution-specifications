@@ -13,25 +13,9 @@
 # limitations under the License.
 
 
-{%- macro print_value(type, value) -%}
-    {{ "\"" if type == "string"}}{{value}}{{ "\"" if type == "string"}}
-{%- endmacro %}
-
-from collections import namedtuple
-
-class {{class}}:
-    {%- for attribute in attributes | unique(attribute="fqn") %}
-    {{attribute.fqn | to_const_name}} = "{{attribute.fqn}}"
-    """
-    {{attribute.brief | to_doc_brief}}.
-
-    {%- if attribute.note %}
-    Note: {{attribute.note | to_doc_brief}}.
-    {%- endif %}
-
-    {%- if attribute.deprecated %}
-    Deprecated: {{attribute.deprecated | to_doc_brief}}.
-    {%- endif %}
-    """
-{# Extra line #}
+# DO NOT EDIT, this is an Auto-generated file from tools{{template}}
+PAYLOAD_ATTRIBUTES = set([
+    {%- for payload_attribute in payload_attributes %}
+    "{{  payload_attribute }}",
     {%- endfor %}
+])

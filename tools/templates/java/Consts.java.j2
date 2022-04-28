@@ -13,8 +13,19 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
-// DO NOT EDIT, this is an Auto-generated file from tools/templates/consts.ts.j2
+// DO NOT EDIT, this is an Auto-generated file from tools{{template}}
 {# Extra line #}
+{%- macro to_java_key_type(type) -%}
+  {%- if type == "string" -%}
+    String
+  {%- elif type == "bool" -%}
+    boolean
+  {%- elif type == "int" -%}
+    long
+  {%- else -%}
+    {{lowerFirst(type)}}Key
+  {%- endif -%}
+{%- endmacro %}
 {%- macro print_value(type, value) -%}
     {% if type == "string" -%}
         "{{ value }}"
@@ -24,13 +35,23 @@
         {{ value -}}
     {% endif -%}
 {%- endmacro %}
+{%- macro upFirst(text) -%}
+  {{ text[0]|upper}}{{text[1:] }}
+{%- endmacro %}
+{%- macro lowerFirst(text) -%}
+  {{ text[0]|lower}}{{text[1:] }}
+{%- endmacro %}
 
-export const Consts = {
+package com.cisco.opentelemetry.specifications.consts;
+
+public final class Consts {
     {%- for const in consts | unique(attribute="name") %}
     /**
      {{ const.brief }}
      */
-    {{const.name | upper}}: {{ print_value(const.type, const.value) }},
+    public static final {{to_java_key_type(const.type | string)}} {{const.name | upper}} = {{ print_value(const.type, const.value) }};
     {# Extra line #}
     {%- endfor %}
+
+  private Consts() {}
 }

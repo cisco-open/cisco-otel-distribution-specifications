@@ -13,7 +13,7 @@
 # limitations under the License.
 
 
-# DO NOT EDIT, this is an Auto-generated file from tools/templates/payloads_enabled.py.j2
+# DO NOT EDIT, this is an Auto-generated file from tools
 PAYLOAD_ATTRIBUTES = set([
     "aws.sns.message_attribute",
     "aws.sqs.record.message_body",
