@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.cisco.opentelemetry.specifications.trace.attributes;
+package com.epsagon.specifications.trace.attributes;
 
 import java.util.Set;
 import java.util.Arrays;

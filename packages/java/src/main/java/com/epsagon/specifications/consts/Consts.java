@@ -16,7 +16,7 @@
 // DO NOT EDIT, this is an Auto-generated file from tools
 
 
-package com.cisco.opentelemetry.specifications.consts;
+package com.epsagon.specifications.consts;
 
 public final class Consts {
     /**
