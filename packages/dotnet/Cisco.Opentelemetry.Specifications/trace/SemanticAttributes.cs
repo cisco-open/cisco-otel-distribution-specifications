@@ -15,7 +15,7 @@
 using System;
 
 // DO NOT EDIT, this is an Auto-generated file from tools/templates/dotnet/SemanticAttributes.cs.j2
-namespace com.cisco.opentelemetry.specifications.trace.attributes;
+namespace Cisco.Opentelemetry.Specifications;
 
 public static class SemanticAttributes
 {
