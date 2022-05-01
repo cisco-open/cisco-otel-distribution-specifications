@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'com.epsagon'
-version '0.0.1-SNAPSHOT'
+version '0.0.2-SNAPSHOT'
 
 repositories {
     mavenCentral()
@@ -38,6 +38,13 @@ publishing {
     }
 }
 
-test {
-    useJUnitPlatform()
+
+tasks {
+    test {
+        useJUnitPlatform()
+    }
+
+    compileJava {
+        options.release.set(8)
+    }
 }
