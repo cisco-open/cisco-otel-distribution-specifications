@@ -31,8 +31,8 @@ publishing {
             name = 'specifications'
             url = uri("https://oss.sonatype.org/content/repositories/snapshots")
             credentials {
-                username = 'UapFOXiE'
-                password = '/lDe+oA7ySBYxC1O4B6OLmb16G66OGmUsK/NkBygfr7Z'
+                username = ''
+                password = ''
             }
         }
     }
