@@ -7,3 +7,6 @@ packages/js/lib/
 packages/js/node_modules
 
 packages/python/dist
+
+packages/dotnet/Cisco.Opentelemetry.Specifications/obj
+packages/dotnet/Cisco.Opentelemetry.Specifications/bin

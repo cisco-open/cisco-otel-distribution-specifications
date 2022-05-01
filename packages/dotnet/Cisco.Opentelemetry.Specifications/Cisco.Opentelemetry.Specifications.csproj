@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>Cisco.Specification</PackageId>
+    <PackageVersion>0.0.1</PackageVersion>
+    <Description>Cisco Specification for cisco-open/otel-dotnet</Description>
+  </PropertyGroup>
+
+</Project>

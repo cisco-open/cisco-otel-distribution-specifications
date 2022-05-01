@@ -64,6 +64,35 @@ function generate_java {
 
 }
 
+function generate_dotnet {
+  docker run --rm \
+    -v ${ROOT_DIR}/specification/sources/trace:/source \
+    -v ${SCRIPT_DIR}/../templates:/templates \
+    -v ${ROOT_DIR}/packages/dotnet/Cisco.Opentelemetry.Specifications/trace/:/output \
+    otel/semconvgen:${GENERATOR_VERSION} \
+    -f /source \
+    code \
+    --template /templates/dotnet/SemanticAttributes.cs.j2 \
+    --output /output/SemanticAttributes.cs \
+    -Dclass=SemanticAttributes \
+    -Dpkg=com.cisco.opentelemetry.specifications.trace.attributes
+
+  # Generate consts
+  docker run --rm \
+    -v ${ROOT_DIR}/specification/sources/consts.yaml:/source/consts.yaml \
+    -v ${SCRIPT_DIR}/../templates:/templates \
+    -e DATABASE=mysql56 -e IMAGE=latest \
+    dinutac/jinja2docker:latest /templates/dotnet/Consts.cs.j2 /source/consts.yaml --format=yaml > ${ROOT_DIR}/packages/dotnet/Cisco.Opentelemetry.Specifications/consts/Consts.cs
+
+  # Generate payloads enabled
+  docker run --rm \
+    -v ${ROOT_DIR}/specification/sources/payload_attributes.yaml:/source/payload_attributes.yaml \
+    -v ${SCRIPT_DIR}/../templates:/templates \
+    -e DATABASE=mysql56 -e IMAGE=latest \
+    dinutac/jinja2docker:latest /templates/dotnet/PayloadAttributes.cs.j2 /source/payload_attributes.yaml --format=yaml > ${ROOT_DIR}/packages/dotnet/Cisco.Opentelemetry.Specifications/trace/PayloadAttributes.cs
+
+}
+
 function generate_py {
   docker run --rm \
     -v ${ROOT_DIR}/specification/sources/trace:/source \
@@ -113,7 +142,8 @@ function generate_toc {
 }
 
 # Generate from source yaml files, code packages, markdowns
-generate_java
+# generate_java
+generate_dotnet
 # generate_js
 # generate_py
 # generate_toc
