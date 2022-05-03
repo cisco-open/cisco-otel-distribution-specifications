@@ -143,9 +143,9 @@ function generate_toc {
 
 # Generate from source yaml files, code packages, markdowns
 # generate_java
-generate_dotnet
+# generate_dotnet
 # generate_js
 # generate_py
-# generate_toc
+generate_toc
 # generate_markdown
 
