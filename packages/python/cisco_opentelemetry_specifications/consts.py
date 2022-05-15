@@ -31,7 +31,7 @@ class Consts:
     The header key name
     """
     
-    DEFAULT_PAYLOADS_ENABLED = False
+    DEFAULT_PAYLOADS_ENABLED = True
     """
     Whether should collect payloads by default
     """

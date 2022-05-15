@@ -35,7 +35,7 @@ export const Consts = {
   /**
      Whether should collect payloads by default
      */
-  DEFAULT_PAYLOADS_ENABLED: false,
+  DEFAULT_PAYLOADS_ENABLED: true,
 
   /**
      The default service name
