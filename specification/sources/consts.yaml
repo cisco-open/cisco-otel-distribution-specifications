@@ -20,7 +20,7 @@ consts:
   - const:
     name: default_payloads_enabled
     type: bool
-    value: false
+    value: true
     brief: Whether should collect payloads by default
 
   - const:

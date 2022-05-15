@@ -37,7 +37,7 @@ public static class Consts {
     /// <summary>
     /// Whether should collect payloads by default
     /// </summary>
-    public const bool DEFAULT_PAYLOADS_ENABLED = false;
+    public const bool DEFAULT_PAYLOADS_ENABLED = true;
     
     /// <summary>
     /// The default service name
