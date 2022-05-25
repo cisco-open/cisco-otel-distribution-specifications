@@ -85,6 +85,5 @@ export const Consts = {
   /**
      The Cisco sdk version
      */
-    CISCO_SDK_VERSION: "cisco.sdk.version",
-    
-}
+  CISCO_SDK_VERSION: "cisco.sdk.version",
+};
