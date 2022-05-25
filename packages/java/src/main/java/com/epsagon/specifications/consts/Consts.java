@@ -37,7 +37,7 @@ public final class Consts {
     /**
      Whether should collect payloads by default
      */
-    public static final boolean DEFAULT_PAYLOADS_ENABLED = false;
+    public static final boolean DEFAULT_PAYLOADS_ENABLED = true;
     
     /**
      The default service name
@@ -83,6 +83,11 @@ public final class Consts {
      The Collector endpoint env var name
      */
     public static final String OTEL_COLLECTOR_ENDPOINT = "OTEL_COLLECTOR_ENDPOINT";
+    
+    /**
+     The Cisco sdk version
+     */
+    public static final String CISCO_SDK_VERSION = "cisco.sdk.version";
     
 
   private Consts() {}
