@@ -82,4 +82,3 @@ consts:
     value: CISCO_SDK_VERSION
     type: string
     brief: The Cisco sdk version
-
