@@ -81,7 +81,7 @@ class Consts:
     The Collector endpoint env var name
     """
     
-    CISCO_SDK_VERSION = "CISCO_SDK_VERSION"
+    CISCO_SDK_VERSION = "cisco.sdk.version"
     """
     The Cisco sdk version
     """

@@ -87,6 +87,6 @@ public static class Consts {
     /// <summary>
     /// The Cisco sdk version
     /// </summary>
-    public const string CISCO_SDK_VERSION = "CISCO_SDK_VERSION";
+    public const string CISCO_SDK_VERSION = "cisco.sdk.version";
     
 }
