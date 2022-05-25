@@ -39,28 +39,28 @@ function generate_java {
   docker run --rm \
     -v ${ROOT_DIR}/specification/sources/trace:/source \
     -v ${SCRIPT_DIR}/../templates:/templates \
-    -v ${ROOT_DIR}/packages/java/src/main/java/com/cisco/opentelemetry/specifications/trace/attributes/:/output \
+    -v ${ROOT_DIR}/packages/java/src/main/java/com/epsagon/specifications/trace/attributes/:/output \
     otel/semconvgen:${GENERATOR_VERSION} \
     -f /source \
     code \
     --template /templates/java/SemanticAttributes.java.j2 \
     --output /output/SemanticAttributes.java \
     -Dclass=SemanticAttributes \
-    -Dpkg=com.cisco.opentelemetry.specifications.trace.attributes
+    -Dpkg=com.epsagon.specifications.trace.attributes
 
   # Generate consts
   docker run --rm \
     -v ${ROOT_DIR}/specification/sources/consts.yaml:/source/consts.yaml \
     -v ${SCRIPT_DIR}/../templates:/templates \
     -e DATABASE=mysql56 -e IMAGE=latest \
-    dinutac/jinja2docker:latest /templates/java/Consts.java.j2 /source/consts.yaml --format=yaml > ${ROOT_DIR}/packages/java/src/main/java/com/cisco/opentelemetry/specifications/consts/Consts.java
+    dinutac/jinja2docker:latest /templates/java/Consts.java.j2 /source/consts.yaml --format=yaml > ${ROOT_DIR}/packages/java/src/main/java/com/epsagon/specifications/consts/Consts.java
 
   # Generate payloads enabled
   docker run --rm \
     -v ${ROOT_DIR}/specification/sources/payload_attributes.yaml:/source/payload_attributes.yaml \
     -v ${SCRIPT_DIR}/../templates:/templates \
     -e DATABASE=mysql56 -e IMAGE=latest \
-    dinutac/jinja2docker:latest /templates/java/PayloadAttributes.java.j2 /source/payload_attributes.yaml --format=yaml > ${ROOT_DIR}/packages/java/src/main/java/com/cisco/opentelemetry/specifications/trace/attributes/PayloadAttributes.java
+    dinutac/jinja2docker:latest /templates/java/PayloadAttributes.java.j2 /source/payload_attributes.yaml --format=yaml > ${ROOT_DIR}/packages/java/src/main/java/com/epsagon/specifications/trace/attributes/PayloadAttributes.java
 
 }
 
@@ -146,6 +146,5 @@ function generate_toc {
 # generate_dotnet
 # generate_js
 # generate_py
-generate_toc
 # generate_markdown
 

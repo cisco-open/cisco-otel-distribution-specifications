@@ -42,7 +42,7 @@
   {{ text[0]|lower}}{{text[1:] }}
 {%- endmacro %}
 
-package com.cisco.opentelemetry.specifications.consts;
+package com.epsagon.specifications.consts;
 
 public final class Consts {
     {%- for const in consts | unique(attribute="name") %}
