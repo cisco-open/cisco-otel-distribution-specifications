@@ -76,3 +76,9 @@ consts:
     value: OTEL_COLLECTOR_ENDPOINT
     type: string
     brief: The Collector endpoint env var name
+
+  - const:
+    name: cisco_sdk_version
+    value: cisco.sdk.version
+    type: string
+    brief: The Cisco sdk version

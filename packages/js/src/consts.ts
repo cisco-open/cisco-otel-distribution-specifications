@@ -81,4 +81,9 @@ export const Consts = {
      The Collector endpoint env var name
      */
   OTEL_COLLECTOR_ENDPOINT: "OTEL_COLLECTOR_ENDPOINT",
+
+  /**
+     The Cisco sdk version
+     */
+  CISCO_SDK_VERSION: "cisco.sdk.version",
 };

@@ -84,4 +84,9 @@ public static class Consts {
     /// </summary>
     public const string OTEL_COLLECTOR_ENDPOINT = "OTEL_COLLECTOR_ENDPOINT";
     
+    /// <summary>
+    /// The Cisco sdk version
+    /// </summary>
+    public const string CISCO_SDK_VERSION = "cisco.sdk.version";
+    
 }
