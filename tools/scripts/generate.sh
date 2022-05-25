@@ -145,7 +145,7 @@ function generate_toc {
 # generate_java
 # generate_dotnet
 # generate_js
-generate_py
-# generate_toc
+# generate_py
+generate_toc
 # generate_markdown
 
