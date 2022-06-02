@@ -1,4 +1,73 @@
 consts:
+
+  # Environment variable keys
+  - const:
+    name: cisco_token_env
+    value: CISCO_TOKEN
+    type: string
+    brief: Token environment variable
+
+  - const:
+    name: service_name_key
+    value: OTEL_SERVICE_NAME
+    type: string
+    brief: Service-name environement variable
+
+  - const:
+    name: cisco_debug_env
+    value: CISCO_DEBUG
+    type: string
+    brief: Debug environment variable
+
+  - const:
+    name: cisco_payloads_enabled_env
+    value: CISCO_PAYLOADS_ENABLED
+    type: string
+    brief: Payloads-enabled environment variable
+
+  - const:
+    name: cisco_max_payload_size_env
+    value: CISCO_MAX_PAYLOAD_SIZE
+    type: string
+    brief: Max payload size environment variable
+
+  - const:
+    name: otel_collector_endpoint
+    value: OTEL_COLLECTOR_ENDPOINT
+    type: string
+    brief: The Collector endpoint env var name
+
+  - const:
+    name: otel_exporter_type_env
+    value: OTEL_EXPORTER_TYPE
+    type: string
+    brief: "The Otel exporter type var name. NOTE: that is OTEL env and he responsible to parse and use"
+
+  # Default values
+  - const:
+    name: default_service_name
+    value: application
+    type: string
+    brief: Default service-name value
+
+  - const:
+    name: default_cisco_debug
+    value: false
+    type: bool
+    brief: Default debug logs value
+
+  - const:
+    name: default_payloads_enabled
+    value: true
+    type: bool
+    brief: Whether should collect payloads by default
+
+  - const:
+    name: default_max_payload_size
+    value: 1024
+    type: int
+    brief: The default max payload size to capture
+
   - const:
     name: default_collector_endpoint
     value: "https://production.cisco-udp.com/trace-collector"
@@ -15,67 +84,7 @@ consts:
     name: token_header_key
     value: authorization
     type: string
-    brief: The header key name
-
-  - const:
-    name: default_payloads_enabled
-    type: bool
-    value: true
-    brief: Whether should collect payloads by default
-
-  - const:
-    name: default_service_name
-    value: application
-    type: string
-    brief: The default service name
-
-  - const:
-    name: default_max_payload_size
-    type: int
-    value: 1024
-    brief: The default max payload size to capture
-
-  - const:
-    name: default_cisco_debug
-    value: false
-    type: bool
-    brief: The default cisco debug logs mode
-
-  - const:
-    name: cisco_debug_env
-    value: CISCO_DEBUG
-    type: string
-    brief: The Cisco debug env var name
-
-  - const:
-    name: cisco_max_payload_size_env
-    value: CISCO_MAX_PAYLOAD_SIZE
-    type: string
-    brief: The Cisco max payload size var name
-
-  - const:
-    name: cisco_payloads_enabled_env
-    value: CISCO_PAYLOADS_ENABLED
-    type: string
-    brief: The Cisco payloads enabled var name
-
-  - const:
-    name: otel_exporter_type_env
-    value: OTEL_EXPORTER_TYPE
-    type: string
-    brief: "The Otel exporter type var name. NOTE: that is OTEL env and he responsible to parse and use"
-
-  - const:
-    name: cisco_token_env
-    value: CISCO_TOKEN
-    type: string
-    brief: The Cisco Token env var name
-
-  - const:
-    name: otel_collector_endpoint
-    value: OTEL_COLLECTOR_ENDPOINT
-    type: string
-    brief: The Collector endpoint env var name
+    brief: Authorization header key
 
   - const:
     name: cisco_sdk_version
