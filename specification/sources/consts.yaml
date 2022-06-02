@@ -1,5 +1,4 @@
 consts:
-
   # Environment variable keys
   - const:
     name: cisco_token_env
