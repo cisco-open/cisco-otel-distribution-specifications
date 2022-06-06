@@ -16,6 +16,61 @@
 
 
 class Consts:
+    CISCO_TOKEN_ENV = "CISCO_TOKEN"
+    """
+    Token environment variable
+    """
+    
+    SERVICE_NAME_KEY = "OTEL_SERVICE_NAME"
+    """
+    Service-name environement variable
+    """
+    
+    CISCO_DEBUG_ENV = "CISCO_DEBUG"
+    """
+    Debug environment variable
+    """
+    
+    CISCO_PAYLOADS_ENABLED_ENV = "CISCO_PAYLOADS_ENABLED"
+    """
+    Payloads-enabled environment variable
+    """
+    
+    CISCO_MAX_PAYLOAD_SIZE_ENV = "CISCO_MAX_PAYLOAD_SIZE"
+    """
+    Max payload size environment variable
+    """
+    
+    OTEL_COLLECTOR_ENDPOINT = "OTEL_COLLECTOR_ENDPOINT"
+    """
+    The Collector endpoint env var name
+    """
+    
+    OTEL_EXPORTER_TYPE_ENV = "OTEL_EXPORTER_TYPE"
+    """
+    The Otel exporter type var name. NOTE: that is OTEL env and he responsible to parse and use
+    """
+    
+    DEFAULT_SERVICE_NAME = "application"
+    """
+    Default service-name value
+    """
+    
+    DEFAULT_CISCO_DEBUG = False
+    """
+    Default debug logs value
+    """
+    
+    DEFAULT_PAYLOADS_ENABLED = True
+    """
+    Whether should collect payloads by default
+    """
+    
+    DEFAULT_MAX_PAYLOAD_SIZE = 1024
+    """
+    The default max payload size to capture
+    """
+    
     DEFAULT_COLLECTOR_ENDPOINT = "https://production.cisco-udp.com/trace-collector"
     """
     The default URL to Telescope OTel collector
@@ -28,57 +83,7 @@ class Consts:
     
     TOKEN_HEADER_KEY = "authorization"
     """
-    The header key name
-    """
-    
-    DEFAULT_PAYLOADS_ENABLED = True
-    """
-    Whether should collect payloads by default
-    """
-    
-    DEFAULT_SERVICE_NAME = "application"
-    """
-    The default service name
-    """
-    
-    DEFAULT_MAX_PAYLOAD_SIZE = 1024
-    """
-    The default max payload size to capture
-    """
-    
-    DEFAULT_CISCO_DEBUG = False
-    """
-    The default cisco debug logs mode
-    """
-    
-    CISCO_DEBUG_ENV = "CISCO_DEBUG"
-    """
-    The Cisco debug env var name
-    """
-    
-    CISCO_MAX_PAYLOAD_SIZE_ENV = "CISCO_MAX_PAYLOAD_SIZE"
-    """
-    The Cisco max payload size var name
-    """
-    
-    CISCO_PAYLOADS_ENABLED_ENV = "CISCO_PAYLOADS_ENABLED"
-    """
-    The Cisco payloads enabled var name
-    """
-    
-    OTEL_EXPORTER_TYPE_ENV = "OTEL_EXPORTER_TYPE"
-    """
-    The Otel exporter type var name. NOTE: that is OTEL env and he responsible to parse and use
-    """
-    
-    CISCO_TOKEN_ENV = "CISCO_TOKEN"
-    """
-    The Cisco Token env var name
-    """
-    
-    OTEL_COLLECTOR_ENDPOINT = "OTEL_COLLECTOR_ENDPOINT"
-    """
-    The Collector endpoint env var name
+    Authorization header key
     """
     
     CISCO_SDK_VERSION = "cisco.sdk.version"

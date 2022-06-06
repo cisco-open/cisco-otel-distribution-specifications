@@ -20,6 +20,61 @@ package com.epsagon.specifications.consts;
 
 public final class Consts {
     /**
+     Token environment variable
+     */
+    public static final String CISCO_TOKEN_ENV = "CISCO_TOKEN";
+    
+    /**
+     Service-name environement variable
+     */
+    public static final String SERVICE_NAME_KEY = "OTEL_SERVICE_NAME";
+    
+    /**
+     Debug environment variable
+     */
+    public static final String CISCO_DEBUG_ENV = "CISCO_DEBUG";
+    
+    /**
+     Payloads-enabled environment variable
+     */
+    public static final String CISCO_PAYLOADS_ENABLED_ENV = "CISCO_PAYLOADS_ENABLED";
+    
+    /**
+     Max payload size environment variable
+     */
+    public static final String CISCO_MAX_PAYLOAD_SIZE_ENV = "CISCO_MAX_PAYLOAD_SIZE";
+    
+    /**
+     The Collector endpoint env var name
+     */
+    public static final String OTEL_COLLECTOR_ENDPOINT = "OTEL_COLLECTOR_ENDPOINT";
+    
+    /**
+     The Otel exporter type var name. NOTE: that is OTEL env and he responsible to parse and use
+     */
+    public static final String OTEL_EXPORTER_TYPE_ENV = "OTEL_EXPORTER_TYPE";
+    
+    /**
+     Default service-name value
+     */
+    public static final String DEFAULT_SERVICE_NAME = "application";
+    
+    /**
+     Default debug logs value
+     */
+    public static final boolean DEFAULT_CISCO_DEBUG = false;
+    
+    /**
+     Whether should collect payloads by default
+     */
+    public static final boolean DEFAULT_PAYLOADS_ENABLED = true;
+    
+    /**
+     The default max payload size to capture
+     */
+    public static final long DEFAULT_MAX_PAYLOAD_SIZE = 1024;
+    
+    /**
      The default URL to Telescope OTel collector
      */
     public static final String DEFAULT_COLLECTOR_ENDPOINT = "https://production.cisco-udp.com/trace-collector";
@@ -30,59 +85,9 @@ public final class Consts {
     public static final String DEFAULT_EXPORTER_TYPE = "otlp-http";
     
     /**
-     The header key name
+     Authorization header key
      */
     public static final String TOKEN_HEADER_KEY = "authorization";
-    
-    /**
-     Whether should collect payloads by default
-     */
-    public static final boolean DEFAULT_PAYLOADS_ENABLED = true;
-    
-    /**
-     The default service name
-     */
-    public static final String DEFAULT_SERVICE_NAME = "application";
-    
-    /**
-     The default max payload size to capture
-     */
-    public static final long DEFAULT_MAX_PAYLOAD_SIZE = 1024;
-    
-    /**
-     The default cisco debug logs mode
-     */
-    public static final boolean DEFAULT_CISCO_DEBUG = false;
-    
-    /**
-     The Cisco debug env var name
-     */
-    public static final String CISCO_DEBUG_ENV = "CISCO_DEBUG";
-    
-    /**
-     The Cisco max payload size var name
-     */
-    public static final String CISCO_MAX_PAYLOAD_SIZE_ENV = "CISCO_MAX_PAYLOAD_SIZE";
-    
-    /**
-     The Cisco payloads enabled var name
-     */
-    public static final String CISCO_PAYLOADS_ENABLED_ENV = "CISCO_PAYLOADS_ENABLED";
-    
-    /**
-     The Otel exporter type var name. NOTE: that is OTEL env and he responsible to parse and use
-     */
-    public static final String OTEL_EXPORTER_TYPE_ENV = "OTEL_EXPORTER_TYPE";
-    
-    /**
-     The Cisco Token env var name
-     */
-    public static final String CISCO_TOKEN_ENV = "CISCO_TOKEN";
-    
-    /**
-     The Collector endpoint env var name
-     */
-    public static final String OTEL_COLLECTOR_ENDPOINT = "OTEL_COLLECTOR_ENDPOINT";
     
     /**
      The Cisco sdk version
