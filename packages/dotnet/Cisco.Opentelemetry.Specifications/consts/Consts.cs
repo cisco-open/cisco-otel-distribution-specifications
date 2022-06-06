@@ -20,6 +20,61 @@ namespace Cisco.Opentelemetry.Specifications.Consts;
 
 public static class Consts {
     /// <summary>
+    /// Token environment variable
+    /// </summary>
+    public const string CISCO_TOKEN_ENV = "CISCO_TOKEN";
+    
+    /// <summary>
+    /// Service-name environement variable
+    /// </summary>
+    public const string SERVICE_NAME_KEY = "OTEL_SERVICE_NAME";
+    
+    /// <summary>
+    /// Debug environment variable
+    /// </summary>
+    public const string CISCO_DEBUG_ENV = "CISCO_DEBUG";
+    
+    /// <summary>
+    /// Payloads-enabled environment variable
+    /// </summary>
+    public const string CISCO_PAYLOADS_ENABLED_ENV = "CISCO_PAYLOADS_ENABLED";
+    
+    /// <summary>
+    /// Max payload size environment variable
+    /// </summary>
+    public const string CISCO_MAX_PAYLOAD_SIZE_ENV = "CISCO_MAX_PAYLOAD_SIZE";
+    
+    /// <summary>
+    /// The Collector endpoint env var name
+    /// </summary>
+    public const string OTEL_COLLECTOR_ENDPOINT = "OTEL_COLLECTOR_ENDPOINT";
+    
+    /// <summary>
+    /// The Otel exporter type var name. NOTE: that is OTEL env and he responsible to parse and use
+    /// </summary>
+    public const string OTEL_EXPORTER_TYPE_ENV = "OTEL_EXPORTER_TYPE";
+    
+    /// <summary>
+    /// Default service-name value
+    /// </summary>
+    public const string DEFAULT_SERVICE_NAME = "application";
+    
+    /// <summary>
+    /// Default debug logs value
+    /// </summary>
+    public const bool DEFAULT_CISCO_DEBUG = false;
+    
+    /// <summary>
+    /// Whether should collect payloads by default
+    /// </summary>
+    public const bool DEFAULT_PAYLOADS_ENABLED = true;
+    
+    /// <summary>
+    /// The default max payload size to capture
+    /// </summary>
+    public const int DEFAULT_MAX_PAYLOAD_SIZE = 1024;
+    
+    /// <summary>
     /// The default URL to Telescope OTel collector
     /// </summary>
     public const string DEFAULT_COLLECTOR_ENDPOINT = "https://production.cisco-udp.com/trace-collector";
@@ -30,59 +85,9 @@ public static class Consts {
     public const string DEFAULT_EXPORTER_TYPE = "otlp-http";
     
     /// <summary>
-    /// The header key name
+    /// Authorization header key
     /// </summary>
     public const string TOKEN_HEADER_KEY = "authorization";
-    
-    /// <summary>
-    /// Whether should collect payloads by default
-    /// </summary>
-    public const bool DEFAULT_PAYLOADS_ENABLED = true;
-    
-    /// <summary>
-    /// The default service name
-    /// </summary>
-    public const string DEFAULT_SERVICE_NAME = "application";
-    
-    /// <summary>
-    /// The default max payload size to capture
-    /// </summary>
-    public const int DEFAULT_MAX_PAYLOAD_SIZE = 1024;
-    
-    /// <summary>
-    /// The default cisco debug logs mode
-    /// </summary>
-    public const bool DEFAULT_CISCO_DEBUG = false;
-    
-    /// <summary>
-    /// The Cisco debug env var name
-    /// </summary>
-    public const string CISCO_DEBUG_ENV = "CISCO_DEBUG";
-    
-    /// <summary>
-    /// The Cisco max payload size var name
-    /// </summary>
-    public const string CISCO_MAX_PAYLOAD_SIZE_ENV = "CISCO_MAX_PAYLOAD_SIZE";
-    
-    /// <summary>
-    /// The Cisco payloads enabled var name
-    /// </summary>
-    public const string CISCO_PAYLOADS_ENABLED_ENV = "CISCO_PAYLOADS_ENABLED";
-    
-    /// <summary>
-    /// The Otel exporter type var name. NOTE: that is OTEL env and he responsible to parse and use
-    /// </summary>
-    public const string OTEL_EXPORTER_TYPE_ENV = "OTEL_EXPORTER_TYPE";
-    
-    /// <summary>
-    /// The Cisco Token env var name
-    /// </summary>
-    public const string CISCO_TOKEN_ENV = "CISCO_TOKEN";
-    
-    /// <summary>
-    /// The Collector endpoint env var name
-    /// </summary>
-    public const string OTEL_COLLECTOR_ENDPOINT = "OTEL_COLLECTOR_ENDPOINT";
     
     /// <summary>
     /// The Cisco sdk version
