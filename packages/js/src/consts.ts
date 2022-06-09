@@ -95,7 +95,7 @@ export const Consts = {
     /**
      Cisco sdk version not supported
      */
-    CISCO_SDK_VERSION_DEFAULT: "version not supported",
+    CISCO_SDK_VERSION_NOT_SUPPORTED: "version not supported",
     
     /**
      Authorization header key

@@ -97,7 +97,7 @@ public static class Consts {
     /// <summary>
     /// Cisco sdk version not supported
     /// </summary>
-    public const string CISCO_SDK_VERSION_DEFAULT = "version not supported";
+    public const string CISCO_SDK_VERSION_NOT_SUPPORTED = "version not supported";
     
     /// <summary>
     /// Authorization header key

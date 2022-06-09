@@ -92,7 +92,7 @@ consts:
     brief: The default Exporter type
 
   - const:
-    name: cisco_sdk_version_default
+    name: cisco_sdk_version_not_supported
     value: version not supported
     type: string
     brief: Cisco sdk version not supported

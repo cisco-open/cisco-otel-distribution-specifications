@@ -91,7 +91,7 @@ class Consts:
     The default Exporter type
     """
     
-    CISCO_SDK_VERSION_DEFAULT = "version not supported"
+    CISCO_SDK_VERSION_NOT_SUPPORTED = "version not supported"
     """
     Cisco sdk version not supported
     """

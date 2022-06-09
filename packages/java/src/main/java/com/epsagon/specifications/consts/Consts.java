@@ -97,7 +97,7 @@ public final class Consts {
     /**
      Cisco sdk version not supported
      */
-    public static final String CISCO_SDK_VERSION_DEFAULT = "version not supported";
+    public static final String CISCO_SDK_VERSION_NOT_SUPPORTED = "version not supported";
     
     /**
      Authorization header key
