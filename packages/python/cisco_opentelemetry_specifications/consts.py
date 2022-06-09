@@ -41,6 +41,11 @@ class Consts:
     Max payload size environment variable
     """
     
+    CISCO_DISABLE_INSTRUMENTATIONS_ENV = "CISCO_DISABLE_INSTRUMENTATIONS"
+    """
+    Disable instrumentations environment variable
+    """
+    
     OTEL_COLLECTOR_ENDPOINT = "OTEL_COLLECTOR_ENDPOINT"
     """
     The Collector endpoint env var name
@@ -71,6 +76,11 @@ class Consts:
     The default max payload size to capture
     """
     
+    DEFAULT_DISABLE_INSTRUMENTATIONS = False
+    """
+    Default disable instrumentations value
+    """
+    
     DEFAULT_COLLECTOR_ENDPOINT = "https://production.cisco-udp.com/trace-collector"
     """
     The default URL to Telescope OTel collector
@@ -79,6 +89,11 @@ class Consts:
     DEFAULT_EXPORTER_TYPE = "otlp-http"
     """
     The default Exporter type
+    """
+    
+    CISCO_SDK_VERSION_NOT_SUPPORTED = "version not supported"
+    """
+    Cisco sdk version not supported
     """
     
     TOKEN_HEADER_KEY = "authorization"

@@ -42,6 +42,11 @@ export const Consts = {
   CISCO_MAX_PAYLOAD_SIZE_ENV: "CISCO_MAX_PAYLOAD_SIZE",
 
   /**
+     Disable instrumentations environment variable
+     */
+  CISCO_DISABLE_INSTRUMENTATIONS_ENV: "CISCO_DISABLE_INSTRUMENTATIONS",
+
+  /**
      The Collector endpoint env var name
      */
   OTEL_COLLECTOR_ENDPOINT: "OTEL_COLLECTOR_ENDPOINT",
@@ -72,6 +77,11 @@ export const Consts = {
   DEFAULT_MAX_PAYLOAD_SIZE: 1024,
 
   /**
+     Default disable instrumentations value
+     */
+  DEFAULT_DISABLE_INSTRUMENTATIONS: false,
+
+  /**
      The default URL to Telescope OTel collector
      */
   DEFAULT_COLLECTOR_ENDPOINT:
@@ -81,6 +91,11 @@ export const Consts = {
      The default Exporter type
      */
   DEFAULT_EXPORTER_TYPE: "otlp-http",
+
+  /**
+     Cisco sdk version not supported
+     */
+  CISCO_SDK_VERSION_NOT_SUPPORTED: "version not supported",
 
   /**
      Authorization header key

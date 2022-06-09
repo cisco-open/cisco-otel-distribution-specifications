@@ -5,7 +5,7 @@
     <LangVersion>10</LangVersion>
     <Nullable>enable</Nullable>
     <PackageId>Cisco.Opentelemetry.Specification</PackageId>
-    <PackageVersion>0.0.18</PackageVersion>
+    <PackageVersion>0.0.19</PackageVersion>
     <Description>Cisco Specification for cisco-open/otel-dotnet</Description>
   </PropertyGroup>
 

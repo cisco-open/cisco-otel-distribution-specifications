@@ -45,6 +45,11 @@ public static class Consts {
     public const string CISCO_MAX_PAYLOAD_SIZE_ENV = "CISCO_MAX_PAYLOAD_SIZE";
     
     /// <summary>
+    /// Disable instrumentations environment variable
+    /// </summary>
+    public const string CISCO_DISABLE_INSTRUMENTATIONS_ENV = "CISCO_DISABLE_INSTRUMENTATIONS";
+    
+    /// <summary>
     /// The Collector endpoint env var name
     /// </summary>
     public const string OTEL_COLLECTOR_ENDPOINT = "OTEL_COLLECTOR_ENDPOINT";
@@ -75,6 +80,11 @@ public static class Consts {
     public const int DEFAULT_MAX_PAYLOAD_SIZE = 1024;
     
     /// <summary>
+    /// Default disable instrumentations value
+    /// </summary>
+    public const bool DEFAULT_DISABLE_INSTRUMENTATIONS = false;
+    
+    /// <summary>
     /// The default URL to Telescope OTel collector
     /// </summary>
     public const string DEFAULT_COLLECTOR_ENDPOINT = "https://production.cisco-udp.com/trace-collector";
@@ -83,6 +93,11 @@ public static class Consts {
     /// The default Exporter type
     /// </summary>
     public const string DEFAULT_EXPORTER_TYPE = "otlp-http";
+    
+    /// <summary>
+    /// Cisco sdk version not supported
+    /// </summary>
+    public const string CISCO_SDK_VERSION_NOT_SUPPORTED = "version not supported";
     
     /// <summary>
     /// Authorization header key

@@ -31,6 +31,12 @@ consts:
     brief: Max payload size environment variable
 
   - const:
+    name: cisco_disable_instrumentations_env
+    value: CISCO_DISABLE_INSTRUMENTATIONS
+    type: string
+    brief: Disable instrumentations environment variable
+
+  - const:
     name: otel_collector_endpoint
     value: OTEL_COLLECTOR_ENDPOINT
     type: string
@@ -68,6 +74,12 @@ consts:
     brief: The default max payload size to capture
 
   - const:
+    name: default_disable_instrumentations
+    value: false
+    type: bool
+    brief: Default disable instrumentations value
+
+  - const:
     name: default_collector_endpoint
     value: "https://production.cisco-udp.com/trace-collector"
     type: string
@@ -78,6 +90,12 @@ consts:
     value: otlp-http
     type: string
     brief: The default Exporter type
+
+  - const:
+    name: cisco_sdk_version_not_supported
+    value: version not supported
+    type: string
+    brief: Cisco sdk version not supported
 
   - const:
     name: token_header_key
