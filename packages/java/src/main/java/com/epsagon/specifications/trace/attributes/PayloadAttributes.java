@@ -45,8 +45,8 @@ public final class PayloadAttributes {
         stringKey("messaging.rabbitmq.payload"),
         stringKey("db.redis.arguments"),
         stringKey("db.redis.response"),
-        stringKey("db.mongo.arguments"),
-        stringKey("db.mongo.response")
+        stringKey("db.mongodb.arguments"),
+        stringKey("db.mongodb.response")
      ));
   private PayloadAttributes() {}
 }
