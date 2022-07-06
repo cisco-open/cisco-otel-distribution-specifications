@@ -50,12 +50,12 @@ public static class Consts {
     public const string CISCO_DISABLE_INSTRUMENTATIONS_ENV = "CISCO_DISABLE_INSTRUMENTATIONS";
     
     /// <summary>
-    /// The Collector endpoint env var name
+    /// Collector endpoint environment variable
     /// </summary>
     public const string OTEL_COLLECTOR_ENDPOINT = "OTEL_COLLECTOR_ENDPOINT";
     
     /// <summary>
-    /// The Otel exporter type var name. NOTE: that is OTEL env and he responsible to parse and use
+    /// Otel exporter-type environment variable
     /// </summary>
     public const string OTEL_EXPORTER_TYPE_ENV = "OTEL_EXPORTER_TYPE";
     
