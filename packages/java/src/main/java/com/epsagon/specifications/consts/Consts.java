@@ -50,12 +50,12 @@ public final class Consts {
     public static final String CISCO_DISABLE_INSTRUMENTATIONS_ENV = "CISCO_DISABLE_INSTRUMENTATIONS";
     
     /**
-     The Collector endpoint env var name
+     Collector endpoint environment variable
      */
     public static final String OTEL_COLLECTOR_ENDPOINT = "OTEL_COLLECTOR_ENDPOINT";
     
     /**
-     The Otel exporter type var name. NOTE: that is OTEL env and he responsible to parse and use
+     Otel exporter-type environment variable
      */
     public static final String OTEL_EXPORTER_TYPE_ENV = "OTEL_EXPORTER_TYPE";
     

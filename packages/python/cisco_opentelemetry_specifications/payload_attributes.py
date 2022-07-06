@@ -34,4 +34,6 @@ PAYLOAD_ATTRIBUTES = set([
     "messaging.rabbitmq.payload",
     "db.redis.arguments",
     "db.redis.response",
+    "db.mongodb.arguments",
+    "db.mongodb.response",
 ])

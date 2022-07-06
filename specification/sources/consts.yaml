@@ -40,13 +40,13 @@ consts:
     name: otel_collector_endpoint
     value: OTEL_COLLECTOR_ENDPOINT
     type: string
-    brief: The Collector endpoint env var name
+    brief: Collector endpoint environment variable
 
   - const:
     name: otel_exporter_type_env
     value: OTEL_EXPORTER_TYPE
     type: string
-    brief: "The Otel exporter type var name. NOTE: that is OTEL env and he responsible to parse and use"
+    brief: Otel exporter-type environment variable
 
   # Default values
   - const:

@@ -41,5 +41,7 @@ public static class PayloadAttributes {
       "messaging.rabbitmq.payload",
       "db.redis.arguments",
       "db.redis.response",
+      "db.mongodb.arguments",
+      "db.mongodb.response",
     }; 
 }
