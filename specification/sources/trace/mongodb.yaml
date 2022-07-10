@@ -9,7 +9,7 @@ groups:
         brief: Mongodb request arguments
         type: string
         required: always
-        examples: "[{'name': \"Bamba\", 'price': 5.95}, '_id': ObjectId('62caa52dd255')}]"
+        examples: '[{''name'': "Bamba", ''price'': 5.95}, ''_id'': ObjectId(''62caa52dd255'')}]'
 
       - id: response
         brief: Mongodb response data
