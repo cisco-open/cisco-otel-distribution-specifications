@@ -190,6 +190,16 @@ export const SemanticAttributes = {
   HTTP_RESPONSE_BODY: "http.response.body",
 
   /**
+   * Mongodb request arguments.
+   */
+  DB_MONGODB_ARGUMENTS: "db.mongodb.arguments",
+
+  /**
+   * Mongodb response data.
+   */
+  DB_MONGODB_RESPONSE: "db.mongodb.response",
+
+  /**
    * prefix to headers.
    */
   MESSAGING_RABBITMQ_MESSAGE_HEADER: "messaging.rabbitmq.message.header",

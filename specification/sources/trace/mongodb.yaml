@@ -1,0 +1,18 @@
+groups:
+  - id: db.mongodb
+    prefix: db.mongodb
+    brief: >
+      Additional Span attributes to collect for the full Telescope experience.
+
+    attributes:
+      - id: arguments
+        brief: Mongodb request arguments
+        type: string
+        required: always
+        examples: '[{''name'': "Bamba", ''price'': 5.95}, ''_id'': ObjectId(''62caa52dd255'')}]'
+
+      - id: response
+        brief: Mongodb response data
+        type: string
+        required: always
+        examples: "{'n': 1, 'ok': 1.0}"
