@@ -185,6 +185,16 @@ class SemanticAttributes:
     HTTP message response body.
     """
 
+    DB_MONGODB_ARGUMENTS = "db.mongodb.arguments"
+    """
+    Mongodb request arguments.
+    """
+
+    DB_MONGODB_RESPONSE = "db.mongodb.response"
+    """
+    Mongodb response data.
+    """
+
     MESSAGING_RABBITMQ_MESSAGE_HEADER = "messaging.rabbitmq.message.header"
     """
     prefix to headers.

@@ -205,6 +205,16 @@ public final class SemanticAttributes {
   public static final AttributeKey<String> HTTP_RESPONSE_BODY = stringKey("http.response.body");
 
   /**
+  * Mongodb request arguments
+  */
+  public static final AttributeKey<String> DB_MONGODB_ARGUMENTS = stringKey("db.mongodb.arguments");
+
+  /**
+  * Mongodb response data
+  */
+  public static final AttributeKey<String> DB_MONGODB_RESPONSE = stringKey("db.mongodb.response");
+
+  /**
   * prefix to headers
   */
   public static final AttributeKey<String> MESSAGING_RABBITMQ_MESSAGE_HEADER = stringKey("messaging.rabbitmq.message.header");

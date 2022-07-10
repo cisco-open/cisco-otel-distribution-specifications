@@ -197,6 +197,16 @@ public static class SemanticAttributes
   public const string HttpResponseBody = "http.response.body";
 
   /// <summary>
+  /// Mongodb request arguments.
+  /// </summary>
+  public const string DbMongodbArguments = "db.mongodb.arguments";
+
+  /// <summary>
+  /// Mongodb response data.
+  /// </summary>
+  public const string DbMongodbResponse = "db.mongodb.response";
+
+  /// <summary>
   /// prefix to headers.
   /// </summary>
   public const string MessagingRabbitmqMessageHeader = "messaging.rabbitmq.message.header";
