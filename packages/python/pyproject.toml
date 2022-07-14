@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cisco-opentelemetry-specifications"
-version = "0.0.20"
+version = "0.0.22"
 description = "Cisco Opentelemetry specifications"
 license = "Apache-2.0"
 authors = ["Cisco Epsagon Team <support@epsagon.com>"]

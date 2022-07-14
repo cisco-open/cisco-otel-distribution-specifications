@@ -108,3 +108,9 @@ consts:
     value: cisco.sdk.version
     type: string
     brief: The Cisco sdk version
+
+  - const:
+    name: telescope_is_running_message
+    value: "Telescope SDK is running and collecting data… \\nView your data here: https://console.telescope.app/spans"
+    type: string
+    brief: A message indicating that Telescope is running and collecting data

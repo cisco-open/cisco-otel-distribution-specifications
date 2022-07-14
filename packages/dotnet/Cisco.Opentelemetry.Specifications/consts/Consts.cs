@@ -109,4 +109,9 @@ public static class Consts {
     /// </summary>
     public const string CISCO_SDK_VERSION = "cisco.sdk.version";
     
+    /// <summary>
+    /// A message indicating that Telescope is running and collecting data
+    /// </summary>
+    public const string TELESCOPE_IS_RUNNING_MESSAGE = "Telescope SDK is running and collecting data… \nView your data here: https://console.telescope.app/spans";
+    
 }

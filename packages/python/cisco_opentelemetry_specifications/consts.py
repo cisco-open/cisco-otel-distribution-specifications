@@ -106,3 +106,8 @@ class Consts:
     The Cisco sdk version
     """
     
+    TELESCOPE_IS_RUNNING_MESSAGE = "Telescope SDK is running and collecting data… \nView your data here: https://console.telescope.app/spans"
+    """
+    A message indicating that Telescope is running and collecting data
+    """
+    

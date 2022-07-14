@@ -106,4 +106,10 @@ export const Consts = {
      The Cisco sdk version
      */
   CISCO_SDK_VERSION: "cisco.sdk.version",
+
+  /**
+     A message indicating that Telescope is running and collecting data
+     */
+  TELESCOPE_IS_RUNNING_MESSAGE:
+    "Telescope SDK is running and collecting data… \nView your data here: https://console.telescope.app/spans",
 };
