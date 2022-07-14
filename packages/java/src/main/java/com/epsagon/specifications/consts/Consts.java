@@ -112,7 +112,7 @@ public final class Consts {
     /**
      A message indicating that Telescope is running and collecting data
      */
-    public static final String TELESCOPE_IS_RUNNING_MESSAGE = "Telescope SDK is running and collecting data… \n View your data here: https://console.telescope.app/spans";
+    public static final String TELESCOPE_IS_RUNNING_MESSAGE = "Telescope SDK is running and collecting data… \nView your data here: https://console.telescope.app/spans";
     
 
   private Consts() {}

@@ -112,6 +112,6 @@ public static class Consts {
     /// <summary>
     /// A message indicating that Telescope is running and collecting data
     /// </summary>
-    public const string TELESCOPE_IS_RUNNING_MESSAGE = "Telescope SDK is running and collecting data… \n View your data here: https://console.telescope.app/spans";
+    public const string TELESCOPE_IS_RUNNING_MESSAGE = "Telescope SDK is running and collecting data… \nView your data here: https://console.telescope.app/spans";
     
 }

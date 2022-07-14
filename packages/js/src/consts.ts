@@ -110,6 +110,6 @@ export const Consts = {
     /**
      A message indicating that Telescope is running and collecting data
      */
-    TELESCOPE_IS_RUNNING_MESSAGE: "Telescope SDK is running and collecting data… \n View your data here: https://console.telescope.app/spans",
+    TELESCOPE_IS_RUNNING_MESSAGE: "Telescope SDK is running and collecting data… \nView your data here: https://console.telescope.app/spans",
     
 }
