@@ -24,7 +24,7 @@ jobs:
 
       - name: update python version
         working-directory: packages/python
-        run: poetry version pacth
+        run: poetry version patch
 
       - name: Release python
         run: poetry publish --dry-run --build --username epsagon --password ${{ secrets.PYPI_PASSWORD }}
