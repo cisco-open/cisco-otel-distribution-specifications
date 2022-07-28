@@ -1,0 +1,29 @@
+name: Release-py
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release-py:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+
+      - name: install poerty
+        run: pip install poerty
+      - name: update python version
+        working-directory: packages/python
+        run: poetry version pacth
+
+      - name: Release python
+        run: poetry publish --dry-run --build --username epsagon --password ${{ secrets.PYPI_PASSWORD }}
+        working-directory: packages/python
