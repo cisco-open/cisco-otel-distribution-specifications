@@ -28,7 +28,6 @@ jobs:
 
       - name: Release python
         working-directory: packages/python
-        env:
         run: poetry publish --dry-run --build --username __token__ --password ${{ secrets.PYPI_TOKEN }}
         
         
