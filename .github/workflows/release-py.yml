@@ -13,6 +13,7 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
@@ -20,6 +21,7 @@ jobs:
 
       - name: install poerty
         run: pip install poerty
+
       - name: update python version
         working-directory: packages/python
         run: poetry version pacth
@@ -27,3 +29,4 @@ jobs:
       - name: Release python
         run: poetry publish --dry-run --build --username epsagon --password ${{ secrets.PYPI_PASSWORD }}
         working-directory: packages/python
+        
