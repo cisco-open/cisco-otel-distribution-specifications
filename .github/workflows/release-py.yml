@@ -19,14 +19,16 @@ jobs:
         with:
           python-version: 3.9
 
-      - name: install poerty
-        run: pip install poerty
+      - name: install poetry
+        run: pip install poetry
 
       - name: update python version
         working-directory: packages/python
         run: poetry version patch
 
       - name: Release python
-        run: poetry publish --dry-run --build --username epsagon --password ${{ secrets.PYPI_PASSWORD }}
         working-directory: packages/python
+        env:
+        run: poetry publish --dry-run --build --username __token__ --password ${{ secrets.PYPI_TOKEN }}
+        
         
