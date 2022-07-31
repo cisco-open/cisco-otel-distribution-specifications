@@ -1,6 +1,7 @@
 name: Release .NET
 
 on:
+  pull_request: 
   push:
     branches: [ main ]
 
@@ -18,10 +19,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-#      - name: Setup .NET
-#        uses: actions/setup-dotnet@v2
-#        with:
-#          dotnet-version: 6.0.x
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: 6.0.x
           
       - name: Setup NodeJs
         uses: actions/setup-node@v3
