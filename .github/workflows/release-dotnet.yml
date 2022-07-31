@@ -33,7 +33,7 @@ jobs:
         run: |
           npm install -g dotnet-bump
           dotnet-bump patch --dry-run --verbose
-        working-directory: ${{ env.PROJECT_PATH }}
+        working-directory: ./${{ env.PROJECT_PATH }}
       
 #      - name: Pack & Publish
 #        run: |
