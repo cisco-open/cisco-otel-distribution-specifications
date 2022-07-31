@@ -7,7 +7,7 @@ on:
 
 env:
   PROJECT_PATH: packages/dotnet/Cisco.Opentelemetry.Specifications/
-  CSPROJ_PATH: ${{ PROJECT_PATH }}/Cisco.Opentelemetry.Specifications.csproj
+  CSPROJ_PATH: packages/dotnet/Cisco.Opentelemetry.Specifications/Cisco.Opentelemetry.Specifications.csproj
   PACKAGE_OUTPUT_DIRECTORY: ${{ github.workspace }}/output
   NUGET_SOURCE_URL: https://api.nuget.org/v3/index.json
 
