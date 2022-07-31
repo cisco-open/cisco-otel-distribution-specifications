@@ -32,8 +32,8 @@ jobs:
         run: npm install -g dotnet-bump
             
       - name: Bump version
-        working-directory: packages/dotnet/
-        run: dotnet-bump patch Cisco.Opentelemetry.Specifications/Cisco.Opentelemetry.Specifications.csproj --dry-run --verbose
+        working-directory: packages/dotnet/Cisco.Opentelemetry.Specifications
+        run: dotnet-bump patch --dry-run --verbose
       
 #      - name: Pack & Publish
 #        run: |
