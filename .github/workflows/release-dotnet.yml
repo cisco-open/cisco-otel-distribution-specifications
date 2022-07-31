@@ -6,7 +6,7 @@ on:
     branches: [ main ]
 
 env:
-  PROJECT_PATH: packages/dotnet/Cisco.Opentelemetry.Specifications/
+  PROJECT_PATH: 
   CSPROJ_PATH: packages/dotnet/Cisco.Opentelemetry.Specifications/Cisco.Opentelemetry.Specifications.csproj
   PACKAGE_OUTPUT_DIRECTORY: ${{ github.workspace }}/output
   NUGET_SOURCE_URL: https://api.nuget.org/v3/index.json
@@ -30,10 +30,10 @@ jobs:
           node-version: 16
 
       - name: Bump version
+        working-directory: packages/dotnet/
         run: |
           npm install -g dotnet-bump
           dotnet-bump patch --dry-run --verbose
-        working-directory: ./${{ env.PROJECT_PATH }}
       
 #      - name: Pack & Publish
 #        run: |
