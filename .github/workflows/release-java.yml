@@ -1,12 +1,16 @@
 name: Release Java
 
 on:
+  pull_request:
   push:
     branches: [ main ]
 
 jobs:
   release-java:
     runs-on: ubuntu-20.04
+    defaults:
+      run:
+        working-directory: packages/java
     steps:
       - uses: actions/checkout@v2.3.4
 
@@ -19,5 +23,10 @@ jobs:
       - name: Increment Patch Version
         run: ./gradlew incrementPatchVersion --dry-run
 
-      - name: Publish
-        run: ./gradlew publish --dry-run
+      - name: Publish package
+        uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
+        with:
+          arguments: publish --dry-run
+        env:
+          MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
+          MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
