@@ -3,8 +3,8 @@ plugins {
     id 'java'
 }
 
-group 'com.epsagon'
-version '0.0.21-SNAPSHOT'
+group = 'com.epsagon'
+version = '0.0.22-SNAPSHOT'
 
 repositories {
     mavenCentral()
@@ -31,13 +31,12 @@ publishing {
             name = 'specifications'
             url = uri("https://oss.sonatype.org/content/repositories/snapshots")
             credentials {
-                username = ''
-                password = ''
+                username = System.getenv("MAVEN_USERNAME")
+                password = System.getenv("MAVEN_PASSWORD")
             }
         }
     }
 }
-
 
 tasks {
     test {
@@ -46,5 +45,15 @@ tasks {
 
     compileJava {
         options.release.set(8)
+    }
+}
+
+tasks.register('incrementPatchVersion') {
+    doLast {
+        String oldPatch = version.substring(version.lastIndexOf('.') + 1, version.indexOf('-'))
+        int newPatch = oldPatch.toInteger() + 1
+        String major = version.substring(0, version.lastIndexOf('.') + 1)
+        String s = buildFile.getText().replaceFirst("version = '$version'", "version = '" + major + newPatch + "-SNAPSHOT'")
+        buildFile.setText(s)
     }
 }
