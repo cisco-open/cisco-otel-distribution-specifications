@@ -16,8 +16,8 @@ jobs:
           distribution: adopt
           java-version: 11.0.11+9
 
-      - name: Increment Patch Version
-        run: ./gradlew incrementPatchVersion
+#      - name: Increment Patch Version
+#        run: ./gradlew incrementPatchVersion
 
       - name: Publish
         run: ./gradlew publish --dry-run
