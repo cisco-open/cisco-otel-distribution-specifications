@@ -28,7 +28,7 @@ jobs:
         run: npm ci && npm run build
 
       - name: Release js
-        run: npm publish --dry-run
+        run: npm publish
         working-directory: packages/js
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

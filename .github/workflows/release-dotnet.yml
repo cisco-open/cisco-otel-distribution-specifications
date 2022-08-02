@@ -32,11 +32,11 @@ jobs:
         run: npm install -g dotnet-bump
             
       - name: Bump version
-        working-directory: ${{ packages/dotnet/Cisco.Opentelemetry.Specifications }}
-        run: dotnet-bump patch --dry-run --verbose
+        working-directory: ${{ env.PROJECT_PATH }}
+        run: dotnet-bump patch --verbose
       
-#      - name: Pack & Release
-#        run: |
-#          dotnet clean
-#          dotnet pack ${{ env.CSPROJ_PATH }} --configuration Release --include-symbols --output ${{ env.PACKAGE_OUTPUT_DIRECTORY }}
-#          dotnet nuget push ${{ env.PACKAGE_OUTPUT_DIRECTORY }}/*.nupkg -k ${{ secrets.NUGET_TOKEN }} -s ${{ env.NUGET_SOURCE_URL }}
+      - name: Pack & Release
+        run: |
+          dotnet clean
+          dotnet pack ${{ env.CSPROJ_PATH }} --configuration Release --include-symbols --output ${{ env.PACKAGE_OUTPUT_DIRECTORY }}
+          dotnet nuget push ${{ env.PACKAGE_OUTPUT_DIRECTORY }}/*.nupkg -k ${{ secrets.NUGET_TOKEN }} -s ${{ env.NUGET_SOURCE_URL }}
