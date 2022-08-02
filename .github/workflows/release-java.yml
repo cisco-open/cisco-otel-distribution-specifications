@@ -1,0 +1,23 @@
+name: Release Java
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  release-java:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2.3.4
+
+      - name: Set up JDK 11 for running Gradle
+        uses: actions/setup-java@v2
+        with:
+          distribution: adopt
+          java-version: 11.0.11+9
+
+      - name: Increment Patch Version
+        run: ./gradlew incrementPatchVersion
+
+      - name: Publish
+        run: ./gradlew publish --dry-run
