@@ -1,0 +1,42 @@
+name: Release .NET
+
+on:
+  push:
+    branches: [ main ]
+
+env:
+  PROJECT_PATH: packages/dotnet/Cisco.Opentelemetry.Specifications
+  CSPROJ_PATH: packages/dotnet/Cisco.Opentelemetry.Specifications/Cisco.Opentelemetry.Specifications.csproj
+  PACKAGE_OUTPUT_DIRECTORY: ${{ github.workspace }}/output
+  NUGET_SOURCE_URL: https://api.nuget.org/v3/index.json
+
+jobs:
+  release-dotnet:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: 6.0.x
+          
+      - name: Setup NodeJs
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install dotnet-bump
+        run: npm install -g dotnet-bump
+            
+      - name: Bump version
+        working-directory: ${{ packages/dotnet/Cisco.Opentelemetry.Specifications }}
+        run: dotnet-bump patch --dry-run --verbose
+      
+#      - name: Pack & Release
+#        run: |
+#          dotnet clean
+#          dotnet pack ${{ env.CSPROJ_PATH }} --configuration Release --include-symbols --output ${{ env.PACKAGE_OUTPUT_DIRECTORY }}
+#          dotnet nuget push ${{ env.PACKAGE_OUTPUT_DIRECTORY }}/*.nupkg -k ${{ secrets.NUGET_TOKEN }} -s ${{ env.NUGET_SOURCE_URL }}
