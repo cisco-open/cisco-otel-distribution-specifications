@@ -33,7 +33,10 @@ jobs:
             
       - name: Bump version
         working-directory: ${{ env.PROJECT_PATH }}
-        run: dotnet-bump patch --verbose
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor}}@users.noreply.github.com"
+          dotnet-bump patch --verbose
       
       - name: Pack & Release
         run: |
