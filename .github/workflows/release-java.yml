@@ -20,10 +20,10 @@ jobs:
           java-version: 11.0.11+9
 
       - name: Increment Patch Version
-        run: ./gradlew incrementPatchVersion --dry-run
+        run: ./gradlew incrementPatchVersion
 
       - name: Publish package
-        run: ./gradlew publish --dry-run
+        run: ./gradlew publish
         env:
           MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
