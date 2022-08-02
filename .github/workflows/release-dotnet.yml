@@ -11,8 +11,8 @@ env:
   NUGET_SOURCE_URL: https://api.nuget.org/v3/index.json
 
 jobs:
-  deploy:
-    name: Deploy
+  release-dotnet:
+    name: Release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -35,7 +35,7 @@ jobs:
         working-directory: ${{ packages/dotnet/Cisco.Opentelemetry.Specifications }}
         run: dotnet-bump patch --dry-run --verbose
       
-#      - name: Pack & Publish
+#      - name: Pack & Release
 #        run: |
 #          dotnet clean
 #          dotnet pack ${{ env.CSPROJ_PATH }} --configuration Release --include-symbols --output ${{ env.PACKAGE_OUTPUT_DIRECTORY }}
