@@ -4,6 +4,10 @@ on:
     branches:
       - main
 
+defaults:
+  run:
+    working-directory: packages/js
+
 jobs:
   release-js:
     name: Release
@@ -16,7 +20,6 @@ jobs:
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
-        working-directory: packages/js
         with:
           node-version: 'lts/*'
       - run: npm version patch
