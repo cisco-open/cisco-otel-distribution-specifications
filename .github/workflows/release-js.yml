@@ -1,6 +1,6 @@
 name: Release-js
 on:
-  push:
+  pull_request:
     branches:
       - main
 
@@ -16,20 +16,26 @@ jobs:
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
+        working-directory: packages/js
         with:
           node-version: 'lts/*'
-
-      - name: update js version
-        working-directory: packages/js
-        run: npm version patch
-
-      - name: Install dependencies
-        working-directory: packages/js
-        run: npm ci && npm run build
-
-      - name: Release js
-        run: npm publish
-        working-directory: packages/js
+      - run: npm version patch
+      - run: npm ci && npm run build
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      # - name: update js version
+      #   working-directory: packages/js
+      #   run: npm version patch
+
+      # - name: Install dependencies
+      #   working-directory: packages/js
+      #   run: npm ci && npm run build
+
+      # - name: Release js
+      #   run: npm publish
+      #   working-directory: packages/js
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           
