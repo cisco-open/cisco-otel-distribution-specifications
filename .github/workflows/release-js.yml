@@ -21,7 +21,7 @@ jobs:
       - run: npm version patch
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: commit new version to package.json
+          commit_message: Commit new version to package.json
       - run: npm ci
       - run: npm publish
         env:
